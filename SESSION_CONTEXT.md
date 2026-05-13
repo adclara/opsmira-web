@@ -24,7 +24,7 @@ When starting a new session, share this summary:
 
 Current handoff summary:
 
-`GitHub Pages is live at https://adclara.github.io/opsmira-web/. The site has now been substantially repositioned into a delivery-first AI operations service website for SMBs with a solid navy navbar, stronger favicon/brand mark, a third-position savings calculator on the homepage, and clearer ROI/qualification messaging. Continue from the latest main branch state, review SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md, and focus future work on QA, live backend improvements, or stronger real proof assets rather than redoing the core messaging again.`
+`GitHub Pages is live at https://adclara.github.io/opsmira-web/. The homepage is now 5 focused sections (Hero → Savings Calculator → Services → Process → Contact CTA). The savings calculator has a 3-column layout with dynamic savings cards, tooltips on sliders, and full results panel. A /pricing route exists separately. Continue from the latest main branch state, review SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md, and focus future work on QA, live backend improvements, or stronger real proof assets.`
 
 Latest strategic handoff summary:
 
@@ -145,3 +145,14 @@ Latest strategic handoff summary:
 - data.ts cleaned up: removed 7 unused exports (heroSignals, platformModules, homeExperienceCards, savingsExamples, deliveryFacts, packagePaybackExamples, engagementPoints), trimmed processSteps 5→3, packages 4→3, intakeOutputs 5→3, engagementSummary sub-arrays 5→3, buyerFaqs 6→3, services shortened descriptions.
 - Internal pages simplified: /services page removed FAQSection embed, /about page AboutFounder removed rolloutTimeline and engagementPoints displays.
 - Build verification passed. All 7 routes render correctly: /, /services, /pricing, /case-studies, /about, /contact, /icon.svg.
+
+### 2026-05-13 — Savings Calculator Restoration
+
+- The simplification pass had removed the left-side descriptive content from the savings calculator (3 savings example cards, footer guidance). The user's intent was to simplify the calculator, not strip its educational context.
+- Restored the original 3-column layout: left descriptive column (headline + 3 savings cards), middle sliders, right results panel.
+- The 3 savings example cards (Administrative Labor Saved, Owner Time Recovered, Missed Opportunities Recovered) are now **dynamic** — they compute live from slider state instead of using static data from `data.ts`. No `savingsExamples` export was restored.
+- Kept all improvements from the simplification pass: Tooltip (?) icons on every slider, wider slider ranges, prefix/suffix display on slider values, cleaner slider labels.
+- Restored the footer guidance paragraph and two guidance cards below the ROI/yearly values.
+- Restored the "Estimated monthly value created" subtitle text in the results panel.
+- Build verification passed. All 5 homepage sections render correctly: Hero → Savings Calculator → Services → Process → Contact CTA.
+- Pushed to main in commit `a15f345`.
