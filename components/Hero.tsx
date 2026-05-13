@@ -79,7 +79,7 @@ function DashboardMockup() {
 
 export function Hero() {
   return (
-    <section className="section-shell pb-10 pt-6 lg:pb-14 lg:pt-8">
+    <section className="section-shell pb-0 pt-6 lg:pb-2 lg:pt-8">
       <div className="overflow-hidden rounded-[2.8rem] bg-[linear-gradient(180deg,#121b36,#161f3f)] px-6 py-8 text-white shadow-[0_30px_90px_rgba(15,23,47,0.24)] sm:px-8 lg:px-10 lg:py-12">
         <div className="relative">
           <div className="absolute -left-24 top-0 h-64 w-64 rounded-full bg-brand-500/18 blur-3xl" />

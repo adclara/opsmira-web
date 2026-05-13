@@ -82,6 +82,7 @@ export const site = {
 
 export const navLinks: NavLink[] = [
   { label: "Services", href: "/services" },
+  { label: "Savings Calculator", href: "/#savings-calculator" },
   { label: "Pricing", href: "/pricing" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
