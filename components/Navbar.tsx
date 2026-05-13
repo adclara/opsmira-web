@@ -28,9 +28,10 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  style={{ color: active ? "#ffffff" : "#eef2ff" }}
                   className={clsx(
-                    "!text-white/88 rounded-full px-5 py-2.5 text-sm font-medium transition hover:bg-white/10 hover:!text-white",
-                    active && "bg-white/12 shadow-[0_10px_24px_rgba(15,23,47,0.22)] !text-white"
+                    "rounded-full px-5 py-2.5 text-sm font-semibold tracking-[0.01em] transition hover:bg-white/10 hover:text-white",
+                    active && "bg-white/12 shadow-[0_10px_24px_rgba(15,23,47,0.22)]"
                   )}
                 >
                   {link.label}
