@@ -19,10 +19,10 @@ function formatCurrency(value: number) {
 function Tooltip({ text }: { text: string }) {
   return (
     <span className="group relative ml-1.5 inline-flex cursor-help">
-      <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-stone-300 bg-stone-100 text-[10px] font-bold text-neutral-500">
+      <span className="flex h-4 w-4 items-center justify-center rounded-full border border-stone-300 bg-stone-100 text-[9px] font-bold text-neutral-500">
         ?
       </span>
-      <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-56 -translate-x-1/2 rounded-xl border border-stone-200 bg-white px-3 py-2 text-xs leading-5 text-neutral-600 opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
+      <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-52 -translate-x-1/2 rounded-lg border border-stone-200 bg-white px-2.5 py-1.5 text-xs leading-5 text-neutral-600 opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
         {text}
       </span>
     </span>
@@ -51,13 +51,13 @@ function SliderRow({
   onChange: (value: number) => void;
 }) {
   return (
-    <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
-      <div className="flex items-center justify-between gap-4">
-        <label className="flex items-center text-sm font-semibold text-foreground">
+    <div className="rounded-xl border border-stone-200 bg-white p-3.5">
+      <div className="flex items-center justify-between gap-3">
+        <label className="flex items-center text-[0.8rem] font-medium text-foreground">
           {label}
           <Tooltip text={tooltip} />
         </label>
-        <span className="text-sm font-medium text-neutral-600">
+        <span className="text-[0.8rem] font-medium text-neutral-600">
           {prefix}{value}{suffix}
         </span>
       </div>
@@ -68,7 +68,7 @@ function SliderRow({
         step={step}
         value={value}
         onChange={(event) => onChange(Number(event.target.value))}
-        className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-full bg-[#e4e8f7] accent-[#4f46e5]"
+        className="mt-3 h-1.5 w-full cursor-pointer appearance-none rounded-full bg-[#e4e8f7] accent-[#4f46e5]"
       />
     </div>
   );
@@ -104,54 +104,54 @@ export function ROICalculator() {
   }, [adminHours, adminRate, ownerHours, ownerRate, recoveredJobs, jobValue, planPrice]);
 
   return (
-    <section id="savings-calculator" className="section-shell section-space scroll-mt-28">
-      <div className="overflow-hidden rounded-[2.5rem] border border-stone-200 bg-[linear-gradient(180deg,#eef2ff,#f7f8fc)] p-6 shadow-soft sm:p-8">
-        <div className="grid gap-8 xl:grid-cols-[0.72fr_1.28fr]">
+    <section id="savings-calculator" className="section-shell section-space scroll-mt-24">
+      <div className="overflow-hidden rounded-2xl border border-stone-200 bg-[linear-gradient(180deg,#eef2ff,#f7f8fc)] p-5 shadow-soft sm:p-6">
+        <div className="grid gap-6 xl:grid-cols-[0.72fr_1.28fr]">
           {/* Left descriptive column */}
           <div>
             <span className="eyebrow">Savings calculator</span>
-            <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
+            <h2 className="section-title">
               Show the business case before the implementation gets larger.
             </h2>
-            <p className="mt-5 text-base leading-8 text-neutral-600">
+            <p className="mt-3 text-[0.9rem] leading-6 text-neutral-600">
               OpsMira is positioned around cost savings first. Use this model to
               estimate how admin labor saved, owner time recovered, and missed
               opportunities captured can justify the monthly service cost.
             </p>
 
-            <div className="mt-8 grid gap-4">
-              <div className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+            <div className="mt-6 grid gap-3">
+              <div className="rounded-xl border border-white/80 bg-white/90 p-4">
+                <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
                   Administrative labor saved
                 </p>
-                <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
+                <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
                   {formatCurrency(results.laborSavings)}/mo
                 </p>
-                <p className="mt-2 text-sm leading-7 text-neutral-600">
+                <p className="mt-1.5 text-[0.8rem] leading-6 text-neutral-600">
                   Example: {adminHours} hours removed monthly at ${adminRate} per hour.
                 </p>
               </div>
 
-              <div className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+              <div className="rounded-xl border border-white/80 bg-white/90 p-4">
+                <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
                   Owner time recovered
                 </p>
-                <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
+                <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
                   {formatCurrency(results.ownerSavings)}/mo
                 </p>
-                <p className="mt-2 text-sm leading-7 text-neutral-600">
+                <p className="mt-1.5 text-[0.8rem] leading-6 text-neutral-600">
                   Example: {ownerHours} owner hours recovered monthly at ${ownerRate} per hour.
                 </p>
               </div>
 
-              <div className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+              <div className="rounded-xl border border-white/80 bg-white/90 p-4">
+                <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
                   Missed opportunities recovered
                 </p>
-                <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
+                <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
                   {formatCurrency(results.revenueRecovery)}/mo
                 </p>
-                <p className="mt-2 text-sm leading-7 text-neutral-600">
+                <p className="mt-1.5 text-[0.8rem] leading-6 text-neutral-600">
                   Example: {recoveredJobs} additional {recoveredJobs === 1 ? "project" : "projects"} recovered monthly at {formatCurrency(jobValue)} each.
                 </p>
               </div>
@@ -159,8 +159,8 @@ export function ROICalculator() {
           </div>
 
           {/* Right interactive column — sliders + results */}
-          <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
-            <div className="grid gap-4">
+          <div className="grid gap-5 xl:grid-cols-[1.02fr_0.98fr]">
+            <div className="grid gap-3">
               <SliderRow
                 label="Admin hours saved"
                 tooltip="Hours your team spends on manual follow-ups, scheduling, and reporting each month"
@@ -223,11 +223,11 @@ export function ROICalculator() {
                 onChange={setJobValue}
               />
 
-              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
-                <label className="text-sm font-semibold text-foreground">
+              <div className="rounded-xl border border-stone-200 bg-white p-3.5">
+                <label className="text-[0.8rem] font-medium text-foreground">
                   Plan used in estimate
                 </label>
-                <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {plans.map((plan) => {
                     const active = plan.price === planPrice;
 
@@ -238,12 +238,12 @@ export function ROICalculator() {
                         onClick={() => setPlanPrice(plan.price)}
                         className={
                           active
-                            ? "rounded-[1.2rem] border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-4 py-4 text-left text-white"
-                            : "rounded-[1.2rem] border border-stone-200 bg-[#f7f8fc] px-4 py-4 text-left text-foreground"
+                            ? "rounded-lg border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-3 py-3 text-left text-white"
+                            : "rounded-lg border border-stone-200 bg-[#f7f8fc] px-3 py-3 text-left text-foreground"
                         }
                       >
-                        <p className="text-sm font-semibold">{plan.label}</p>
-                        <p className="mt-1 text-sm">
+                        <p className="text-[0.8rem] font-medium">{plan.label}</p>
+                        <p className="mt-0.5 text-[0.8rem]">
                           {formatCurrency(plan.price)}/mo
                         </p>
                       </button>
@@ -253,71 +253,71 @@ export function ROICalculator() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="luxury-panel p-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-white/55">
+            <div className="space-y-3">
+              <div className="luxury-panel p-5">
+                <p className="text-[0.65rem] uppercase tracking-[0.1em] text-white/55">
                   Estimated monthly value created
                 </p>
-                <p className="mt-4 text-5xl font-semibold leading-none tracking-[-0.03em] text-white sm:text-6xl">
+                <p className="mt-3 text-4xl font-semibold leading-none tracking-[-0.02em] text-white">
                   {formatCurrency(results.monthlyValue)}
                 </p>
-                <p className="mt-3 text-sm leading-7 text-white/72">
+                <p className="mt-2 text-[0.8rem] leading-6 text-white/65">
                   Combined value from labor savings, owner time recovery, and
                   recovered customer work.
                 </p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2">
                 {[
-                  ["Administrative labor saved", results.laborSavings],
+                  ["Admin labor saved", results.laborSavings],
                   ["Owner time recovered", results.ownerSavings],
-                  ["Missed opportunities recovered", results.revenueRecovery],
+                  ["Opportunities recovered", results.revenueRecovery],
                   ["Monthly net value", results.monthlyNet]
                 ].map(([label, value]) => (
                   <div
                     key={label}
-                    className="rounded-[1.4rem] border border-stone-200 bg-white p-5"
+                    className="rounded-xl border border-stone-200 bg-white p-4"
                   >
-                    <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                    <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
                       {label}
                     </p>
-                    <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground">
+                    <p className="mt-2 text-xl font-semibold tracking-[-0.02em] text-foreground">
                       {formatCurrency(Number(value))}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
-                  <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-xl border border-stone-200 bg-white p-4">
+                  <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
                     Yearly value
                   </p>
-                  <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
+                  <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
                     {formatCurrency(results.yearlyValue)}
                   </p>
                 </div>
-                <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
-                  <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                <div className="rounded-xl border border-stone-200 bg-white p-4">
+                  <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
                     ROI multiple
                   </p>
-                  <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
+                  <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
                     {results.roi.toFixed(1)}x
                   </p>
                 </div>
               </div>
 
-              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
-                <p className="text-sm leading-7 text-neutral-600">
+              <div className="rounded-xl border border-stone-200 bg-white p-4">
+                <p className="text-[0.8rem] leading-6 text-neutral-600">
                   A smaller plan often pays for itself with labor savings alone.
                   Broader deployments are easier to justify when response speed,
                   recovered jobs, and reporting reduction are added.
                 </p>
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-[1.2rem] border border-stone-200 bg-[#f8faff] px-4 py-4 text-sm leading-7 text-neutral-700">
+                <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                  <div className="rounded-lg border border-stone-200 bg-[#f8faff] px-3 py-3 text-[0.8rem] leading-6 text-neutral-700">
                     Use this estimate to choose the first workflow worth deploying.
                   </div>
-                  <div className="rounded-[1.2rem] border border-stone-200 bg-[#f8faff] px-4 py-4 text-sm leading-7 text-neutral-700">
+                  <div className="rounded-lg border border-stone-200 bg-[#f8faff] px-3 py-3 text-[0.8rem] leading-6 text-neutral-700">
                     Then scope the plan around the operational lane with the clearest payback.
                   </div>
                 </div>

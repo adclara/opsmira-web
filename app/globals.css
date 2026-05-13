@@ -41,18 +41,18 @@ body::before {
 }
 
 .section-space {
-  @apply py-6 sm:py-10 lg:py-12;
+  @apply py-10 sm:py-14 lg:py-16;
 }
 
 .eyebrow {
-  @apply mb-4 inline-flex items-center rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] shadow-[0_10px_30px_rgba(79,70,229,0.08)];
+  @apply mb-3 inline-flex items-center rounded-full border px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] shadow-[0_6px_20px_rgba(79,70,229,0.06)];
   border-color: rgba(79, 70, 229, 0.14);
   color: #4338ca;
   background-color: rgba(255, 255, 255, 0.95);
 }
 
 .section-title {
-  @apply max-w-4xl font-display text-4xl font-semibold leading-[1.08] tracking-[-0.025em] text-foreground sm:text-5xl lg:text-6xl;
+  @apply max-w-4xl font-display text-2xl font-semibold leading-[1.15] tracking-[-0.02em] text-foreground sm:text-3xl lg:text-4xl;
 }
 
 .section-copy {
@@ -60,32 +60,32 @@ body::before {
 }
 
 .card {
-  @apply rounded-[2rem] border border-stone-300/70 shadow-soft backdrop-blur;
+  @apply rounded-2xl border border-stone-300/70 shadow-soft backdrop-blur;
   background-color: rgba(255, 255, 255, 0.95);
 }
 
 .card-muted {
-  @apply rounded-[1.6rem] border border-stone-300/80 bg-[#f8faff] shadow-soft;
+  @apply rounded-xl border border-stone-300/80 bg-[#f8faff] shadow-soft;
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-sm font-medium text-white transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2;
   background: linear-gradient(135deg, #5b4cf0, #4338ca);
-  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.22);
+  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.18);
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center rounded-2xl border border-stone-300 px-6 py-3 text-sm font-semibold text-foreground transition duration-200 hover:-translate-y-0.5 hover:border-brand-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-xl border border-stone-300 px-5 py-2.5 text-sm font-medium text-foreground transition duration-200 hover:-translate-y-0.5 hover:border-brand-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:ring-offset-2;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
 .section-kicker {
-  @apply text-xs font-semibold uppercase tracking-[0.28em] text-brand-600;
+  @apply text-xs font-medium uppercase tracking-[0.1em] text-brand-600;
 }
 
 .luxury-panel {
-  @apply rounded-[2.25rem] border text-white;
+  @apply rounded-2xl border text-white;
   border-color: rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, #17203f, #0f172f);
-  box-shadow: 0 24px 80px rgba(15, 23, 47, 0.22);
+  box-shadow: 0 16px 48px rgba(15, 23, 47, 0.18);
 }
