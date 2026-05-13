@@ -106,158 +106,221 @@ export function ROICalculator() {
   return (
     <section id="savings-calculator" className="section-shell section-space scroll-mt-28">
       <div className="overflow-hidden rounded-[2.5rem] border border-stone-200 bg-[linear-gradient(180deg,#eef2ff,#f7f8fc)] p-6 shadow-soft sm:p-8">
-        <div className="mb-8 max-w-2xl">
-          <span className="eyebrow">Savings calculator</span>
-          <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
-            Estimate your monthly savings.
-          </h2>
-          <p className="mt-4 text-base leading-7 text-neutral-600">
-            Adjust the sliders to see how admin labor saved, owner time recovered,
-            and missed opportunities captured can justify the service cost.
-          </p>
-        </div>
+        <div className="grid gap-8 xl:grid-cols-[0.72fr_1.28fr]">
+          {/* Left descriptive column */}
+          <div>
+            <span className="eyebrow">Savings calculator</span>
+            <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
+              Show the business case before the implementation gets larger.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-neutral-600">
+              OpsMira is positioned around cost savings first. Use this model to
+              estimate how admin labor saved, owner time recovered, and missed
+              opportunities captured can justify the monthly service cost.
+            </p>
 
-        <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
-          <div className="grid gap-4">
-            <SliderRow
-              label="Admin hours saved"
-              tooltip="Hours your team spends on manual follow-ups, scheduling, and reporting each month"
-              value={adminHours}
-              min={0}
-              max={120}
-              step={5}
-              suffix=" hrs/mo"
-              onChange={setAdminHours}
-            />
-            <SliderRow
-              label="Admin hourly rate"
-              tooltip="Average hourly cost of administrative staff doing this work"
-              value={adminRate}
-              min={15}
-              max={50}
-              step={1}
-              prefix="$"
-              suffix="/hr"
-              onChange={setAdminRate}
-            />
-            <SliderRow
-              label="Owner hours recovered"
-              tooltip="Hours you personally spend on tasks that could be automated"
-              value={ownerHours}
-              min={0}
-              max={60}
-              step={5}
-              suffix=" hrs/mo"
-              onChange={setOwnerHours}
-            />
-            <SliderRow
-              label="Owner hourly value"
-              tooltip="Value of your time per hour as the business owner"
-              value={ownerRate}
-              min={25}
-              max={75}
-              step={5}
-              prefix="$"
-              suffix="/hr"
-              onChange={setOwnerRate}
-            />
-            <SliderRow
-              label="Recovered jobs per month"
-              tooltip="Customer jobs or leads you estimate are lost due to slow follow-up"
-              value={recoveredJobs}
-              min={0}
-              max={5}
-              step={1}
-              onChange={setRecoveredJobs}
-            />
-            <SliderRow
-              label="Average job value"
-              tooltip="Average revenue per customer project or job"
-              value={jobValue}
-              min={500}
-              max={10000}
-              step={500}
-              prefix="$"
-              onChange={setJobValue}
-            />
+            <div className="mt-8 grid gap-4">
+              <div className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5">
+                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                  Administrative labor saved
+                </p>
+                <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
+                  {formatCurrency(results.laborSavings)}/mo
+                </p>
+                <p className="mt-2 text-sm leading-7 text-neutral-600">
+                  Example: {adminHours} hours removed monthly at ${adminRate} per hour.
+                </p>
+              </div>
 
-            <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
-              <label className="text-sm font-semibold text-foreground">
-                Plan used in estimate
-              </label>
-              <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                {plans.map((plan) => {
-                  const active = plan.price === planPrice;
+              <div className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5">
+                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                  Owner time recovered
+                </p>
+                <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
+                  {formatCurrency(results.ownerSavings)}/mo
+                </p>
+                <p className="mt-2 text-sm leading-7 text-neutral-600">
+                  Example: {ownerHours} owner hours recovered monthly at ${ownerRate} per hour.
+                </p>
+              </div>
 
-                  return (
-                    <button
-                      key={plan.label}
-                      type="button"
-                      onClick={() => setPlanPrice(plan.price)}
-                      className={
-                        active
-                          ? "rounded-[1.2rem] border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-4 py-4 text-left text-white"
-                          : "rounded-[1.2rem] border border-stone-200 bg-[#f7f8fc] px-4 py-4 text-left text-foreground"
-                      }
-                    >
-                      <p className="text-sm font-semibold">{plan.label}</p>
-                      <p className="mt-1 text-sm">
-                        {formatCurrency(plan.price)}/mo
-                      </p>
-                    </button>
-                  );
-                })}
+              <div className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5">
+                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                  Missed opportunities recovered
+                </p>
+                <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
+                  {formatCurrency(results.revenueRecovery)}/mo
+                </p>
+                <p className="mt-2 text-sm leading-7 text-neutral-600">
+                  Example: {recoveredJobs} additional {recoveredJobs === 1 ? "project" : "projects"} recovered monthly at {formatCurrency(jobValue)} each.
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="space-y-4">
-            <div className="luxury-panel p-6">
-              <p className="text-xs uppercase tracking-[0.24em] text-white/55">
-                Estimated monthly value
-              </p>
-              <p className="mt-4 text-5xl font-semibold leading-none tracking-[-0.03em] text-white sm:text-6xl">
-                {formatCurrency(results.monthlyValue)}
-              </p>
-            </div>
+          {/* Right interactive column — sliders + results */}
+          <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
+            <div className="grid gap-4">
+              <SliderRow
+                label="Admin hours saved"
+                tooltip="Hours your team spends on manual follow-ups, scheduling, and reporting each month"
+                value={adminHours}
+                min={0}
+                max={120}
+                step={5}
+                suffix=" hrs/mo"
+                onChange={setAdminHours}
+              />
+              <SliderRow
+                label="Admin hourly rate"
+                tooltip="Average hourly cost of administrative staff doing this work"
+                value={adminRate}
+                min={15}
+                max={50}
+                step={1}
+                prefix="$"
+                suffix="/hr"
+                onChange={setAdminRate}
+              />
+              <SliderRow
+                label="Owner hours recovered"
+                tooltip="Hours you personally spend on tasks that could be automated"
+                value={ownerHours}
+                min={0}
+                max={60}
+                step={5}
+                suffix=" hrs/mo"
+                onChange={setOwnerHours}
+              />
+              <SliderRow
+                label="Owner hourly value"
+                tooltip="Value of your time per hour as the business owner"
+                value={ownerRate}
+                min={25}
+                max={75}
+                step={5}
+                prefix="$"
+                suffix="/hr"
+                onChange={setOwnerRate}
+              />
+              <SliderRow
+                label="Recovered jobs per month"
+                tooltip="Customer jobs or leads you estimate are lost due to slow follow-up"
+                value={recoveredJobs}
+                min={0}
+                max={5}
+                step={1}
+                onChange={setRecoveredJobs}
+              />
+              <SliderRow
+                label="Average job value"
+                tooltip="Average revenue per customer project or job"
+                value={jobValue}
+                min={500}
+                max={10000}
+                step={500}
+                prefix="$"
+                onChange={setJobValue}
+              />
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                ["Admin labor saved", results.laborSavings],
-                ["Owner time recovered", results.ownerSavings],
-                ["Opportunities recovered", results.revenueRecovery],
-                ["Monthly net value", results.monthlyNet]
-              ].map(([label, value]) => (
-                <div
-                  key={label}
-                  className="rounded-[1.4rem] border border-stone-200 bg-white p-5"
-                >
-                  <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                    {label}
-                  </p>
-                  <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground">
-                    {formatCurrency(Number(value))}
-                  </p>
+              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
+                <label className="text-sm font-semibold text-foreground">
+                  Plan used in estimate
+                </label>
+                <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                  {plans.map((plan) => {
+                    const active = plan.price === planPrice;
+
+                    return (
+                      <button
+                        key={plan.label}
+                        type="button"
+                        onClick={() => setPlanPrice(plan.price)}
+                        className={
+                          active
+                            ? "rounded-[1.2rem] border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-4 py-4 text-left text-white"
+                            : "rounded-[1.2rem] border border-stone-200 bg-[#f7f8fc] px-4 py-4 text-left text-foreground"
+                        }
+                      >
+                        <p className="text-sm font-semibold">{plan.label}</p>
+                        <p className="mt-1 text-sm">
+                          {formatCurrency(plan.price)}/mo
+                        </p>
+                      </button>
+                    );
+                  })}
                 </div>
-              ))}
+              </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                  Yearly value
+            <div className="space-y-4">
+              <div className="luxury-panel p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-white/55">
+                  Estimated monthly value created
                 </p>
-                <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
-                  {formatCurrency(results.yearlyValue)}
+                <p className="mt-4 text-5xl font-semibold leading-none tracking-[-0.03em] text-white sm:text-6xl">
+                  {formatCurrency(results.monthlyValue)}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-white/72">
+                  Combined value from labor savings, owner time recovery, and
+                  recovered customer work.
                 </p>
               </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  ["Administrative labor saved", results.laborSavings],
+                  ["Owner time recovered", results.ownerSavings],
+                  ["Missed opportunities recovered", results.revenueRecovery],
+                  ["Monthly net value", results.monthlyNet]
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="rounded-[1.4rem] border border-stone-200 bg-white p-5"
+                  >
+                    <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                      {label}
+                    </p>
+                    <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground">
+                      {formatCurrency(Number(value))}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
+                  <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                    Yearly value
+                  </p>
+                  <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
+                    {formatCurrency(results.yearlyValue)}
+                  </p>
+                </div>
+                <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
+                  <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                    ROI multiple
+                  </p>
+                  <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
+                    {results.roi.toFixed(1)}x
+                  </p>
+                </div>
+              </div>
+
               <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                  ROI multiple
+                <p className="text-sm leading-7 text-neutral-600">
+                  A smaller plan often pays for itself with labor savings alone.
+                  Broader deployments are easier to justify when response speed,
+                  recovered jobs, and reporting reduction are added.
                 </p>
-                <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
-                  {results.roi.toFixed(1)}x
-                </p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-[1.2rem] border border-stone-200 bg-[#f8faff] px-4 py-4 text-sm leading-7 text-neutral-700">
+                    Use this estimate to choose the first workflow worth deploying.
+                  </div>
+                  <div className="rounded-[1.2rem] border border-stone-200 bg-[#f8faff] px-4 py-4 text-sm leading-7 text-neutral-700">
+                    Then scope the plan around the operational lane with the clearest payback.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
