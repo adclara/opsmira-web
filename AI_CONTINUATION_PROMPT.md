@@ -20,6 +20,10 @@ Before editing anything, read:
 - This is the OpsMira marketing website built with Next.js and Tailwind.
 - The site has already been substantially repositioned away from generic consulting and founder-heavy language.
 - The current identity is much closer to a delivery-first AI operations service for SMBs.
+- The navbar and brand shell have also been refined further since the initial repositioning:
+  - the navbar is now solid navy, not translucent
+  - the brand subtitle currently reads `AI Innovations`
+  - the favicon/monogram has been strengthened into a higher-definition SVG treatment
 - The site now emphasizes:
   - what OpsMira implements
   - how customers receive the implementation
@@ -48,10 +52,10 @@ The homepage currently includes:
 
 1. `Hero`
 2. `TrustedBy`
-3. `ServicesSection`
-4. `ComparisonSection`
-5. `EngagementSection`
-6. `ROICalculator`
+3. `ROICalculator`
+4. `ServicesSection`
+5. `ComparisonSection`
+6. `EngagementSection`
 7. `CaseStudySection`
 8. `ProcessSection`
 9. `IndustriesSection`
@@ -61,6 +65,17 @@ The homepage currently includes:
 13. `ContactSection`
 
 These sections already cover much of the messaging structure. Future work should refine, validate, or strengthen them rather than replacing them casually.
+
+## Navbar / Brand Notes
+
+- Main navbar links currently include:
+  - `Services`
+  - `Savings Calculator`
+  - `Case Studies`
+  - `About`
+  - `Contact`
+- The `Savings Calculator` link points to the homepage anchor `/#savings-calculator`.
+- Do not casually revert the navbar back to a translucent treatment; the current solid navy treatment was chosen intentionally after multiple contrast fixes.
 
 ## Existing Internal-Page Direction
 

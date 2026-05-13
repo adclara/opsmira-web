@@ -24,11 +24,11 @@ When starting a new session, share this summary:
 
 Current handoff summary:
 
-`GitHub Pages is live at https://adclara.github.io/opsmira-web/. The landing page was already reframed around AI operational infrastructure and then partially redesigned again using the new Deisgn Base SaaS references. Continue from the latest local working tree, review SESSION_CONTEXT.md, and refine the homepage and internal pages toward the newer SaaS visual direction without blindly copying the template.`
+`GitHub Pages is live at https://adclara.github.io/opsmira-web/. The site has now been substantially repositioned into a delivery-first AI operations service website for SMBs with a solid navy navbar, stronger favicon/brand mark, a third-position savings calculator on the homepage, and clearer ROI/qualification messaging. Continue from the latest main branch state, review SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md, and focus future work on QA, live backend improvements, or stronger real proof assets rather than redoing the core messaging again.`
 
 Latest strategic handoff summary:
 
-`The current site is visually stronger than before, but the main remaining work is messaging and delivery framing. OpsMira should now be repositioned as a delivery-first AI operations service for SMBs, focused on customer outcomes, workflow implementation, and measurable cost savings rather than founder-centric positioning. Read SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md before continuing.`
+`OpsMira is now positioned as a done-for-you AI operations implementation service for SMBs focused on cost savings, customer follow-up, scheduling coordination, reporting automation, and owner visibility. The main remaining work is likely browser QA, replacing the mailto intake with a real backend if desired, and adding stronger real proof assets. Read SESSION_CONTEXT.md, README.md, and AI_CONTINUATION_PROMPT.md before continuing.`
 
 ## Workflow Notes
 
@@ -112,3 +112,9 @@ Latest strategic handoff summary:
 - On the final verification pass, the recurring Windows `.next` `readlink` issue appeared again; deleting `.next` and rerunning produced a clean successful build.
 - The contact form was then upgraded from a front-end placeholder into a static-hosting-compatible workflow that opens a prefilled email draft with the structured intake details.
 - Export verification went beyond build success: a local self-test HTTP server was used against the generated `out` folder, and `/`, `/about/`, `/services/`, `/case-studies/`, `/contact/`, and `/icon.svg` all returned HTTP 200.
+- The navbar then went through several visual fixes and now uses a solid navy treatment aligned to the app palette rather than a washed translucent look.
+- The brand subtitle in the navbar was changed to `AI Innovations` and made much more visible.
+- The favicon / brand symbol was upgraded to a stronger higher-definition SVG version that more closely matches the chosen monogram direction.
+- The homepage `Savings Calculator` was moved up to third position and also received its own main-navbar entry.
+- The `ROI Multiple` / `Yearly Value` area in the calculator was adjusted so those values no longer visually collide.
+- The latest pushed GitHub state now includes these navbar, favicon, and calculator-order refinements. Future sessions should treat them as the new baseline rather than reverting to the earlier translucent navbar iterations.

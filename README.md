@@ -37,6 +37,21 @@ This site should not feel like:
 - `/about`
 - `/contact`
 
+## Main Navbar
+
+Current primary navigation:
+
+- `Services`
+- `Savings Calculator`
+- `Case Studies`
+- `About`
+- `Contact`
+
+Notes:
+
+- `Savings Calculator` links to the homepage anchor `/#savings-calculator`
+- The navbar is intentionally solid navy now; do not assume the earlier translucent versions are still desired
+
 ## Important Files
 
 - [SESSION_CONTEXT.md](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/SESSION_CONTEXT.md)
@@ -71,7 +86,8 @@ npm.cmd run build
 - Delivery model clarity
 - Qualification and objection handling
 - Contact/intake framing
-- Simple reusable brand mark and favicon
+- Solid navbar / brand shell
+- Simple reusable brand mark and strengthened SVG favicon
 
 ## Remaining High-Value Next Steps
 
