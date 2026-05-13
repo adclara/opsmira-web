@@ -1,26 +1,41 @@
-import { processSteps } from "@/lib/data";
+import { deliveryFacts, processSteps } from "@/lib/data";
 
 export function ProcessSection() {
   return (
     <section className="section-shell section-space">
       <div className="grid gap-6 xl:grid-cols-[0.7fr_1.3fr]">
         <div className="rounded-[2.25rem] border border-stone-300 bg-white/[0.84] p-7 sm:p-8">
-          <span className="eyebrow">Deployment approach</span>
+          <span className="eyebrow">How implementation works</span>
           <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.15rem]">
-            Built like an operational improvement project, not a software drop-off.
+            A clear delivery model from workflow audit to optimization after launch.
           </h2>
           <p className="mt-5 text-base leading-8 text-neutral-600">
-            OpsMira is designed for businesses that want a realistic managed
-            rollout: diagnose the friction, quantify the loss, build the right
-            workflow layer, and improve it over time.
+            OpsMira is designed to feel like an operational deployment, not a
+            vague automation engagement. Each phase exists to remove admin drag
+            and make the savings measurable.
           </p>
           <div className="mt-8 rounded-[1.9rem] border border-stone-300 bg-stone-100/80 p-5">
-            <p className="section-kicker">Positioning</p>
+            <p className="section-kicker">What customers buy</p>
             <p className="mt-3 text-lg leading-8 text-foreground">
-              We are not promising AI magic. We are building operational
-              infrastructure that helps the business run faster, more
-              consistently, and with less administrative chaos.
+              Audit the workflow, identify where money is leaking, configure
+              the operational system, launch with oversight, then refine around
+              real business use.
             </p>
+          </div>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {deliveryFacts.map((fact) => (
+              <div
+                key={fact.label}
+                className="rounded-[1.4rem] border border-stone-300 bg-white/85 px-4 py-4"
+              >
+                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                  {fact.label}
+                </p>
+                <p className="mt-2 text-sm font-semibold text-foreground">
+                  {fact.value}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -37,7 +52,7 @@ export function ProcessSection() {
               <div
                 className={
                   index === 2
-                    ? "font-display text-5xl text-olive-100"
+                    ? "font-display text-5xl text-brand-100"
                     : "font-display text-5xl text-neutral-300"
                 }
               >

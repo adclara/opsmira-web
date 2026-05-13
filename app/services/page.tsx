@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
+import { ComparisonSection } from "@/components/ComparisonSection";
+import { EngagementSection } from "@/components/EngagementSection";
+import { FAQSection } from "@/components/FAQSection";
 import { detailedServices } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Services | OpsMira",
+  title: "Services",
   description:
-    "Explore OpsMira services including supply chain optimization, AI agents, workflow automation, warehouse operations consulting, SOP development, and business reporting systems."
+    "See what OpsMira implements for SMBs: workflow audits, AI agents, customer follow-up systems, scheduling coordination, owner dashboards, reporting automation, and launch support."
 };
 
 export default function ServicesPage() {
@@ -15,8 +18,18 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Supply Chain, AI Automation, and Process Improvement Built for Real Business Operations."
-        description="OpsMira helps companies improve daily execution by combining operational experience, process analysis, AI-supported workflows, and practical systems."
+        title="What OpsMira implements and what manual work it removes."
+        description="OpsMira delivers done-for-you AI operations systems for SMBs. The service is built around workflow audit, system configuration, launch support, and measurable reductions in admin burden, response delays, and reporting overhead."
+        stats={[
+          { label: "Delivery model", value: "Managed implementation" },
+          { label: "Primary value", value: "Cost savings first" },
+          { label: "Best fit", value: "SMB service operators" }
+        ]}
+        highlights={[
+          "Start with the workflow that has the clearest payback",
+          "Build customer follow-up, scheduling, and reporting into one operational layer",
+          "Keep human oversight while removing repetitive admin"
+        ]}
       />
 
       <section className="section-shell pb-20 lg:pb-28">
@@ -27,25 +40,31 @@ export default function ServicesPage() {
             return (
               <article
                 key={service.title}
-                className="card grid gap-8 p-7 lg:grid-cols-[0.9fr_1.1fr]"
+                className="card grid gap-8 p-7 lg:grid-cols-[0.9fr_1.1fr] lg:p-8"
               >
                 <div>
-                  <div className="w-fit rounded-2xl bg-olive-50 p-3 text-olive-800">
+                  <div className="w-fit rounded-2xl bg-[#eef0ff] p-3 text-brand-700">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h2 className="mt-5 text-3xl font-semibold text-foreground">
+                  <p className="mt-5 text-xs uppercase tracking-[0.24em] text-brand-600">
+                    Service module
+                  </p>
+                  <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground">
                     {service.title}
                   </h2>
                   <p className="mt-4 text-sm leading-7 text-neutral-600">
                     {service.description}
                   </p>
+                  <p className="mt-4 rounded-[1.4rem] border border-stone-300 bg-stone-100/80 px-4 py-4 text-sm leading-7 text-neutral-700">
+                    {service.impact}
+                  </p>
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-2">
-                  {service.bullets.map((bullet) => (
+                  {service.deliverables.map((bullet) => (
                     <div
                       key={bullet}
-                      className="rounded-[1.4rem] border border-stone-300 bg-stone-100/80 px-4 py-4 text-sm font-medium text-neutral-700"
+                      className="rounded-[1.4rem] border border-stone-300 bg-[#f8faff] px-4 py-4 text-sm font-medium text-neutral-700"
                     >
                       {bullet}
                     </div>
@@ -56,19 +75,29 @@ export default function ServicesPage() {
           })}
         </div>
 
-        <div className="card mt-10 flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
+        <ComparisonSection embedded />
+        <EngagementSection embedded />
+        <FAQSection embedded />
+
+        <div className="luxury-panel mt-10 flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h3 className="font-display text-4xl text-foreground">
-              Looking for a custom workflow?
+            <p className="text-xs uppercase tracking-[0.22em] text-white/55">
+              Next step
+            </p>
+            <h3 className="mt-4 font-display text-4xl text-white">
+              Need help scoping the right first workflow?
             </h3>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-neutral-600">
-              OpsMira can tailor supply chain consulting, business process
-              automation, and workflow automation around the systems you already
-              use.
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/72">
+              OpsMira can help identify the highest-value operational bottleneck
+              to target first so the savings case is clear before the rollout
+              expands.
             </p>
           </div>
-          <Link href="/contact" className="button-primary">
-            Request Consultation
+          <Link
+            href="/contact"
+            className="inline-flex items-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-brand-700"
+          >
+            Book Workflow Audit
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>

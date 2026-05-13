@@ -4,9 +4,16 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "OpsMira | AI Operational Infrastructure For SMB Businesses",
+  metadataBase: new URL("https://adclara.github.io/opsmira-web/"),
+  title: {
+    default: "OpsMira | Delivery-First AI Operations For SMBs",
+    template: "%s | OpsMira"
+  },
   description:
-    "OpsMira helps SMB businesses reduce administrative workload, improve customer communication, automate scheduling and reporting, and centralize operations through managed AI infrastructure."
+    "OpsMira implements done-for-you AI operations systems for SMBs, including workflow automation, customer follow-up, scheduling coordination, reporting automation, and owner visibility dashboards.",
+  icons: {
+    icon: "/icon.svg"
+  }
 };
 
 export default function RootLayout({

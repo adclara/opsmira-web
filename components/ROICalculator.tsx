@@ -35,7 +35,7 @@ function SliderRow({
   onChange: (value: number) => void;
 }) {
   return (
-    <div className="rounded-[1.6rem] border border-stone-300 bg-white/90 p-4">
+    <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
       <div className="flex items-center justify-between gap-4">
         <label className="text-sm font-semibold text-foreground">{label}</label>
         <span className="text-sm text-neutral-600">
@@ -50,7 +50,7 @@ function SliderRow({
         step={step}
         value={value}
         onChange={(event) => onChange(Number(event.target.value))}
-        className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-full bg-stone-200 accent-[#405c0b]"
+        className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-full bg-[#e4e8f7] accent-[#4f46e5]"
       />
     </div>
   );
@@ -87,40 +87,39 @@ export function ROICalculator() {
 
   return (
     <section className="section-shell section-space">
-      <div className="grid gap-6 xl:grid-cols-[0.76fr_1.24fr]">
-        <div className="rounded-[2.4rem] border border-stone-300 bg-white/[0.84] p-7 sm:p-8">
-          <span className="eyebrow">ROI model</span>
-          <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
-            Estimate what operational automation could be worth each month.
-          </h2>
-          <p className="mt-5 text-base leading-8 text-neutral-600">
-            These assumptions are designed around realistic 2026 U.S. SMB
-            operating costs: administrative labor, owner time, and customer
-            opportunity recovery. The model is intentionally practical rather
-            than inflated.
-          </p>
+      <div className="overflow-hidden rounded-[2.5rem] border border-stone-200 bg-[linear-gradient(180deg,#eef2ff,#f7f8fc)] p-6 shadow-soft sm:p-8">
+        <div className="grid gap-8 xl:grid-cols-[0.72fr_1.28fr]">
+          <div>
+            <span className="eyebrow">Savings calculator</span>
+            <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
+              Show the business case before the implementation gets larger.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-neutral-600">
+              OpsMira is positioned around cost savings first. Use this model to
+              estimate how admin labor saved, owner time recovered, and missed
+              opportunities captured can justify the monthly service cost.
+            </p>
 
-          <div className="mt-8 grid gap-4">
-            {savingsExamples.map((example) => (
-              <div
-                key={example.title}
-                className="rounded-[1.6rem] border border-stone-300 bg-stone-100/75 p-5"
-              >
-                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                  {example.title}
-                </p>
-                <p className="mt-3 font-display text-4xl text-foreground">
-                  {example.value}
-                </p>
-                <p className="mt-2 text-sm leading-7 text-neutral-600">
-                  {example.body}
-                </p>
-              </div>
-            ))}
+            <div className="mt-8 grid gap-4">
+              {savingsExamples.map((example) => (
+                <div
+                  key={example.title}
+                  className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5"
+                >
+                  <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                    {example.title}
+                  </p>
+                  <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
+                    {example.value}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-neutral-600">
+                    {example.body}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="overflow-hidden rounded-[2.4rem] border border-[#d8dfd0] bg-[linear-gradient(180deg,rgba(241,244,232,0.8),rgba(255,255,255,0.95))] p-5 shadow-soft sm:p-6">
           <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
             <div className="grid gap-4">
               <SliderRow
@@ -135,7 +134,7 @@ export function ROICalculator() {
                 label="Administrative hourly value"
                 value={adminRate}
                 min={18}
-                max={28}
+                max={35}
                 step={1}
                 suffix="/hr"
                 onChange={setAdminRate}
@@ -152,7 +151,7 @@ export function ROICalculator() {
                 label="Owner hourly value"
                 value={ownerRate}
                 min={35}
-                max={75}
+                max={100}
                 step={5}
                 suffix="/hr"
                 onChange={setOwnerRate}
@@ -174,9 +173,9 @@ export function ROICalculator() {
                 onChange={setJobValue}
               />
 
-              <div className="rounded-[1.6rem] border border-stone-300 bg-white/90 p-4">
+              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
                 <label className="text-sm font-semibold text-foreground">
-                  Platform plan
+                  Monthly plan used in estimate
                 </label>
                 <div className="mt-4 grid gap-3 sm:grid-cols-3">
                   {plans.map((plan) => {
@@ -189,8 +188,8 @@ export function ROICalculator() {
                         onClick={() => setPlanPrice(plan.price)}
                         className={
                           active
-                            ? "rounded-[1.3rem] border border-olive-300 bg-olive-700 px-4 py-4 text-left text-white"
-                            : "rounded-[1.3rem] border border-stone-300 bg-stone-100/80 px-4 py-4 text-left text-foreground"
+                            ? "rounded-[1.2rem] border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-4 py-4 text-left text-white"
+                            : "rounded-[1.2rem] border border-stone-200 bg-[#f7f8fc] px-4 py-4 text-left text-foreground"
                         }
                       >
                         <p className="text-sm font-semibold">{plan.label}</p>
@@ -206,46 +205,46 @@ export function ROICalculator() {
 
             <div className="space-y-4">
               <div className="luxury-panel p-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-white/[0.65]">
-                  Estimated monthly impact
+                <p className="text-xs uppercase tracking-[0.24em] text-white/55">
+                  Estimated monthly value created
                 </p>
-                <p className="mt-4 font-display text-6xl leading-none text-white">
+                <p className="mt-4 text-6xl font-semibold leading-none tracking-[-0.05em] text-white">
                   {formatCurrency(results.monthlyValue)}
                 </p>
-                <p className="mt-3 text-sm leading-7 text-white/[0.76]">
-                  Combined value from labor savings, owner efficiency recovery,
-                  and customer opportunity recovery.
+                <p className="mt-3 text-sm leading-7 text-white/72">
+                  Combined value from labor savings, owner time recovery, and
+                  recovered customer work.
                 </p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
-                  ["Administrative labor", results.laborSavings],
-                  ["Owner time", results.ownerSavings],
-                  ["Recovered projects", results.revenueRecovery],
+                  ["Administrative labor saved", results.laborSavings],
+                  ["Owner time recovered", results.ownerSavings],
+                  ["Missed opportunities recovered", results.revenueRecovery],
                   ["Monthly net value", results.monthlyNet]
                 ].map(([label, value]) => (
                   <div
                     key={label}
-                    className="rounded-[1.6rem] border border-stone-300 bg-white p-5"
+                    className="rounded-[1.4rem] border border-stone-200 bg-white p-5"
                   >
                     <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
                       {label}
                     </p>
-                    <p className="mt-3 font-display text-4xl text-foreground">
+                    <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
                       {formatCurrency(Number(value))}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="rounded-[1.8rem] border border-stone-300 bg-[linear-gradient(180deg,#ffffff,#f6f8ef)] p-6">
+              <div className="rounded-[1.6rem] border border-stone-200 bg-white p-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
                       Yearly value
                     </p>
-                    <p className="mt-3 font-display text-5xl text-foreground">
+                    <p className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-foreground">
                       {formatCurrency(results.yearlyValue)}
                     </p>
                   </div>
@@ -253,16 +252,29 @@ export function ROICalculator() {
                     <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
                       ROI multiple
                     </p>
-                    <p className="mt-3 font-display text-5xl text-foreground">
+                    <p className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-foreground">
                       {results.roi.toFixed(1)}x
                     </p>
                   </div>
                 </div>
                 <p className="mt-4 text-sm leading-7 text-neutral-600">
-                  Many SMB operators land somewhere in the 3x to 10x+ range when
-                  improved response speed and one or more recovered customer
-                  projects are included.
+                  A smaller plan often pays for itself with labor savings alone.
+                  Broader deployments become easier to justify when response
+                  speed, recovered jobs, and reporting reduction are added.
                 </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "Use this estimate to choose the first workflow worth deploying.",
+                    "Then scope the plan around the operational lane with the clearest payback."
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-[1.2rem] border border-stone-200 bg-[#f8faff] px-4 py-4 text-sm leading-7 text-neutral-700"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

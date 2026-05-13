@@ -9,15 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#F8F8F5",
-        foreground: "#0B0B0B",
-        olive: {
-          50: "#F1F4E8",
-          100: "#DDE8C2",
-          300: "#95A17B",
-          500: "#6A7E37",
-          700: "#405C0B",
-          800: "#3F5F12"
+        background: "#F5F7FB",
+        foreground: "#121826",
+        brand: {
+          50: "#EEF0FF",
+          100: "#DDE2FF",
+          300: "#A4B1FF",
+          500: "#4F46E5",
+          600: "#4338CA",
+          700: "#3730A3"
+        },
+        midnight: {
+          900: "#0F172F",
+          800: "#18213D"
         },
         stone: {
           100: "#F5F5F2",
@@ -26,17 +30,17 @@ const config: Config = {
         }
       },
       fontFamily: {
-        display: ["Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Georgia", "serif"],
+        display: ["Aptos", "Avenir Next", "Segoe UI", "Helvetica Neue", "sans-serif"],
         sans: ["Aptos", "Avenir Next", "Segoe UI", "Helvetica Neue", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 16px 60px rgba(20, 28, 15, 0.08)"
+        soft: "0 20px 60px rgba(15, 23, 47, 0.08)"
       },
       backgroundImage: {
         "hero-glow":
-          "radial-gradient(circle at top, rgba(221, 232, 194, 0.9), rgba(248, 248, 245, 0) 46%)",
+          "radial-gradient(circle at top, rgba(79, 70, 229, 0.22), rgba(245, 247, 251, 0) 46%)",
         "panel-glow":
-          "linear-gradient(135deg, rgba(221, 232, 194, 0.92), rgba(149, 161, 123, 0.28))"
+          "linear-gradient(135deg, rgba(221, 226, 255, 0.92), rgba(79, 70, 229, 0.2))"
       }
     }
   },

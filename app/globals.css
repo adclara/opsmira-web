@@ -13,9 +13,9 @@ html {
 body {
   @apply bg-background font-sans text-foreground antialiased;
   background-image:
-    radial-gradient(circle at top left, rgba(221, 232, 194, 0.34), transparent 24%),
-    radial-gradient(circle at 85% 12%, rgba(149, 161, 123, 0.18), transparent 20%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(248, 248, 245, 0.96) 22%, #f8f8f5 100%);
+    radial-gradient(circle at top left, rgba(79, 70, 229, 0.08), transparent 22%),
+    radial-gradient(circle at 85% 12%, rgba(99, 102, 241, 0.08), transparent 18%),
+    linear-gradient(180deg, #ffffff 0%, #f5f7fb 45%, #eff2f9 100%);
 }
 
 body::before {
@@ -24,11 +24,11 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(64, 92, 11, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(64, 92, 11, 0.04) 1px, transparent 1px);
-  background-size: 120px 120px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 72%);
-  opacity: 0.45;
+    linear-gradient(rgba(79, 70, 229, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, 0.035) 1px, transparent 1px);
+  background-size: 140px 140px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.18), transparent 70%);
+  opacity: 0.35;
   z-index: -1;
 }
 
@@ -45,12 +45,14 @@ body::before {
 }
 
 .eyebrow {
-  @apply mb-4 inline-flex items-center rounded-full border border-stone-300/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-olive-700 shadow-[0_10px_30px_rgba(20,28,15,0.06)];
-  background-color: rgba(255, 255, 255, 0.85);
+  @apply mb-4 inline-flex items-center rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] shadow-[0_10px_30px_rgba(79,70,229,0.08)];
+  border-color: rgba(79, 70, 229, 0.14);
+  color: #4338ca;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .section-title {
-  @apply max-w-4xl font-display text-4xl leading-[0.98] tracking-[-0.035em] text-foreground sm:text-5xl lg:text-6xl;
+  @apply max-w-4xl font-display text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-foreground sm:text-5xl lg:text-6xl;
 }
 
 .section-copy {
@@ -58,23 +60,32 @@ body::before {
 }
 
 .card {
-  @apply rounded-[2rem] border border-stone-300/80 shadow-soft backdrop-blur;
-  background-color: rgba(255, 255, 255, 0.88);
+  @apply rounded-[2rem] border border-stone-300/70 shadow-soft backdrop-blur;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.card-muted {
+  @apply rounded-[1.6rem] border border-stone-300/80 bg-[#f8faff] shadow-soft;
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-olive-700 px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-olive-800 focus:outline-none focus:ring-2 focus:ring-olive-700/40 focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2;
+  background: linear-gradient(135deg, #5b4cf0, #4338ca);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.22);
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-foreground transition duration-200 hover:-translate-y-0.5 hover:border-olive-300 hover:bg-olive-50 focus:outline-none focus:ring-2 focus:ring-olive-700/20 focus:ring-offset-2;
-  background-color: rgba(255, 255, 255, 0.92);
+  @apply inline-flex items-center justify-center rounded-2xl border border-stone-300 px-6 py-3 text-sm font-semibold text-foreground transition duration-200 hover:-translate-y-0.5 hover:border-brand-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:ring-offset-2;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .section-kicker {
-  @apply text-xs font-semibold uppercase tracking-[0.28em] text-olive-700;
+  @apply text-xs font-semibold uppercase tracking-[0.28em] text-brand-600;
 }
 
 .luxury-panel {
-  @apply rounded-[2.25rem] border border-white/10 bg-[#11160f] text-white shadow-[0_22px_70px_rgba(11,11,11,0.18)];
+  @apply rounded-[2.25rem] border text-white;
+  border-color: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, #17203f, #0f172f);
+  box-shadow: 0 24px 80px rgba(15, 23, 47, 0.22);
 }

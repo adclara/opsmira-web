@@ -1,148 +1,103 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import {
-  heroSignals,
-  heroStats,
-  platformModules,
-  site
-} from "@/lib/data";
+import { CheckCircle2 } from "lucide-react";
+import { heroSignals, heroStats, platformModules } from "@/lib/data";
 
 function DashboardMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-[46rem]">
-      <div className="absolute left-10 right-10 top-12 h-52 rounded-[3rem] bg-olive-100/70 blur-3xl" />
-      <div className="relative overflow-hidden rounded-[2.8rem] border border-[#d6dccd] bg-[#f6f6f1]/95 p-4 shadow-[0_28px_90px_rgba(20,28,15,0.12)] sm:p-5">
-        <div className="rounded-[2.2rem] border border-stone-300 bg-white/92 p-5 sm:p-6">
-          <div className="flex flex-col gap-5">
-            <div className="grid gap-4 border-b border-stone-300 pb-5 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-              <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-neutral-500">
-                  OpsMira executive dashboard
-                </p>
-                <div className="mt-4 flex items-end gap-3">
-                  <span className="font-display text-5xl leading-none text-foreground sm:text-6xl">
+    <div className="relative mx-auto w-full max-w-[42rem]">
+      <div className="absolute -left-6 top-10 h-24 w-24 rounded-full bg-brand-500/20 blur-3xl" />
+      <div className="absolute -right-8 bottom-10 h-28 w-28 rounded-full bg-cyan-400/20 blur-3xl" />
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-xl">
+        <div className="rounded-[1.65rem] bg-white p-4 shadow-[0_24px_60px_rgba(15,23,47,0.18)] sm:p-5">
+          <div className="flex items-center justify-between border-b border-stone-200 pb-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.24em] text-neutral-500">
+                OpsMira control layer
+              </p>
+              <p className="mt-2 text-2xl font-semibold text-foreground">
+                Delivery-first operational rollout
+              </p>
+            </div>
+            <div className="rounded-xl bg-[#eef0ff] px-3 py-2 text-xs font-semibold text-brand-700">
+              Done-for-you setup
+            </div>
+          </div>
+
+          <div className="mt-4 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-[1.5rem] border border-stone-200 bg-[#f8faff] p-4">
+              <div className="flex items-end justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+                    Example monthly value created
+                  </p>
+                  <p className="mt-2 text-5xl font-semibold tracking-[-0.04em] text-foreground">
                     $4.2k
-                  </span>
-                  <span className="pb-2 text-sm font-medium text-neutral-600">
-                    projected monthly operational value
-                  </span>
+                  </p>
+                </div>
+                <div className="rounded-xl bg-white px-3 py-2 text-xs font-medium text-neutral-600">
+                  3.8x estimated ROI
                 </div>
               </div>
 
-              <div className="rounded-[1.7rem] border border-stone-300 bg-stone-100/80 p-4">
-                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                  Managed system
-                </p>
-                <p className="mt-3 text-sm leading-7 text-neutral-700">
-                  Private AI infrastructure supporting customer communication,
-                  scheduling, summaries, and reporting.
-                </p>
+              <div className="mt-5 space-y-3">
+                {[
+                  ["Admin work removed", "42 hrs/mo"],
+                  ["Response speed improvement", "84% faster"],
+                  ["Recovered opportunities", "+11 this month"]
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex items-center justify-between rounded-[1.1rem] border border-stone-200 bg-white px-4 py-3"
+                  >
+                    <span className="text-sm font-medium text-neutral-700">{label}</span>
+                    <span className="text-sm font-semibold text-brand-700">{value}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
-              <div className="rounded-[1.9rem] border border-stone-300 bg-[linear-gradient(180deg,#f6f8ef,#ffffff)] p-5">
-                <div className="mb-5 flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-neutral-700">
-                    Monthly impact model
-                  </h3>
-                  <span className="rounded-full bg-olive-50 px-3 py-1 text-xs font-medium text-olive-800">
-                    SMB operations
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  {[
-                    ["Admin labor recovered", "$1,050", "42 hrs/mo"],
-                    ["Owner time recovered", "$900", "18 hrs/mo"],
-                    ["Customer work recovered", "$2,250", "1 additional job"],
-                    ["Manual reporting reduced", "68%", "weekly summaries"]
-                  ].map(([label, value, meta]) => (
-                    <div
-                      key={label}
-                      className="grid items-center gap-3 rounded-[1.4rem] border border-stone-300 bg-white px-4 py-4 sm:grid-cols-[1fr_auto]"
-                    >
-                      <div>
-                        <p className="text-sm font-semibold text-foreground">
-                          {label}
-                        </p>
-                        <p className="mt-1 text-xs uppercase tracking-[0.18em] text-neutral-500">
-                          {meta}
-                        </p>
-                      </div>
-                      <div className="font-display text-3xl text-foreground">
-                        {value}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="grid gap-4">
-                  {heroStats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="rounded-[1.5rem] border border-stone-300 bg-white p-4"
-                    >
-                      <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                        {stat.label}
-                      </p>
-                      <p className="mt-3 font-display text-4xl text-foreground">
-                        {stat.value}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="rounded-[1.8rem] border border-white/10 bg-[#11160f] p-5 text-white">
-                  <div className="mb-4 flex items-center justify-between">
-                    <h3 className="text-sm font-semibold">Automation stack</h3>
-                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/75">
-                      Managed centrally
-                    </span>
-                  </div>
-                  <div className="space-y-3">
-                    {platformModules.map((module) => {
-                      const Icon = module.icon;
-
-                      return (
-                        <div
-                          key={module.title}
-                          className="rounded-[1.3rem] border border-white/10 bg-white/[0.05] p-4"
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="rounded-xl bg-white/10 p-2 text-olive-100">
-                              <Icon className="h-4 w-4" />
-                            </div>
-                            <div>
-                              <p className="text-sm font-semibold text-white">
-                                {module.title}
-                              </p>
-                              <p className="mt-1 text-xs leading-6 text-white/70">
-                                {module.body}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              {heroSignals.map((signal) => (
+            <div className="space-y-4">
+              {heroStats.map((stat) => (
                 <div
-                  key={signal}
-                  className="flex items-center gap-3 rounded-[1.4rem] border border-stone-300 bg-stone-100/70 px-4 py-3 text-sm text-neutral-700"
+                  key={stat.label}
+                  className="rounded-[1.4rem] border border-stone-200 bg-white p-4"
                 >
-                  <CheckCircle2 className="h-4 w-4 text-olive-700" />
-                  {signal}
+                  <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                    {stat.label}
+                  </p>
+                  <p className="mt-2 text-3xl font-semibold tracking-[-0.03em] text-foreground">
+                    {stat.value}
+                  </p>
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {platformModules.map((module) => {
+              const Icon = module.icon;
+
+              return (
+                <div
+                  key={module.title}
+                  className="rounded-[1.2rem] border border-stone-200 bg-[#fbfbfe] px-4 py-3"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="rounded-xl bg-[#eef0ff] p-2 text-brand-700">
+                      <Icon className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">
+                        {module.title}
+                      </p>
+                      <p className="mt-1 text-xs leading-6 text-neutral-600">
+                        {module.body}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -152,65 +107,62 @@ function DashboardMockup() {
 
 export function Hero() {
   return (
-    <section className="section-shell relative overflow-hidden pb-10 pt-8 sm:pt-10 lg:pb-16 lg:pt-14">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[40rem] bg-hero-glow" />
-      <div className="relative overflow-hidden rounded-[3rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(246,246,241,0.96)_48%,rgba(240,244,232,0.9))] px-6 py-8 shadow-[0_26px_100px_rgba(20,28,15,0.08)] sm:px-8 lg:px-10 lg:py-10">
-        <div className="absolute -left-14 top-10 h-48 w-48 rounded-full bg-olive-100/70 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-60 w-60 rounded-full bg-olive-100/[0.45] blur-3xl" />
+    <section className="section-shell pb-10 pt-6 lg:pb-14 lg:pt-8">
+      <div className="overflow-hidden rounded-[2.8rem] bg-[linear-gradient(180deg,#121b36,#161f3f)] px-6 py-8 text-white shadow-[0_30px_90px_rgba(15,23,47,0.24)] sm:px-8 lg:px-10 lg:py-12">
+        <div className="relative">
+          <div className="absolute -left-24 top-0 h-64 w-64 rounded-full bg-brand-500/18 blur-3xl" />
+          <div className="absolute right-0 top-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
 
-        <div className="relative grid items-start gap-12 xl:grid-cols-[0.88fr_1.12fr]">
-          <div className="max-w-[38rem] pt-3">
-            <span className="eyebrow">Private AI operational infrastructure for SMB businesses</span>
-            <p className="section-kicker">
-              Adrian Clara | AI admin automation | operational ROI | workflow
-              acceleration
-            </p>
-            <h1 className="mt-5 max-w-[12ch] font-display text-5xl leading-[0.9] tracking-[-0.05em] text-foreground sm:text-6xl xl:text-[6rem]">
-              Reduce admin drag. Recover revenue. Run a cleaner operation.
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-neutral-600 sm:text-lg">
-              OpsMira is not a generic chatbot. It is a managed AI-powered
-              operational system designed to help service businesses automate
-              repetitive administrative work, improve customer communication,
-              centralize workflows, and recover real monthly value.
-            </p>
+          <div className="relative grid items-center gap-12 xl:grid-cols-[0.92fr_1.08fr]">
+            <div className="max-w-[40rem]">
+              <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-brand-100">
+                Done-for-you AI agents, workflow automation, and operational dashboards
+              </span>
+              <h1 className="mt-6 max-w-[11ch] font-display text-5xl font-semibold leading-[0.94] tracking-[-0.055em] text-white sm:text-6xl xl:text-[5.6rem]">
+                AI operations systems that cut admin cost first.
+              </h1>
+              <p className="mt-6 max-w-xl text-base leading-8 text-white/72 sm:text-lg">
+                OpsMira implements customer follow-up systems, scheduling
+                coordination, reporting automation, and owner visibility
+                dashboards for SMBs that need cleaner execution and measurable
+                savings.
+              </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link href="/contact" className="button-primary">
-                Schedule a Strategy Call
-              </Link>
-              <Link href="/services" className="button-secondary">
-                Explore The Platform
-              </Link>
-            </div>
-
-            <div className="mt-10 grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
-              <div className="rounded-[2rem] border border-stone-300/80 bg-white/[0.82] p-5">
-                <p className="section-kicker">Why Adrian Clara</p>
-                <p className="mt-3 text-lg leading-8 text-foreground">
-                  Adrian brings enterprise-grade operations thinking shaped by
-                  work connected to cost reduction at Sam&apos;s Club and supply
-                  chain improvement opportunities at Amazon, then translates
-                  that discipline into SMB automation systems.
-                </p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link href="/contact" className="button-primary">
+                  Book Workflow Audit
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  See What Gets Implemented
+                </Link>
               </div>
 
-              <div className="luxury-panel p-5">
-                <p className="text-xs uppercase tracking-[0.24em] text-white/[0.65]">
-                  Positioning
-                </p>
-                <p className="mt-3 text-sm leading-7 text-white/[0.82]">
-                  {site.valueProp}
-                </p>
-                <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-white">
-                  Realistic ROI, modern systems, human-controlled automation
-                  <ArrowRight className="h-4 w-4 text-olive-100" />
-                </div>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {heroSignals.map((signal) => (
+                  <div
+                    key={signal}
+                    className="flex items-center gap-3 rounded-[1rem] bg-white/[0.06] px-4 py-3 text-sm text-white/82"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-brand-300" />
+                    {signal}
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-white/10 pt-6 text-sm text-white/55">
+                <span>Audit workflow and admin drag</span>
+                <span className="hidden h-1 w-1 rounded-full bg-white/30 sm:block" />
+                <span>Deploy with human oversight</span>
+                <span className="hidden h-1 w-1 rounded-full bg-white/30 sm:block" />
+                <span>Measure savings and refine after launch</span>
               </div>
             </div>
+
+            <DashboardMockup />
           </div>
-
-          <DashboardMockup />
         </div>
       </div>
     </section>

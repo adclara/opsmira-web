@@ -1,24 +1,25 @@
-import { packages } from "@/lib/data";
+import Link from "next/link";
+import { packagePaybackExamples, packages } from "@/lib/data";
 
 export function PackagesSection() {
   return (
     <section className="section-shell section-space">
-      <div className="grid gap-6 xl:grid-cols-[0.76fr_1.24fr]">
-        <div className="luxury-panel p-8 sm:p-10">
-          <span className="text-xs uppercase tracking-[0.28em] text-white/[0.65]">
-            Pricing model
+      <div className="overflow-hidden rounded-[2.6rem] bg-[linear-gradient(180deg,#131b34,#0f172f)] px-6 py-10 text-white shadow-[0_30px_90px_rgba(15,23,47,0.22)] sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-brand-100">
+            Pricing and scope
           </span>
-          <h2 className="mt-4 font-display text-4xl leading-[0.96] tracking-[-0.03em] text-white sm:text-5xl">
-            Premium enough to matter. Grounded enough to make financial sense.
+          <h2 className="mt-5 font-display text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl">
+            Plans designed around workflow scope and payback potential.
           </h2>
-          <p className="mt-5 text-base leading-8 text-white/[0.74]">
-            Pricing is framed against labor recovery, owner time recovery, and
-            improved customer opportunity response. The platform should feel
-            like a cost-control system, not an extra operational burden.
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/68">
+            Pricing is easiest to understand when it connects to what gets
+            implemented and what it can replace. Each plan is scoped around
+            workflow depth, coordination complexity, and operational impact.
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 lg:grid-cols-4">
           {packages.map((pkg, index) => {
             const featured = index === 1;
 
@@ -27,50 +28,114 @@ export function PackagesSection() {
                 key={pkg.title}
                 className={
                   featured
-                    ? "rounded-[2rem] border border-olive-300 bg-[linear-gradient(180deg,#405c0b,#587327)] p-6 text-white shadow-[0_22px_70px_rgba(64,92,11,0.24)]"
-                    : "card p-6"
+                    ? "rounded-[1.9rem] border border-brand-300 bg-[linear-gradient(180deg,#5b4cf0,#4338ca)] p-6 text-white shadow-[0_20px_60px_rgba(79,70,229,0.28)]"
+                    : "rounded-[1.9rem] border border-white/10 bg-white px-6 py-6 text-foreground"
                 }
               >
-                <div className="flex h-full flex-col">
-                  <p
+                <p
+                  className={
+                    featured
+                      ? "text-xs font-semibold uppercase tracking-[0.24em] text-white/70"
+                      : "text-xs font-semibold uppercase tracking-[0.24em] text-brand-600"
+                  }
+                >
+                  {pkg.title}
+                </p>
+                <p
+                  className={
+                    featured
+                      ? "mt-5 text-5xl font-semibold tracking-[-0.05em] text-white"
+                      : "mt-5 text-5xl font-semibold tracking-[-0.05em] text-foreground"
+                  }
+                >
+                  {pkg.price}
+                </p>
+                <p
+                  className={
+                    featured
+                      ? "mt-2 text-sm font-medium text-white/72"
+                      : "mt-2 text-sm font-medium text-neutral-500"
+                  }
+                >
+                  {pkg.setup}
+                </p>
+                <p
+                  className={
+                    featured
+                      ? "mt-5 text-sm font-semibold text-white"
+                      : "mt-5 text-sm font-semibold text-foreground"
+                  }
+                >
+                  {pkg.bestFor}
+                </p>
+                <p
+                  className={
+                    featured
+                      ? "mt-3 text-sm leading-7 text-white/82"
+                      : "mt-3 text-sm leading-7 text-neutral-600"
+                  }
+                >
+                  {pkg.body}
+                </p>
+                <div className="mt-5 grid gap-2">
+                  {pkg.bullets.map((bullet) => (
+                    <div
+                      key={bullet}
+                      className={
+                        featured
+                          ? "rounded-[1rem] border border-white/12 bg-white/8 px-3 py-3 text-sm text-white/86"
+                          : "rounded-[1rem] border border-stone-200 bg-[#f7f8fc] px-3 py-3 text-sm text-neutral-700"
+                      }
+                    >
+                      {bullet}
+                    </div>
+                  ))}
+                </div>
+                <p
+                  className={
+                    featured
+                      ? "mt-5 text-xs leading-6 text-white/72"
+                      : "mt-5 text-xs leading-6 text-neutral-500"
+                  }
+                >
+                  {pkg.roi}
+                </p>
+                <div className="mt-6">
+                  <Link
+                    href="/contact"
                     className={
                       featured
-                        ? "text-xs uppercase tracking-[0.22em] text-white/[0.7]"
-                        : "text-xs uppercase tracking-[0.22em] text-neutral-500"
+                        ? "inline-flex w-full items-center justify-center rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-brand-700"
+                        : "inline-flex w-full items-center justify-center rounded-2xl bg-[#eef0ff] px-4 py-3 text-sm font-semibold text-brand-700"
                     }
                   >
-                    {featured ? "Recommended for growing SMB teams" : "Plan option"}
-                  </p>
-                  <h3 className="mt-4 text-2xl font-semibold">{pkg.title}</h3>
-                  <p
-                    className={
-                      featured
-                        ? "mt-4 font-display text-4xl text-white"
-                        : "mt-4 font-display text-4xl text-foreground"
-                    }
-                  >
-                    {pkg.price}
-                  </p>
-                  <p
-                    className={
-                      featured
-                        ? "mt-4 text-sm leading-7 text-white/[0.82]"
-                        : "mt-4 text-sm leading-7 text-neutral-600"
-                    }
-                  >
-                    {pkg.body}
-                  </p>
+                    Talk through this plan
+                  </Link>
                 </div>
               </article>
             );
           })}
         </div>
-      </div>
 
-      <p className="mt-6 text-sm leading-6 text-neutral-500">
-        Exact scope depends on communication volume, workflow complexity,
-        industry needs, reporting depth, and integration requirements.
-      </p>
+        <div className="mt-8 grid gap-4 lg:grid-cols-3">
+          {packagePaybackExamples.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[1.7rem] border border-white/10 bg-white/[0.06] p-5"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/55">
+                {item.title}
+              </p>
+              <p className="mt-3 text-sm leading-7 text-white/76">{item.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 text-center text-sm leading-6 text-white/50">
+          Final scope depends on workflow volume, integrations, reporting depth,
+          and how many operational lanes are being deployed.
+        </p>
+      </div>
     </section>
   );
 }
