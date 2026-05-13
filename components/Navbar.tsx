@@ -25,7 +25,7 @@ export function Navbar() {
               <span className="text-olive-700">Mira</span>
             </div>
             <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-neutral-500">
-              Process Intelligence
+              AI Operations
             </div>
           </div>
         </Link>

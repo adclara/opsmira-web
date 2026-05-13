@@ -6,15 +6,15 @@ export function PackagesSection() {
       <div className="grid gap-6 xl:grid-cols-[0.76fr_1.24fr]">
         <div className="luxury-panel p-8 sm:p-10">
           <span className="text-xs uppercase tracking-[0.28em] text-white/[0.65]">
-            Engagements
+            Pricing model
           </span>
           <h2 className="mt-4 font-display text-4xl leading-[0.96] tracking-[-0.03em] text-white sm:text-5xl">
-            Flexible support shaped around the operation, not a rigid package menu.
+            Premium enough to matter. Grounded enough to make financial sense.
           </h2>
           <p className="mt-5 text-base leading-8 text-white/[0.74]">
-            Some teams need a fast diagnostic. Others need implementation,
-            automation, training, and ongoing refinement. We scope around the
-            real complexity of the business.
+            Pricing is framed against labor recovery, owner time recovery, and
+            improved customer opportunity response. The platform should feel
+            like a cost-control system, not an extra operational burden.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export function PackagesSection() {
                         : "text-xs uppercase tracking-[0.22em] text-neutral-500"
                     }
                   >
-                    {featured ? "Recommended for system buildout" : "Engagement option"}
+                    {featured ? "Recommended for growing SMB teams" : "Plan option"}
                   </p>
                   <h3 className="mt-4 text-2xl font-semibold">{pkg.title}</h3>
                   <p
@@ -68,8 +68,8 @@ export function PackagesSection() {
       </div>
 
       <p className="mt-6 text-sm leading-6 text-neutral-500">
-        Pricing varies by project size, system complexity, integrations,
-        business needs, and implementation scope.
+        Exact scope depends on communication volume, workflow complexity,
+        industry needs, reporting depth, and integration requirements.
       </p>
     </section>
   );

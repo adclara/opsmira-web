@@ -6,22 +6,22 @@ export function ServicesSection() {
   return (
     <section className="section-shell section-space">
       <div className="grid gap-6 xl:grid-cols-[0.72fr_1.28fr]">
-        <div className="rounded-[2.25rem] border border-stone-300 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(241,244,232,0.95))] p-7 sm:p-8">
-          <span className="eyebrow">What We Build</span>
+        <div className="rounded-[2.35rem] border border-stone-300 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(241,244,232,0.95))] p-7 sm:p-8">
+          <span className="eyebrow">What OpsMira builds</span>
           <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
-            A sharper mix of operations consulting and modern workflow systems.
+            A managed operational layer that reduces busywork and improves control.
           </h2>
           <p className="mt-5 text-base leading-8 text-neutral-600">
-            OpsMira helps companies find the operational friction behind
-            missed productivity, weak handoffs, and repetitive admin work, then
-            translate that into clear systems, standard work, and practical
-            automation.
+            We design systems for businesses that need better communication,
+            faster response, cleaner scheduling, stronger reporting, and less
+            owner overload. The goal is practical operational efficiency, not
+            AI theater.
           </p>
           <div className="mt-8 grid gap-3 text-sm text-neutral-600">
             {[
-              "Process-first diagnostics before tooling decisions",
-              "Executive-level clarity without losing floor-level detail",
-              "Automation that supports people instead of replacing judgment"
+              "AI-powered administrative automation with human oversight",
+              "Private managed infrastructure instead of generic chatbot positioning",
+              "Clear financial framing tied to labor recovery and customer opportunity"
             ].map((point) => (
               <div
                 key={point}
@@ -38,7 +38,7 @@ export function ServicesSection() {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
                 <p className="text-xs uppercase tracking-[0.28em] text-white/[0.65]">
-                  Signature service
+                  Core platform
                 </p>
                 <h3 className="mt-3 font-display text-4xl leading-none tracking-[-0.03em] text-white sm:text-5xl">
                   {featuredService.title}
@@ -49,11 +49,11 @@ export function ServicesSection() {
               </div>
               <div className="rounded-[1.7rem] border border-white/10 bg-white/5 p-5 lg:max-w-xs">
                 <p className="text-xs uppercase tracking-[0.24em] text-white/[0.55]">
-                  Outcome
+                  Best fit
                 </p>
                 <p className="mt-3 text-lg leading-7 text-white">
-                  Better flow, lower waste, and clearer control points across
-                  the operation.
+                  SMB teams handling customer requests, scheduling, updates,
+                  field coordination, and repetitive reporting.
                 </p>
               </div>
             </div>

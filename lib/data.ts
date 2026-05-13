@@ -1,20 +1,24 @@
 import {
   Activity,
   ArrowRight,
+  BarChart3,
   Bot,
-  Boxes,
   BriefcaseBusiness,
+  Building2,
+  CalendarClock,
   ChartColumn,
   ClipboardCheck,
   Factory,
   Gauge,
   HardHat,
   LayoutDashboard,
+  MessageSquareMore,
   PackageCheck,
-  Route,
+  PhoneCall,
   ScanSearch,
   Settings2,
   ShieldCheck,
+  Sparkles,
   Truck,
   Warehouse
 } from "lucide-react";
@@ -37,9 +41,12 @@ export const site = {
   email: "adrianarmando9@gmail.com",
   linkedIn: "https://www.linkedin.com/in/adrian-clara-9721a9122",
   location: "Serving businesses in Florida and across the United States.",
-  valueProp: "See the process. Improve the flow. Automate the work.",
+  valueProp:
+    "Private AI operational infrastructure for businesses that need faster execution and less admin chaos.",
   trustLine:
-    "Built from real-world operational experience across Amazon, Lowe's, and Sam's Club/Walmart."
+    "Built by Adrian Clara from real operations work across Amazon, Lowe's, and Sam's Club/Walmart.",
+  founderSummary:
+    "Adrian Clara combines supply chain discipline, workflow design, and AI automation strategy to help SMB operators reduce waste, centralize communication, and recover margin."
 };
 
 export const navLinks: NavLink[] = [
@@ -51,60 +58,60 @@ export const navLinks: NavLink[] = [
 
 export const homeExperienceCards: IconCard[] = [
   {
-    title: "Amazon Operations",
+    title: "Sam's Club Cost Reduction Work",
     body:
-      "Outbound quality, central flow operations, defect reduction, manual packing analysis, labor planning, and process standardization.",
+      "Adrian supported projects focused on minimizing roughly $500,000 in process-related costs by tightening execution, visibility, and operational discipline.",
+    icon: ClipboardCheck
+  },
+  {
+    title: "Amazon Supply Chain Opportunity",
+    body:
+      "Adrian developed and proposed a supply chain improvement concept aimed at minimizing up to $50 million in value leakage across workflow, validation, and process control.",
     icon: PackageCheck
   },
   {
-    title: "Lowe's Inbound Operations",
+    title: "OpsMira Operating Lens",
     body:
-      "Inbound execution, Non-Con operations, FIFO discipline, safety communication, KPI improvement, quality control, and team supervision.",
-    icon: Warehouse
-  },
-  {
-    title: "Sam's Club / Walmart Quality Assurance",
-    body:
-      "Inventory analysis, pick variation review, slotting support, damage reporting, audits, food-safety segregation, and associate coaching.",
-    icon: ClipboardCheck
+      "The same thinking is now applied to SMB operations: reduce repetitive admin work, speed up customer response, centralize communication, and build workflows that scale.",
+    icon: Sparkles
   }
 ];
 
 export const services: IconCard[] = [
   {
-    title: "Supply Chain Process Optimization",
+    title: "AI Operational Infrastructure",
     body:
-      "Analyze workflows, identify bottlenecks, reduce waste, and redesign processes to improve speed, quality, and consistency.",
-    icon: Route
-  },
-  {
-    title: "AI Agents & Workflow Automation",
-    body:
-      "Build AI-assisted workflows for customer communication, project updates, scheduling, reminders, email drafts, reports, and operational follow-ups.",
+      "Privately managed AI systems built to support scheduling, customer communication, follow-up, reporting, voice workflows, and daily operations.",
     icon: Bot
   },
   {
-    title: "Warehouse & Operations Consulting",
+    title: "WhatsApp & Customer Coordination",
     body:
-      "Improve receiving, inventory flow, picking, packing, quality control, slotting, damage reduction, standard work, and productivity.",
-    icon: Boxes
+      "Automate customer follow-up, appointment reminders, estimate updates, missed call recovery, and project communication without losing human oversight.",
+    icon: MessageSquareMore
   },
   {
-    title: "Training & Standard Work",
+    title: "Executive Dashboards & Reporting",
     body:
-      "Create SOPs, training plans, accountability routines, and associate development systems to improve consistency.",
-    icon: ShieldCheck
+      "Centralize tasks, customer requests, field updates, weekly summaries, KPIs, and operational visibility in one decision-friendly layer.",
+    icon: LayoutDashboard
   },
   {
-    title: "Systems Improvement",
+    title: "Workflow Automation & SOP Logic",
     body:
-      "Improve existing tools or create simple operational systems using Excel, dashboards, automation, APIs, reporting workflows, and AI-supported processes.",
+      "Map the current process, remove repetitive admin steps, standardize the flow, and automate the work that slows owners and teams down.",
     icon: Settings2
   },
   {
-    title: "Data-Driven Decision Support",
+    title: "Scheduling & Dispatch Support",
     body:
-      "Turn operational data into clear insights, leadership dashboards, action plans, and measurable improvement priorities.",
+      "Reduce scheduling friction with AI-assisted coordination, calendar logic, reminders, and better job communication between office and field teams.",
+    icon: CalendarClock
+  },
+  {
+    title: "Operational ROI Analysis",
+    body:
+      "Estimate labor savings, owner time recovery, customer opportunity recovery, and realistic monthly ROI before and after implementation.",
     icon: ChartColumn
   }
 ];
@@ -112,209 +119,209 @@ export const services: IconCard[] = [
 export const processSteps = [
   {
     step: "01",
-    title: "Discover",
+    title: "Audit The Administrative Drag",
     body:
-      "We review your current operation, pain points, systems, communication flow, and business goals."
+      "We review how customer requests, scheduling, updates, follow-ups, reporting, and approvals currently move through the business."
   },
   {
     step: "02",
-    title: "Diagnose",
+    title: "Quantify Lost Time And Missed Revenue",
     body:
-      "We identify bottlenecks, manual waste, cost drivers, training gaps, and automation opportunities."
+      "We estimate where the company is losing labor hours, owner attention, customer opportunities, and process consistency."
   },
   {
     step: "03",
-    title: "Design",
+    title: "Design The Managed AI Workflow Layer",
     body:
-      "We create a practical improvement plan with workflows, SOPs, automation logic, reporting needs, and implementation priorities."
+      "We build a private operational system using AI agents, dashboards, automation logic, reporting routines, and communication workflows."
   },
   {
     step: "04",
-    title: "Implement",
+    title: "Deploy With Human Control",
     body:
-      "We build or adapt systems, configure AI tools, train the team, and support rollout."
+      "Automations support the team, approvals stay where needed, and the business gets cleaner workflows without losing operational judgment."
   },
   {
     step: "05",
-    title: "Improve",
+    title: "Measure, Refine, And Expand",
     body:
-      "We monitor results, refine workflows, and continue improving the process over time."
+      "We keep optimizing response speed, admin workload, reporting accuracy, and operational visibility as the business grows."
   }
 ];
 
 export const industries = [
-  { title: "Construction & Contractors", icon: HardHat },
-  { title: "Warehousing & Distribution", icon: Warehouse },
-  { title: "Retail Operations", icon: BriefcaseBusiness },
-  { title: "Logistics & Transportation", icon: Truck },
-  { title: "Service Businesses", icon: Activity },
-  { title: "Small and Mid-Sized Companies", icon: Factory },
-  { title: "Field Service Teams", icon: Gauge },
-  { title: "Project-Based Operations", icon: LayoutDashboard }
+  { title: "Construction", icon: HardHat },
+  { title: "Roofing", icon: Building2 },
+  { title: "Landscaping", icon: Activity },
+  { title: "HVAC", icon: Gauge },
+  { title: "Plumbing", icon: Factory },
+  { title: "Logistics", icon: Truck },
+  { title: "Field Service Teams", icon: BriefcaseBusiness },
+  { title: "Operational SMBs", icon: Warehouse }
 ];
 
 export const packages = [
   {
-    title: "Process Assessment",
-    price: "Starting at $500+",
+    title: "Starter",
+    price: "$299/mo",
     body:
-      "Includes workflow review, pain point analysis, bottleneck identification, process mapping, and improvement recommendations."
+      "For businesses starting with one high-friction workflow such as missed request follow-up, reminders, simple reporting, or communication triage."
   },
   {
-    title: "AI Automation Setup",
-    price: "Starting at $3,500+",
+    title: "Professional",
+    price: "$599/mo",
     body:
-      "Includes AI agent configuration, workflow design, integrations, reporting setup, documentation, and basic team training."
+      "For teams ready to centralize customer communication, scheduling, AI summaries, dashboards, and recurring administrative workflows."
   },
   {
-    title: "Monthly Optimization Support",
-    price: "Starting at $550/month",
+    title: "Premium",
+    price: "$899/mo",
     body:
-      "Includes support, monitoring, adjustments, reports, workflow refinement, and continued optimization."
+      "For operators needing a broader AI-powered admin layer across reporting, dispatch, follow-up, organization, and managed optimization support."
   },
   {
-    title: "Custom Operations Improvement Project",
-    price: "Custom pricing",
+    title: "Enterprise",
+    price: "Custom",
     body:
-      "For companies needing deeper supply chain, warehouse, training, system, or workflow transformation."
+      "For complex operational environments requiring deeper workflow orchestration, multi-team visibility, private infrastructure planning, or custom integrations."
   }
 ];
 
 export const detailedServices = [
   {
-    title: "Supply Chain & Process Optimization",
+    title: "Operational Workflow Diagnostics",
     description:
-      "We study the current state of your operation and identify waste, bottlenecks, duplicated work, waiting time, poor handoffs, quality issues, and missed productivity opportunities.",
+      "We identify administrative friction, delayed handoffs, missed customer requests, and process gaps that are quietly costing the business time and money.",
     bullets: [
-      "Process mapping",
-      "Bottleneck analysis",
-      "KPI review",
-      "Waste identification",
-      "Workflow redesign",
-      "Improvement roadmap",
-      "Productivity opportunity review"
+      "Workflow mapping",
+      "Administrative waste review",
+      "Customer response analysis",
+      "Task ownership clarity",
+      "KPI visibility gaps",
+      "Owner overload review",
+      "Improvement roadmap"
     ],
     icon: ScanSearch
   },
   {
-    title: "AI Agents & Workflow Automation",
+    title: "AI Agents & Communication Automation",
     description:
-      "We design AI-supported workflows that help automate repetitive administrative and operational tasks while keeping human approval where needed.",
+      "We build AI-supported operational workflows that handle repetitive coordination work while keeping practical guardrails around approvals and exceptions.",
     bullets: [
-      "Customer follow-ups",
-      "Lead qualification",
+      "Customer follow-up",
+      "Incoming request triage",
       "Appointment scheduling",
-      "Daily reports",
-      "Weekly reports",
-      "Project updates",
-      "Email draft support",
-      "WhatsApp or messaging workflows",
+      "Estimate update reminders",
       "Voice note transcription",
-      "Task reminders",
-      "Operational alerts"
+      "AI summaries",
+      "Weekly reports",
+      "WhatsApp workflows",
+      "Internal coordination prompts"
     ],
     icon: Bot
   },
   {
-    title: "Warehouse & Inventory Operations",
+    title: "Dashboards & Operational Visibility",
     description:
-      "We help businesses improve receiving, inventory flow, item location logic, picking paths, packing flow, quality checks, damage reduction, and layout efficiency.",
+      "We centralize your operational picture so leadership can see request flow, reporting, team workload, and missed opportunities without digging through disconnected tools.",
     bullets: [
-      "Receiving flow",
-      "Inventory accuracy",
-      "Slotting logic",
-      "Picking efficiency",
-      "Packing quality",
-      "Damage reporting",
-      "Audit routines",
-      "Layout and travel path analysis"
+      "Executive dashboards",
+      "KPI scorecards",
+      "Pipeline of incoming requests",
+      "Field reporting views",
+      "Summary reports",
+      "Task dashboards",
+      "Operations health scoring"
     ],
-    icon: Warehouse
+    icon: BarChart3
   },
   {
-    title: "Training & SOP Development",
+    title: "Scheduling & Field Coordination",
     description:
-      "We create practical training systems and standard work documents to help teams execute consistently.",
+      "We reduce friction between office, owner, and field teams with better reminders, routing logic, communication timing, and centralized scheduling support.",
+    bullets: [
+      "Calendar coordination",
+      "Reminder systems",
+      "Dispatch support",
+      "Job coordination updates",
+      "Customer ETA messaging",
+      "Reschedule handling",
+      "Daily team visibility"
+    ],
+    icon: PhoneCall
+  },
+  {
+    title: "Reporting, SOPs, And Managed Improvement",
+    description:
+      "We turn repeatable operational knowledge into reporting logic, standard work, and manageable routines that help teams execute more consistently.",
     bullets: [
       "SOP creation",
-      "Training guides",
-      "New associate onboarding flows",
-      "Quality checklists",
-      "Accountability routines",
-      "Coaching templates",
-      "Performance follow-up systems"
-    ],
-    icon: ClipboardCheck
-  },
-  {
-    title: "Reporting & Business Systems",
-    description:
-      "We improve or build simple systems for reporting, tracking, dashboards, Excel-based workflows, operational scorecards, and leadership visibility.",
-    bullets: [
-      "Excel-based trackers",
-      "Dashboard concepts",
-      "KPI reports",
+      "AI-generated reporting",
+      "Executive recaps",
       "Operational scorecards",
-      "Project tracking sheets",
-      "Automated reminders",
-      "Reporting workflows"
+      "Workflow documentation",
+      "Training guides",
+      "Ongoing optimization support"
     ],
-    icon: ChartColumn
+    icon: ShieldCheck
   }
 ];
 
 export const caseStudies = [
   {
-    title: "Amazon Manual Packing Improvement Study",
-    subtitle: "Reducing manual packing errors through system-driven validation.",
+    title: "Amazon Supply Chain Improvement Opportunity",
+    subtitle:
+      "A process and systems concept designed to reduce large-scale value leakage.",
     body:
-      "During Adrian Clara's role as a Process Assistant in Amazon outbound packing operations, he supported quality improvement efforts focused on Defects Per Million Opportunities (DPMO), including unscannables, conveyor-related issues, damaged items, overage items, and missing items.",
+      "During Adrian Clara's work in Amazon operations, he developed and proposed an improvement concept aimed at minimizing as much as $50 million in supply chain cost exposure through stronger process validation, standardization, and workflow control.",
     detail:
-      "The study identified a critical gap between manual packing and automated packing. Automated packing used system-driven validation that significantly reduced unscannable defects, while manual packing relied more heavily on human scanning and manual resolution steps.",
+      "The opportunity centered on identifying operational gaps where system logic and better process design could reduce preventable variation, rework, and execution losses.",
     outcome:
-      "The proposed strategy explored adapting automated validation logic into manual packing workflows to reduce operator-dependent variation, improve process control, reduce rework, and increase throughput.",
+      "This work reflects Adrian's ability to think at enterprise scale while diagnosing workflow breakdowns that start at the process level.",
     note:
-      "This was a conceptual improvement initiative and should not be presented as a fully implemented Amazon system. It is included as an example of analytical thinking, process diagnosis, automation opportunity identification, and operational problem solving.",
+      "This example is presented as professional experience and improvement thinking, not as a public claim of an adopted Amazon-wide deployment.",
     takeaways: [
-      "Manual processes often create hidden operational waste.",
-      "System-driven validation can reduce human-dependent variation.",
-      "Process standardization improves quality and consistency.",
-      "Automation should support the process, not replace process understanding."
+      "Large savings often begin with small process failures repeated at scale.",
+      "Validation logic matters when consistency and throughput are critical.",
+      "Operational design should reduce rework before it reaches customers.",
+      "The same discipline can be translated into SMB automation strategy."
     ]
   },
   {
-    title: "Lowe's Inbound / Non-Con Operations",
-    subtitle: "Improving inbound execution, FIFO discipline, and KPI performance.",
+    title: "Sam's Club Process Cost Reduction Work",
+    subtitle:
+      "Operational improvement work tied to meaningful process cost reduction.",
     body:
-      "At Lowe's, Adrian supervised inbound and non-con operations, supported safety execution, communicated daily priorities, implemented FIFO picking logic, and worked on projects designed to improve KPI performance, security, quality control, and labor efficiency.",
+      "At Sam's Club/Walmart, Adrian worked in quality assurance and inventory environments while contributing to projects focused on minimizing approximately $500,000 in process-related costs through tighter execution and operational visibility.",
     takeaways: [
-      "Clear execution routines improve operational consistency.",
-      "FIFO discipline supports better inventory flow.",
-      "Communication between leadership and floor teams reduces execution gaps.",
-      "KPI improvement requires both process control and associate training."
+      "Operational savings come from disciplined follow-through, not hype.",
+      "Inventory flow, slotting, and quality routines can materially affect cost.",
+      "Small execution failures accumulate into large process waste.",
+      "Clear visibility improves both accountability and decision-making."
     ]
   },
   {
-    title: "Sam's Club / Walmart Quality Assurance & Inventory Flow",
-    subtitle: "Inventory flow, quality audits, slotting support, and damage reduction.",
+    title: "OpsMira For SMB Operations",
+    subtitle:
+      "Translating enterprise operational thinking into managed AI infrastructure.",
     body:
-      "At Sam's Club/Walmart, Adrian worked in quality assurance and inventory environments, supporting inventory analysis, pick variation review, slotting improvements, food-safety segregation, damage reporting, seasonal area setup, quality audits, and associate coaching.",
+      "OpsMira applies that same mindset to SMB businesses that lose money through slow response, repetitive admin work, disconnected communication, and weak operational organization.",
     takeaways: [
-      "Inventory visibility supports better decision-making.",
-      "Slotting and aisle design affect travel time and productivity.",
-      "Damage reporting helps identify root causes and reduce waste.",
-      "Quality audits create accountability and process discipline."
+      "20-60 admin hours can often be recovered monthly.",
+      "Response times can often improve by 50-90%.",
+      "Manual reporting can often be reduced by 40-80%.",
+      "Recovering one missed project can outweigh platform cost several times over."
     ]
   }
 ];
 
 export const values = [
-  "Practical improvement over buzzwords",
-  "Process before technology",
-  "Clear visibility before action",
-  "Training and execution discipline",
-  "Data-informed decisions",
-  "Human-approved automation"
+  "Operations-first before software-first",
+  "Financially grounded ROI assumptions",
+  "Automation with human oversight",
+  "Private managed infrastructure",
+  "Clear dashboards and executive visibility",
+  "Practical systems that teams can actually use"
 ];
 
 export const contactFields = [
@@ -323,7 +330,7 @@ export const contactFields = [
   "Email",
   "Phone",
   "Industry",
-  "What problem are you trying to solve?",
+  "What administrative or operational problem is slowing you down?",
   "Preferred contact method"
 ];
 
@@ -334,17 +341,58 @@ export const footerLinks = [
 ];
 
 export const heroStats = [
-  { label: "Workflow Visibility", value: "78%" },
-  { label: "Execution Score", value: "91" },
-  { label: "Waste Signals", value: "14" }
+  { label: "Admin Hours Recovered", value: "20-60/mo" },
+  { label: "Faster Response Times", value: "50-90%" },
+  { label: "Typical ROI Range", value: "3x-10x+" }
 ];
 
 export const heroSignals = [
-  "Process Improvement Map",
-  "AI Assisted Operations",
-  "Bottleneck Detection",
-  "Cost Waste Signals",
-  "Team Execution Score"
+  "Missed call recovery",
+  "AI summaries for owners",
+  "Scheduling automation",
+  "Operational reporting",
+  "Customer follow-up flows"
+];
+
+export const platformModules: IconCard[] = [
+  {
+    title: "AI agents",
+    body: "Support repetitive coordination and administrative tasks.",
+    icon: Bot
+  },
+  {
+    title: "Voice-to-text workflows",
+    body: "Turn field notes and voice messages into usable updates.",
+    icon: MessageSquareMore
+  },
+  {
+    title: "Operational dashboards",
+    body: "Make owner and manager visibility easier to maintain.",
+    icon: LayoutDashboard
+  },
+  {
+    title: "Automated reporting",
+    body: "Reduce manual reporting overhead with structured summaries.",
+    icon: ChartColumn
+  }
+];
+
+export const savingsExamples = [
+  {
+    title: "Administrative labor",
+    value: "$625/mo",
+    body: "25 hours saved monthly at $25 per hour."
+  },
+  {
+    title: "Owner time recovery",
+    value: "$750/mo",
+    body: "15 hours recovered monthly at $50 per hour."
+  },
+  {
+    title: "Recovered customer work",
+    value: "$2k-$10k+",
+    body: "One additional project recovered monthly depending on industry."
+  }
 ];
 
 export const ctaArrow = ArrowRight;

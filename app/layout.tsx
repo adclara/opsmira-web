@@ -4,9 +4,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "OpsMira | Supply Chain Optimization & AI Automation",
+  title: "OpsMira | AI Operational Infrastructure For SMB Businesses",
   description:
-    "OpsMira helps businesses reduce waste, improve productivity, and automate workflows through supply chain consulting, AI automation, process improvement, and practical system integration."
+    "OpsMira helps SMB businesses reduce administrative workload, improve customer communication, automate scheduling and reporting, and centralize operations through managed AI infrastructure."
 };
 
 export default function RootLayout({

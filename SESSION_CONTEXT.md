@@ -37,3 +37,9 @@ When starting a new session, share this summary:
 - Created the repository `adclara/opsmira-web`.
 - Pushed the initial project commit to `main`.
 - Added this continuity file so future sessions can resume with context.
+- Reworked the landing page toward a more premium/editorial direction while keeping the OpsMira brand and operations-focused messaging.
+- Added static export support and a GitHub Pages workflow for temporary deployment from `main`.
+- Pushed the landing redesign and Pages setup to GitHub in commit `1f88c60`.
+- Temporary Pages target should be `https://adclara.github.io/opsmira-web/` once GitHub Actions/Pages finishes publishing.
+- Next session should expect a new user-provided design direction using PNG references and templates; follow those assets closely instead of extending the current landing direction creatively.
+- Reframed the landing page around premium AI operational infrastructure for SMBs with stronger Adrian Clara positioning, enterprise-to-SMB savings messaging, and an interactive ROI calculator.

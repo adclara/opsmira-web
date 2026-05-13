@@ -27,7 +27,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ["Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Georgia", "serif"],
-        sans: ["Inter", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"]
+        sans: ["Aptos", "Avenir Next", "Segoe UI", "Helvetica Neue", "sans-serif"]
       },
       boxShadow: {
         soft: "0 16px 60px rgba(20, 28, 15, 0.08)"

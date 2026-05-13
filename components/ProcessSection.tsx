@@ -5,19 +5,21 @@ export function ProcessSection() {
     <section className="section-shell section-space">
       <div className="grid gap-6 xl:grid-cols-[0.7fr_1.3fr]">
         <div className="rounded-[2.25rem] border border-stone-300 bg-white/[0.84] p-7 sm:p-8">
-          <span className="eyebrow">Our Method</span>
+          <span className="eyebrow">Deployment approach</span>
           <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.15rem]">
-            Structured enough for leadership. Practical enough for the floor.
+            Built like an operational improvement project, not a software drop-off.
           </h2>
           <p className="mt-5 text-base leading-8 text-neutral-600">
-            Every engagement moves from diagnosis to implementation with a clear
-            view of where the operation is losing time, control, or visibility.
+            OpsMira is designed for businesses that want a realistic managed
+            rollout: diagnose the friction, quantify the loss, build the right
+            workflow layer, and improve it over time.
           </p>
           <div className="mt-8 rounded-[1.9rem] border border-stone-300 bg-stone-100/80 p-5">
-            <p className="section-kicker">Delivery lens</p>
+            <p className="section-kicker">Positioning</p>
             <p className="mt-3 text-lg leading-8 text-foreground">
-              We are translating operational complexity into cleaner workflows,
-              stronger routines, and systems that support repeatable execution.
+              We are not promising AI magic. We are building operational
+              infrastructure that helps the business run faster, more
+              consistently, and with less administrative chaos.
             </p>
           </div>
         </div>
@@ -28,8 +30,8 @@ export function ProcessSection() {
               key={step.step}
               className={
                 index === 2
-                  ? "luxury-panel grid gap-4 p-6 sm:grid-cols-[96px_1fr] sm:items-start"
-                  : "card grid gap-4 p-6 sm:grid-cols-[96px_1fr] sm:items-start"
+                  ? "luxury-panel grid gap-4 p-6 sm:grid-cols-[112px_1fr] sm:items-start"
+                  : "card grid gap-4 p-6 sm:grid-cols-[112px_1fr] sm:items-start"
               }
             >
               <div

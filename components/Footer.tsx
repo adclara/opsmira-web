@@ -12,7 +12,7 @@ export function Footer() {
               <span className="text-olive-700">Mira</span>
             </Link>
             <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-olive-700">
-              Supply Chain Optimization | AI Automation | Process Intelligence
+              AI Operational Infrastructure | Workflow Automation | Operational ROI
             </p>
             <div className="mt-5 space-y-2 text-sm leading-7 text-neutral-600">
               <p>{site.legalName}</p>
