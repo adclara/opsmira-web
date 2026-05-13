@@ -118,3 +118,30 @@ Latest strategic handoff summary:
 - The homepage `Savings Calculator` was moved up to third position and also received its own main-navbar entry.
 - The `ROI Multiple` / `Yearly Value` area in the calculator was adjusted so those values no longer visually collide.
 - The latest pushed GitHub state now includes these navbar, favicon, and calculator-order refinements. Future sessions should treat them as the new baseline rather than reverting to the earlier translucent navbar iterations.
+
+### 2026-05-13 — Major Simplification Pass
+
+- Aggressively simplified the homepage from 13 sections to 5 sections to reduce cognitive load and improve conversion focus.
+- New homepage flow: Hero → ROI Calculator → Services (with integrated comparison table) → Process (3 steps) → Contact CTA.
+- Removed from homepage: TrustedBy, ComparisonSection (standalone), EngagementSection, CaseStudySection, IndustriesSection, PackagesSection, FitSection, FAQSection.
+- Deleted unused component files: TrustedBy.tsx, CaseStudySection.tsx, IndustriesSection.tsx, FAQSection.tsx.
+- Created new `/pricing` route with its own page and simplified 3-tier PackagesSection (removed Enterprise tier and payback examples).
+- Navbar updated: replaced "Savings Calculator" link with "Pricing" link pointing to `/pricing`.
+- Updated navLinks: Services | Pricing | Case Studies | About | Contact.
+- Fixed typography: heading letter-spacing changed from -0.055em/-0.04em to -0.025em across Hero h1, PageHero h1, section-title class, ServicesSection, and PackagesSection. Leading improved from 0.94/1.02 to 1.08.
+- ROI Calculator overhauled:
+  - Admin hours range: 0-120 (was 0-60), stepping by 5
+  - Admin hourly rate: $15-$50 (was $18-$35)
+  - Owner hours: 0-60 (was 0-40), stepping by 5
+  - Owner rate: $25-$75 (was $35-$100), stepping by 5
+  - Recovered jobs renamed from "Additional customer projects recovered" to "Recovered jobs per month", range 0-5
+  - Job value max reduced to $10k (was $12k)
+  - Added tooltip (?) icons next to every slider label explaining what each input means and how it factors into the math
+  - Removed: savingsExamples cards, footer guidance cards, explanatory paragraph below yearly/ROI values
+  - Section headline and intro text shortened significantly
+- ServicesSection absorbed the ComparisonSection's before/after table inline, removed hardcoded service bullets from featured card, reduced from 6 to 5 service cards.
+- ProcessSection simplified from 5 steps to 3: Audit | Build & Deploy | Measure & Refine. Removed deliveryFacts cards and "What customers buy" callout.
+- ContactSection simplified: removed 4 hardcoded expectation cards, reduced intakeOutputs from 5 to 3.
+- data.ts cleaned up: removed 7 unused exports (heroSignals, platformModules, homeExperienceCards, savingsExamples, deliveryFacts, packagePaybackExamples, engagementPoints), trimmed processSteps 5→3, packages 4→3, intakeOutputs 5→3, engagementSummary sub-arrays 5→3, buyerFaqs 6→3, services shortened descriptions.
+- Internal pages simplified: /services page removed FAQSection embed, /about page AboutFounder removed rolloutTimeline and engagementPoints displays.
+- Build verification passed. All 7 routes render correctly: /, /services, /pricing, /case-studies, /about, /contact, /icon.svg.

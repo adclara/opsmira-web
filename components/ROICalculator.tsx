@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { savingsExamples } from "@/lib/data";
 
 const plans = [
   { label: "Starter", price: 299 },
@@ -17,30 +16,49 @@ function formatCurrency(value: number) {
   }).format(value);
 }
 
+function Tooltip({ text }: { text: string }) {
+  return (
+    <span className="group relative ml-1.5 inline-flex cursor-help">
+      <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-stone-300 bg-stone-100 text-[10px] font-bold text-neutral-500">
+        ?
+      </span>
+      <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-56 -translate-x-1/2 rounded-xl border border-stone-200 bg-white px-3 py-2 text-xs leading-5 text-neutral-600 opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
+        {text}
+      </span>
+    </span>
+  );
+}
+
 function SliderRow({
   label,
+  tooltip,
   value,
   min,
   max,
   step,
+  prefix = "",
   suffix = "",
   onChange
 }: {
   label: string;
+  tooltip: string;
   value: number;
   min: number;
   max: number;
   step: number;
+  prefix?: string;
   suffix?: string;
   onChange: (value: number) => void;
 }) {
   return (
     <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
       <div className="flex items-center justify-between gap-4">
-        <label className="text-sm font-semibold text-foreground">{label}</label>
-        <span className="text-sm text-neutral-600">
-          {value}
-          {suffix}
+        <label className="flex items-center text-sm font-semibold text-foreground">
+          {label}
+          <Tooltip text={tooltip} />
+        </label>
+        <span className="text-sm font-medium text-neutral-600">
+          {prefix}{value}{suffix}
         </span>
       </div>
       <input
@@ -57,7 +75,7 @@ function SliderRow({
 }
 
 export function ROICalculator() {
-  const [adminHours, setAdminHours] = useState(25);
+  const [adminHours, setAdminHours] = useState(30);
   const [adminRate, setAdminRate] = useState(25);
   const [ownerHours, setOwnerHours] = useState(15);
   const [ownerRate, setOwnerRate] = useState(50);
@@ -88,193 +106,158 @@ export function ROICalculator() {
   return (
     <section id="savings-calculator" className="section-shell section-space scroll-mt-28">
       <div className="overflow-hidden rounded-[2.5rem] border border-stone-200 bg-[linear-gradient(180deg,#eef2ff,#f7f8fc)] p-6 shadow-soft sm:p-8">
-        <div className="grid gap-8 xl:grid-cols-[0.72fr_1.28fr]">
-          <div>
-            <span className="eyebrow">Savings calculator</span>
-            <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
-              Show the business case before the implementation gets larger.
-            </h2>
-            <p className="mt-5 text-base leading-8 text-neutral-600">
-              OpsMira is positioned around cost savings first. Use this model to
-              estimate how admin labor saved, owner time recovered, and missed
-              opportunities captured can justify the monthly service cost.
-            </p>
+        <div className="mb-8 max-w-2xl">
+          <span className="eyebrow">Savings calculator</span>
+          <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.2rem]">
+            Estimate your monthly savings.
+          </h2>
+          <p className="mt-4 text-base leading-7 text-neutral-600">
+            Adjust the sliders to see how admin labor saved, owner time recovered,
+            and missed opportunities captured can justify the service cost.
+          </p>
+        </div>
 
-            <div className="mt-8 grid gap-4">
-              {savingsExamples.map((example) => (
+        <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
+          <div className="grid gap-4">
+            <SliderRow
+              label="Admin hours saved"
+              tooltip="Hours your team spends on manual follow-ups, scheduling, and reporting each month"
+              value={adminHours}
+              min={0}
+              max={120}
+              step={5}
+              suffix=" hrs/mo"
+              onChange={setAdminHours}
+            />
+            <SliderRow
+              label="Admin hourly rate"
+              tooltip="Average hourly cost of administrative staff doing this work"
+              value={adminRate}
+              min={15}
+              max={50}
+              step={1}
+              prefix="$"
+              suffix="/hr"
+              onChange={setAdminRate}
+            />
+            <SliderRow
+              label="Owner hours recovered"
+              tooltip="Hours you personally spend on tasks that could be automated"
+              value={ownerHours}
+              min={0}
+              max={60}
+              step={5}
+              suffix=" hrs/mo"
+              onChange={setOwnerHours}
+            />
+            <SliderRow
+              label="Owner hourly value"
+              tooltip="Value of your time per hour as the business owner"
+              value={ownerRate}
+              min={25}
+              max={75}
+              step={5}
+              prefix="$"
+              suffix="/hr"
+              onChange={setOwnerRate}
+            />
+            <SliderRow
+              label="Recovered jobs per month"
+              tooltip="Customer jobs or leads you estimate are lost due to slow follow-up"
+              value={recoveredJobs}
+              min={0}
+              max={5}
+              step={1}
+              onChange={setRecoveredJobs}
+            />
+            <SliderRow
+              label="Average job value"
+              tooltip="Average revenue per customer project or job"
+              value={jobValue}
+              min={500}
+              max={10000}
+              step={500}
+              prefix="$"
+              onChange={setJobValue}
+            />
+
+            <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
+              <label className="text-sm font-semibold text-foreground">
+                Plan used in estimate
+              </label>
+              <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                {plans.map((plan) => {
+                  const active = plan.price === planPrice;
+
+                  return (
+                    <button
+                      key={plan.label}
+                      type="button"
+                      onClick={() => setPlanPrice(plan.price)}
+                      className={
+                        active
+                          ? "rounded-[1.2rem] border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-4 py-4 text-left text-white"
+                          : "rounded-[1.2rem] border border-stone-200 bg-[#f7f8fc] px-4 py-4 text-left text-foreground"
+                      }
+                    >
+                      <p className="text-sm font-semibold">{plan.label}</p>
+                      <p className="mt-1 text-sm">
+                        {formatCurrency(plan.price)}/mo
+                      </p>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="luxury-panel p-6">
+              <p className="text-xs uppercase tracking-[0.24em] text-white/55">
+                Estimated monthly value
+              </p>
+              <p className="mt-4 text-5xl font-semibold leading-none tracking-[-0.03em] text-white sm:text-6xl">
+                {formatCurrency(results.monthlyValue)}
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                ["Admin labor saved", results.laborSavings],
+                ["Owner time recovered", results.ownerSavings],
+                ["Opportunities recovered", results.revenueRecovery],
+                ["Monthly net value", results.monthlyNet]
+              ].map(([label, value]) => (
                 <div
-                  key={example.title}
-                  className="rounded-[1.5rem] border border-white/80 bg-white/90 p-5"
+                  key={label}
+                  className="rounded-[1.4rem] border border-stone-200 bg-white p-5"
                 >
                   <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                    {example.title}
+                    {label}
                   </p>
-                  <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
-                    {example.value}
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-neutral-600">
-                    {example.body}
+                  <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground">
+                    {formatCurrency(Number(value))}
                   </p>
                 </div>
               ))}
             </div>
-          </div>
 
-          <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
-            <div className="grid gap-4">
-              <SliderRow
-                label="Admin hours saved per month"
-                value={adminHours}
-                min={0}
-                max={60}
-                step={1}
-                onChange={setAdminHours}
-              />
-              <SliderRow
-                label="Administrative hourly value"
-                value={adminRate}
-                min={18}
-                max={35}
-                step={1}
-                suffix="/hr"
-                onChange={setAdminRate}
-              />
-              <SliderRow
-                label="Owner hours recovered per month"
-                value={ownerHours}
-                min={0}
-                max={40}
-                step={1}
-                onChange={setOwnerHours}
-              />
-              <SliderRow
-                label="Owner hourly value"
-                value={ownerRate}
-                min={35}
-                max={100}
-                step={5}
-                suffix="/hr"
-                onChange={setOwnerRate}
-              />
-              <SliderRow
-                label="Additional customer projects recovered"
-                value={recoveredJobs}
-                min={0}
-                max={4}
-                step={1}
-                onChange={setRecoveredJobs}
-              />
-              <SliderRow
-                label="Average project value"
-                value={jobValue}
-                min={500}
-                max={12000}
-                step={500}
-                onChange={setJobValue}
-              />
-
-              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-4">
-                <label className="text-sm font-semibold text-foreground">
-                  Monthly plan used in estimate
-                </label>
-                <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                  {plans.map((plan) => {
-                    const active = plan.price === planPrice;
-
-                    return (
-                      <button
-                        key={plan.label}
-                        type="button"
-                        onClick={() => setPlanPrice(plan.price)}
-                        className={
-                          active
-                            ? "rounded-[1.2rem] border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-4 py-4 text-left text-white"
-                            : "rounded-[1.2rem] border border-stone-200 bg-[#f7f8fc] px-4 py-4 text-left text-foreground"
-                        }
-                      >
-                        <p className="text-sm font-semibold">{plan.label}</p>
-                        <p className="mt-1 text-sm">
-                          {formatCurrency(plan.price)}/mo
-                        </p>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <div className="luxury-panel p-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-white/55">
-                  Estimated monthly value created
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
+                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                  Yearly value
                 </p>
-                <p className="mt-4 text-6xl font-semibold leading-none tracking-[-0.05em] text-white">
-                  {formatCurrency(results.monthlyValue)}
-                </p>
-                <p className="mt-3 text-sm leading-7 text-white/72">
-                  Combined value from labor savings, owner time recovery, and
-                  recovered customer work.
+                <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
+                  {formatCurrency(results.yearlyValue)}
                 </p>
               </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  ["Administrative labor saved", results.laborSavings],
-                  ["Owner time recovered", results.ownerSavings],
-                  ["Missed opportunities recovered", results.revenueRecovery],
-                  ["Monthly net value", results.monthlyNet]
-                ].map(([label, value]) => (
-                  <div
-                    key={label}
-                    className="rounded-[1.4rem] border border-stone-200 bg-white p-5"
-                  >
-                    <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                      {label}
-                    </p>
-                    <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground">
-                      {formatCurrency(Number(value))}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="rounded-[1.6rem] border border-stone-200 bg-white p-6">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-[1.3rem] border border-stone-200 bg-[#fbfcff] p-4">
-                    <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                      Yearly value
-                    </p>
-                    <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">
-                      {formatCurrency(results.yearlyValue)}
-                    </p>
-                  </div>
-                  <div className="rounded-[1.3rem] border border-stone-200 bg-[#fbfcff] p-4">
-                    <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
-                      ROI multiple
-                    </p>
-                    <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">
-                      {results.roi.toFixed(1)}x
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-4 text-sm leading-7 text-neutral-600">
-                  A smaller plan often pays for itself with labor savings alone.
-                  Broader deployments become easier to justify when response
-                  speed, recovered jobs, and reporting reduction are added.
+              <div className="rounded-[1.4rem] border border-stone-200 bg-white p-5">
+                <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
+                  ROI multiple
                 </p>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Use this estimate to choose the first workflow worth deploying.",
-                    "Then scope the plan around the operational lane with the clearest payback."
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-[1.2rem] border border-stone-200 bg-[#f8faff] px-4 py-4 text-sm leading-7 text-neutral-700"
-                    >
-                      {item}
-                    </div>
-                  ))}
-                </div>
+                <p className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
+                  {results.roi.toFixed(1)}x
+                </p>
               </div>
             </div>
           </div>

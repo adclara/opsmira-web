@@ -13,125 +13,69 @@ Before editing anything, read:
 1. `SESSION_CONTEXT.md`
 2. `README.md`
 3. the current homepage and internal page components
-4. the visual references in `public/reference`
 
 ## Project State Summary
 
 - This is the OpsMira marketing website built with Next.js and Tailwind.
-- The site has already been substantially repositioned away from generic consulting and founder-heavy language.
-- The current identity is much closer to a delivery-first AI operations service for SMBs.
-- The navbar and brand shell have also been refined further since the initial repositioning:
-  - the navbar is now solid navy, not translucent
-  - the brand subtitle currently reads `AI Innovations`
-  - the favicon/monogram has been strengthened into a higher-definition SVG treatment
-- The site now emphasizes:
-  - what OpsMira implements
-  - how customers receive the implementation
-  - what business problems it removes
-  - how cost savings and operational gains justify the investment
+- The site went through a major simplification pass on 2026-05-13 to reduce cognitive load and improve conversion.
+- The homepage was reduced from 13 sections to 5 sections.
+- A new `/pricing` page was created with 3 pricing tiers.
+- Typography was fixed (letter-spacing and line-height improved across all headings).
+- The ROI Calculator was overhauled with better ranges, tooltip explanations, and less clutter.
+- The navbar and brand shell use a solid navy treatment with `AI Innovations` subtitle.
 
 ## Current Positioning
 
-Use this positioning consistently:
-
 `OpsMira is a done-for-you AI operations implementation service for SMBs focused on cost savings, workflow control, customer follow-up, scheduling coordination, reporting automation, and owner visibility.`
 
-## Current Strong Areas
+## Homepage Sections (5 total)
 
-- Homepage hero and primary message
-- Delivery-model clarity
-- ROI and pricing alignment
-- Qualification and objection handling
-- Contact and intake framing
-- Internal page consistency
-- Brand mark / favicon direction
+1. `Hero` — headline, value prop, 2 CTAs, dashboard mockup with stats
+2. `ROICalculator` — interactive savings calculator with 6 sliders (each has ? tooltip), plan selector, live results
+3. `ServicesSection` — core offer card + 4 service cards + integrated before/after comparison table
+4. `ProcessSection` — 3-step process: Audit | Build & Deploy | Measure & Refine
+5. `ContactSection` — CTA with 3 intake outputs
 
-## Existing Homepage Sections
+## Navbar
 
-The homepage currently includes:
+- `Services` → `/services`
+- `Pricing` → `/pricing`
+- `Case Studies` → `/case-studies`
+- `About` → `/about`
+- `Contact` → `/contact`
 
-1. `Hero`
-2. `TrustedBy`
-3. `ROICalculator`
-4. `ServicesSection`
-5. `ComparisonSection`
-6. `EngagementSection`
-7. `CaseStudySection`
-8. `ProcessSection`
-9. `IndustriesSection`
-10. `PackagesSection`
-11. `FitSection`
-12. `FAQSection`
-13. `ContactSection`
+Do not revert the solid navy navbar. Do not add back "Savings Calculator" to the nav — the calculator lives on the homepage below the hero.
 
-These sections already cover much of the messaging structure. Future work should refine, validate, or strengthen them rather than replacing them casually.
+## Internal Pages
 
-## Navbar / Brand Notes
-
-- Main navbar links currently include:
-  - `Services`
-  - `Savings Calculator`
-  - `Case Studies`
-  - `About`
-  - `Contact`
-- The `Savings Calculator` link points to the homepage anchor `/#savings-calculator`.
-- Do not casually revert the navbar back to a translucent treatment; the current solid navy treatment was chosen intentionally after multiple contrast fixes.
-
-## Existing Internal-Page Direction
-
-- `/services`
-  - Deliverables, impact, before/after logic, engagement summary, FAQ, and CTA
-- `/case-studies`
-  - Representative implementation scenarios with problem -> implementation -> outcome -> economic logic framing
-- `/about`
-  - OpsMira operating philosophy, rollout logic, implementation standards, and minimal founder background
-- `/contact`
-  - Implementation intake page with qualification, rollout expectations, and richer intake prompts
+- `/services` — Service detail modules, comparison table, engagement summary, CTA
+- `/pricing` — PageHero + 3-tier PackagesSection (Starter $299, Professional $599, Premium $899)
+- `/case-studies` — Problem → implementation → outcome scenarios with economic logic
+- `/about` — Operating philosophy, implementation principles, values (simplified — no rollout timeline or engagement points)
+- `/contact` — Implementation intake form, fit section, rollout timeline sidebar
 
 ## Messaging Rules
 
 - Do not make the site feel like a personal brand.
-- Keep founder presence minimal and supporting only.
-- Do not reintroduce generic consulting language.
+- Keep founder presence minimal.
 - Speak directly to owners, operators, and SMB decision-makers.
-- Keep cost savings as the primary sales lens.
-- Keep speed, visibility, coordination, and reporting reduction as supporting benefits.
+- Cost savings is the primary sales lens.
 - Avoid hype language and vague claims.
-
-## Core Themes To Preserve
-
-- administrative labor saved
-- owner or manager time recovered
-- faster customer response
-- missed opportunity recovery
-- reduced reporting/admin burden
-- stronger scheduling coordination
-- better operational visibility
-- done-for-you setup
-- workflow mapping
-- system configuration
-- launch support
-- optimization after deployment
+- Do not re-add redundant sections — the 13→5 simplification was intentional.
 
 ## Technical Constraints
 
-- Preserve the current Next.js app structure.
-- Keep static export compatibility.
-- Maintain mobile and desktop quality.
-- Do not rebuild from scratch unless explicitly requested.
+- Next.js App Router with static export
+- Tailwind CSS
+- Do not rebuild from scratch
 
-## Build Verification
-
-Use:
+## Build
 
 ```powershell
 npm.cmd run build
 ```
 
-Important Windows note:
-
-- On this OneDrive/Windows environment, `.next` sometimes causes intermittent `readlink` build failures.
-- If build fails with a `.next` `readlink` error, remove `.next` and rerun:
+If `.next` readlink error on Windows/OneDrive:
 
 ```powershell
 Remove-Item -LiteralPath .next -Recurse -Force
@@ -140,18 +84,15 @@ npm.cmd run build
 
 ## Highest-Value Remaining Work
 
-The next session should prioritize one or more of:
-
 1. Browser-based visual QA on desktop and mobile
-2. Replacing the current mailto-based contact submission with a real backend or external form handler if a silent in-page submission flow is desired
-3. Replacing illustrative proof with real testimonials, proof points, or customer material
-4. Adding stronger real visual proof such as screenshots, dashboards, or workflow examples
+2. Replace mailto-based contact form with a real backend or external form handler
+3. Replace illustrative proof with real testimonials, logos, or case material
+4. Add real screenshots, dashboards, or workflow visuals
 
 ## Success Criteria
 
-- The site feels like one unified AI operations implementation website.
-- The service model is obvious.
-- Pricing, ROI, and delivery feel connected.
-- Qualification and fit are clear.
-- Contact feels like the start of a real implementation process.
-- The site remains buildable and ready for further refinement.
+- The site feels clear, light, and premium.
+- The client understands the offer quickly without excessive reading.
+- The message is strong — says less, but says the right things.
+- Pricing, ROI calculator, and delivery model feel connected.
+- The site converts because it reduces decision friction.

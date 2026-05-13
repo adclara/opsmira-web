@@ -1,4 +1,4 @@
-import { services } from "@/lib/data";
+import { services, comparisonRows } from "@/lib/data";
 
 export function ServicesSection() {
   const [featuredService, ...supportingServices] = services;
@@ -9,12 +9,11 @@ export function ServicesSection() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="eyebrow">What OpsMira implements</span>
           <h2 className="section-title mx-auto text-3xl sm:text-4xl lg:text-[3.4rem]">
-            Built around the work that owners and office teams lose the most time to.
+            The work that costs you the most time.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-neutral-600">
             OpsMira focuses on operational workflows that create labor cost,
-            slow customer response, and make visibility harder than it should
-            be. The goal is not more software. The goal is cleaner execution.
+            slow customer response, and reduce visibility.
           </p>
         </div>
 
@@ -23,27 +22,12 @@ export function ServicesSection() {
             <p className="text-xs uppercase tracking-[0.28em] text-white/55">
               Core offer
             </p>
-            <h3 className="mt-4 max-w-[12ch] font-display text-4xl font-semibold leading-[1] tracking-[-0.04em] text-white sm:text-5xl">
+            <h3 className="mt-4 max-w-[14ch] font-display text-4xl font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-5xl">
               {featuredService.title}
             </h3>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
               {featuredService.body}
             </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                "Customer follow-up systems",
-                "Scheduling coordination",
-                "Reporting automation",
-                "Owner dashboards"
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-[1rem] border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/82"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -92,6 +76,21 @@ export function ServicesSection() {
             })}
           </div>
         </article>
+
+        <div className="overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-soft">
+          <div className="border-b border-stone-200 px-6 py-5">
+            <h3 className="text-lg font-semibold text-foreground">What it replaces</h3>
+          </div>
+          <div className="divide-y divide-stone-200">
+            {comparisonRows.map((row) => (
+              <div key={row.label} className="grid gap-1 px-6 py-4 sm:grid-cols-[0.3fr_1fr_1fr] sm:items-center sm:gap-4">
+                <p className="text-sm font-semibold text-foreground">{row.label}</p>
+                <p className="text-sm leading-6 text-neutral-500">{row.before}</p>
+                <p className="text-sm font-medium leading-6 text-brand-700">{row.after}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

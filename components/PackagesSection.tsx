@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { packagePaybackExamples, packages } from "@/lib/data";
+import { packages } from "@/lib/data";
 
 export function PackagesSection() {
   return (
@@ -7,19 +7,18 @@ export function PackagesSection() {
       <div className="overflow-hidden rounded-[2.6rem] bg-[linear-gradient(180deg,#131b34,#0f172f)] px-6 py-10 text-white shadow-[0_30px_90px_rgba(15,23,47,0.22)] sm:px-8 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-brand-100">
-            Pricing and scope
+            Pricing
           </span>
-          <h2 className="mt-5 font-display text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl">
-            Plans designed around workflow scope and payback potential.
+          <h2 className="mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-5xl">
+            Plans built around workflow scope.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/68">
-            Pricing is easiest to understand when it connects to what gets
-            implemented and what it can replace. Each plan is scoped around
-            workflow depth, coordination complexity, and operational impact.
+            Each plan is scoped around workflow depth, coordination complexity,
+            and operational impact.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {packages.map((pkg, index) => {
             const featured = index === 1;
 
@@ -44,8 +43,8 @@ export function PackagesSection() {
                 <p
                   className={
                     featured
-                      ? "mt-5 text-5xl font-semibold tracking-[-0.05em] text-white"
-                      : "mt-5 text-5xl font-semibold tracking-[-0.05em] text-foreground"
+                      ? "mt-5 text-5xl font-semibold tracking-[-0.03em] text-white"
+                      : "mt-5 text-5xl font-semibold tracking-[-0.03em] text-foreground"
                   }
                 >
                   {pkg.price}
@@ -91,15 +90,6 @@ export function PackagesSection() {
                     </div>
                   ))}
                 </div>
-                <p
-                  className={
-                    featured
-                      ? "mt-5 text-xs leading-6 text-white/72"
-                      : "mt-5 text-xs leading-6 text-neutral-500"
-                  }
-                >
-                  {pkg.roi}
-                </p>
                 <div className="mt-6">
                   <Link
                     href="/contact"
@@ -117,23 +107,8 @@ export function PackagesSection() {
           })}
         </div>
 
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {packagePaybackExamples.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-[1.7rem] border border-white/10 bg-white/[0.06] p-5"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/55">
-                {item.title}
-              </p>
-              <p className="mt-3 text-sm leading-7 text-white/76">{item.body}</p>
-            </div>
-          ))}
-        </div>
-
         <p className="mt-6 text-center text-sm leading-6 text-white/50">
-          Final scope depends on workflow volume, integrations, reporting depth,
-          and how many operational lanes are being deployed.
+          Final scope depends on workflow volume, integrations, and reporting depth.
         </p>
       </div>
     </section>

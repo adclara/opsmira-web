@@ -33,6 +33,7 @@ This site should not feel like:
 
 - `/`
 - `/services`
+- `/pricing`
 - `/case-studies`
 - `/about`
 - `/contact`
@@ -42,15 +43,23 @@ This site should not feel like:
 Current primary navigation:
 
 - `Services`
-- `Savings Calculator`
+- `Pricing`
 - `Case Studies`
 - `About`
 - `Contact`
 
 Notes:
 
-- `Savings Calculator` links to the homepage anchor `/#savings-calculator`
+- `Pricing` links to `/pricing` — a dedicated pricing page
 - The navbar is intentionally solid navy now; do not assume the earlier translucent versions are still desired
+
+## Homepage Sections (simplified)
+
+1. Hero
+2. ROI Calculator (with tooltip explanations on each slider)
+3. Services + Comparison table (combined)
+4. Process (3 steps: Audit → Build & Deploy → Measure & Refine)
+5. Contact CTA
 
 ## Important Files
 
@@ -58,6 +67,7 @@ Notes:
 - [AI_CONTINUATION_PROMPT.md](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/AI_CONTINUATION_PROMPT.md)
 - [lib/data.ts](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/lib/data.ts)
 - [app/page.tsx](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/app/page.tsx)
+- [app/pricing/page.tsx](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/app/pricing/page.tsx)
 - [app/services/page.tsx](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/app/services/page.tsx)
 - [app/case-studies/page.tsx](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/app/case-studies/page.tsx)
 - [app/about/page.tsx](C:/Users/adria/OneDrive/OpsMira%20Project%20Web/app/about/page.tsx)

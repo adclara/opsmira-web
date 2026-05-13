@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import { EngagementSection } from "@/components/EngagementSection";
-import { FAQSection } from "@/components/FAQSection";
 import { detailedServices } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -18,17 +17,12 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="What OpsMira implements and what manual work it removes."
-        description="OpsMira delivers done-for-you AI operations systems for SMBs. The service is built around workflow audit, system configuration, launch support, and measurable reductions in admin burden, response delays, and reporting overhead."
+        title="What OpsMira implements."
+        description="Done-for-you AI operations systems for SMBs — workflow audit, system configuration, launch support, and measurable reductions in admin burden and response delays."
         stats={[
           { label: "Delivery model", value: "Managed implementation" },
           { label: "Primary value", value: "Cost savings first" },
           { label: "Best fit", value: "SMB service operators" }
-        ]}
-        highlights={[
-          "Start with the workflow that has the clearest payback",
-          "Build customer follow-up, scheduling, and reporting into one operational layer",
-          "Keep human oversight while removing repetitive admin"
         ]}
       />
 
@@ -46,10 +40,7 @@ export default function ServicesPage() {
                   <div className="w-fit rounded-2xl bg-[#eef0ff] p-3 text-brand-700">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <p className="mt-5 text-xs uppercase tracking-[0.24em] text-brand-600">
-                    Service module
-                  </p>
-                  <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-foreground">
+                  <h2 className="mt-5 text-2xl font-semibold tracking-[-0.02em] text-foreground">
                     {service.title}
                   </h2>
                   <p className="mt-4 text-sm leading-7 text-neutral-600">
@@ -77,20 +68,14 @@ export default function ServicesPage() {
 
         <ComparisonSection embedded />
         <EngagementSection embedded />
-        <FAQSection embedded />
 
         <div className="luxury-panel mt-10 flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.22em] text-white/55">
-              Next step
-            </p>
-            <h3 className="mt-4 font-display text-4xl text-white">
-              Need help scoping the right first workflow?
+            <h3 className="font-display text-3xl text-white">
+              Ready to scope the right first workflow?
             </h3>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-white/72">
-              OpsMira can help identify the highest-value operational bottleneck
-              to target first so the savings case is clear before the rollout
-              expands.
+              OpsMira identifies the highest-value bottleneck to target first.
             </p>
           </div>
           <Link

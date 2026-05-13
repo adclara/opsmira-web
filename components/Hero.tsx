@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2 } from "lucide-react";
-import { heroSignals, heroStats, platformModules } from "@/lib/data";
+import { heroStats } from "@/lib/data";
 
 function DashboardMockup() {
   return (
@@ -30,7 +29,7 @@ function DashboardMockup() {
                   <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">
                     Example monthly value created
                   </p>
-                  <p className="mt-2 text-5xl font-semibold tracking-[-0.04em] text-foreground">
+                  <p className="mt-2 text-5xl font-semibold tracking-[-0.03em] text-foreground">
                     $4.2k
                   </p>
                 </div>
@@ -72,33 +71,6 @@ function DashboardMockup() {
               ))}
             </div>
           </div>
-
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {platformModules.map((module) => {
-              const Icon = module.icon;
-
-              return (
-                <div
-                  key={module.title}
-                  className="rounded-[1.2rem] border border-stone-200 bg-[#fbfbfe] px-4 py-3"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="rounded-xl bg-[#eef0ff] p-2 text-brand-700">
-                      <Icon className="h-4 w-4" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground">
-                        {module.title}
-                      </p>
-                      <p className="mt-1 text-xs leading-6 text-neutral-600">
-                        {module.body}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </div>
@@ -116,16 +88,15 @@ export function Hero() {
           <div className="relative grid items-center gap-12 xl:grid-cols-[0.92fr_1.08fr]">
             <div className="max-w-[40rem]">
               <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-brand-100">
-                Done-for-you AI agents, workflow automation, and operational dashboards
+                Done-for-you AI operations for SMBs
               </span>
-              <h1 className="mt-6 max-w-[11ch] font-display text-5xl font-semibold leading-[0.94] tracking-[-0.055em] text-white sm:text-6xl xl:text-[5.6rem]">
-                AI operations systems that cut admin cost first.
+              <h1 className="mt-6 max-w-[14ch] font-display text-5xl font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-6xl xl:text-[5.6rem]">
+                Cut admin cost with AI operations.
               </h1>
               <p className="mt-6 max-w-xl text-base leading-8 text-white/72 sm:text-lg">
-                OpsMira implements customer follow-up systems, scheduling
-                coordination, reporting automation, and owner visibility
-                dashboards for SMBs that need cleaner execution and measurable
-                savings.
+                OpsMira implements customer follow-up, scheduling coordination,
+                reporting automation, and owner dashboards — so you save time
+                and recover revenue.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -138,26 +109,6 @@ export function Hero() {
                 >
                   See What Gets Implemented
                 </Link>
-              </div>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {heroSignals.map((signal) => (
-                  <div
-                    key={signal}
-                    className="flex items-center gap-3 rounded-[1rem] bg-white/[0.06] px-4 py-3 text-sm text-white/82"
-                  >
-                    <CheckCircle2 className="h-4 w-4 text-brand-300" />
-                    {signal}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-white/10 pt-6 text-sm text-white/55">
-                <span>Audit workflow and admin drag</span>
-                <span className="hidden h-1 w-1 rounded-full bg-white/30 sm:block" />
-                <span>Deploy with human oversight</span>
-                <span className="hidden h-1 w-1 rounded-full bg-white/30 sm:block" />
-                <span>Measure savings and refine after launch</span>
               </div>
             </div>
 

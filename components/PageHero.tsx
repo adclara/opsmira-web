@@ -36,7 +36,7 @@ export function PageHero({
                   {eyebrow}
                 </span>
               ) : null}
-              <h1 className="mt-6 max-w-[12ch] font-display text-5xl font-semibold leading-[0.94] tracking-[-0.055em] text-white sm:text-6xl lg:text-[5rem]">
+              <h1 className="mt-6 max-w-[12ch] font-display text-5xl font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-6xl lg:text-[5rem]">
                 {title}
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
