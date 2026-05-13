@@ -20,8 +20,8 @@ export default function HomePage() {
       <Hero />
       <TrustedBy />
       <ServicesSection />
-      <ProcessSection />
       <CaseStudySection />
+      <ProcessSection />
       <IndustriesSection />
       <PackagesSection />
       <ContactSection />

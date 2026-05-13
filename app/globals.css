@@ -13,8 +13,23 @@ html {
 body {
   @apply bg-background font-sans text-foreground antialiased;
   background-image:
-    radial-gradient(circle at top left, rgba(221, 232, 194, 0.32), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(149, 161, 123, 0.14), transparent 26%);
+    radial-gradient(circle at top left, rgba(221, 232, 194, 0.34), transparent 24%),
+    radial-gradient(circle at 85% 12%, rgba(149, 161, 123, 0.18), transparent 20%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(248, 248, 245, 0.96) 22%, #f8f8f5 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(64, 92, 11, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(64, 92, 11, 0.04) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 72%);
+  opacity: 0.45;
+  z-index: -1;
 }
 
 * {
@@ -30,11 +45,12 @@ body {
 }
 
 .eyebrow {
-  @apply mb-4 inline-flex items-center rounded-full border border-stone-300 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-olive-700;
+  @apply mb-4 inline-flex items-center rounded-full border border-stone-300/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-olive-700 shadow-[0_10px_30px_rgba(20,28,15,0.06)];
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .section-title {
-  @apply max-w-4xl font-display text-4xl leading-tight text-foreground sm:text-5xl lg:text-6xl;
+  @apply max-w-4xl font-display text-4xl leading-[0.98] tracking-[-0.035em] text-foreground sm:text-5xl lg:text-6xl;
 }
 
 .section-copy {
@@ -42,13 +58,23 @@ body {
 }
 
 .card {
-  @apply rounded-[2rem] border border-stone-300 bg-white/90 shadow-soft backdrop-blur;
+  @apply rounded-[2rem] border border-stone-300/80 shadow-soft backdrop-blur;
+  background-color: rgba(255, 255, 255, 0.88);
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-olive-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-olive-800 focus:outline-none focus:ring-2 focus:ring-olive-700/40 focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-full bg-olive-700 px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-olive-800 focus:outline-none focus:ring-2 focus:ring-olive-700/40 focus:ring-offset-2;
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:border-olive-300 hover:bg-olive-50 focus:outline-none focus:ring-2 focus:ring-olive-700/20 focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-foreground transition duration-200 hover:-translate-y-0.5 hover:border-olive-300 hover:bg-olive-50 focus:outline-none focus:ring-2 focus:ring-olive-700/20 focus:ring-offset-2;
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+.section-kicker {
+  @apply text-xs font-semibold uppercase tracking-[0.28em] text-olive-700;
+}
+
+.luxury-panel {
+  @apply rounded-[2.25rem] border border-white/10 bg-[#11160f] text-white shadow-[0_22px_70px_rgba(11,11,11,0.18)];
 }

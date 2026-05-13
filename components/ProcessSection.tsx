@@ -3,28 +3,61 @@ import { processSteps } from "@/lib/data";
 export function ProcessSection() {
   return (
     <section className="section-shell section-space">
-      <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
-        <div>
-          <span className="eyebrow">How It Works</span>
-          <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl">
-            From Process Assessment to Practical Implementation
+      <div className="grid gap-6 xl:grid-cols-[0.7fr_1.3fr]">
+        <div className="rounded-[2.25rem] border border-stone-300 bg-white/[0.84] p-7 sm:p-8">
+          <span className="eyebrow">Our Method</span>
+          <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.15rem]">
+            Structured enough for leadership. Practical enough for the floor.
           </h2>
+          <p className="mt-5 text-base leading-8 text-neutral-600">
+            Every engagement moves from diagnosis to implementation with a clear
+            view of where the operation is losing time, control, or visibility.
+          </p>
+          <div className="mt-8 rounded-[1.9rem] border border-stone-300 bg-stone-100/80 p-5">
+            <p className="section-kicker">Delivery lens</p>
+            <p className="mt-3 text-lg leading-8 text-foreground">
+              We are translating operational complexity into cleaner workflows,
+              stronger routines, and systems that support repeatable execution.
+            </p>
+          </div>
         </div>
 
-        <div className="space-y-4">
-          {processSteps.map((step) => (
+        <div className="grid gap-4">
+          {processSteps.map((step, index) => (
             <article
               key={step.step}
-              className="card grid gap-4 p-6 sm:grid-cols-[90px_1fr] sm:items-start"
+              className={
+                index === 2
+                  ? "luxury-panel grid gap-4 p-6 sm:grid-cols-[96px_1fr] sm:items-start"
+                  : "card grid gap-4 p-6 sm:grid-cols-[96px_1fr] sm:items-start"
+              }
             >
-              <div className="font-display text-5xl text-neutral-300">
+              <div
+                className={
+                  index === 2
+                    ? "font-display text-5xl text-olive-100"
+                    : "font-display text-5xl text-neutral-300"
+                }
+              >
                 {step.step}
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-foreground">
+                <h3
+                  className={
+                    index === 2
+                      ? "text-2xl font-semibold text-white"
+                      : "text-2xl font-semibold text-foreground"
+                  }
+                >
                   {step.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-600">
+                <p
+                  className={
+                    index === 2
+                      ? "mt-3 text-sm leading-7 text-white/[0.72]"
+                      : "mt-3 text-sm leading-7 text-neutral-600"
+                  }
+                >
                   {step.body}
                 </p>
               </div>

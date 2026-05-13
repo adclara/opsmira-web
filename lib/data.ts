@@ -33,13 +33,13 @@ export const site = {
   legalDisclaimer:
     "OpsMira is a fictitious name / DBA owned by TEIMECA LAND LLC.",
   experienceDisclaimer:
-    "Company names are referenced only to describe professional experience. OpsMira is not affiliated with or endorsed by Amazon, Lowe’s, Sam’s Club, or Walmart.",
+    "Company names are referenced only to describe professional experience. OpsMira is not affiliated with or endorsed by Amazon, Lowe's, Sam's Club, or Walmart.",
   email: "adrianarmando9@gmail.com",
   linkedIn: "https://www.linkedin.com/in/adrian-clara-9721a9122",
   location: "Serving businesses in Florida and across the United States.",
   valueProp: "See the process. Improve the flow. Automate the work.",
   trustLine:
-    "Built from real-world operational experience across Amazon, Lowe’s, and Sam’s Club/Walmart."
+    "Built from real-world operational experience across Amazon, Lowe's, and Sam's Club/Walmart."
 };
 
 export const navLinks: NavLink[] = [
@@ -57,13 +57,13 @@ export const homeExperienceCards: IconCard[] = [
     icon: PackageCheck
   },
   {
-    title: "Lowe’s Inbound Operations",
+    title: "Lowe's Inbound Operations",
     body:
       "Inbound execution, Non-Con operations, FIFO discipline, safety communication, KPI improvement, quality control, and team supervision.",
     icon: Warehouse
   },
   {
-    title: "Sam’s Club / Walmart Quality Assurance",
+    title: "Sam's Club / Walmart Quality Assurance",
     body:
       "Inventory analysis, pick variation review, slotting support, damage reporting, audits, food-safety segregation, and associate coaching.",
     icon: ClipboardCheck
@@ -268,7 +268,7 @@ export const caseStudies = [
     title: "Amazon Manual Packing Improvement Study",
     subtitle: "Reducing manual packing errors through system-driven validation.",
     body:
-      "During Adrian Clara’s role as a Process Assistant in Amazon outbound packing operations, he supported quality improvement efforts focused on Defects Per Million Opportunities (DPMO), including unscannables, conveyor-related issues, damaged items, overage items, and missing items.",
+      "During Adrian Clara's role as a Process Assistant in Amazon outbound packing operations, he supported quality improvement efforts focused on Defects Per Million Opportunities (DPMO), including unscannables, conveyor-related issues, damaged items, overage items, and missing items.",
     detail:
       "The study identified a critical gap between manual packing and automated packing. Automated packing used system-driven validation that significantly reduced unscannable defects, while manual packing relied more heavily on human scanning and manual resolution steps.",
     outcome:
@@ -283,10 +283,10 @@ export const caseStudies = [
     ]
   },
   {
-    title: "Lowe’s Inbound / Non-Con Operations",
+    title: "Lowe's Inbound / Non-Con Operations",
     subtitle: "Improving inbound execution, FIFO discipline, and KPI performance.",
     body:
-      "At Lowe’s, Adrian supervised inbound and non-con operations, supported safety execution, communicated daily priorities, implemented FIFO picking logic, and worked on projects designed to improve KPI performance, security, quality control, and labor efficiency.",
+      "At Lowe's, Adrian supervised inbound and non-con operations, supported safety execution, communicated daily priorities, implemented FIFO picking logic, and worked on projects designed to improve KPI performance, security, quality control, and labor efficiency.",
     takeaways: [
       "Clear execution routines improve operational consistency.",
       "FIFO discipline supports better inventory flow.",
@@ -295,10 +295,10 @@ export const caseStudies = [
     ]
   },
   {
-    title: "Sam’s Club / Walmart Quality Assurance & Inventory Flow",
+    title: "Sam's Club / Walmart Quality Assurance & Inventory Flow",
     subtitle: "Inventory flow, quality audits, slotting support, and damage reduction.",
     body:
-      "At Sam’s Club/Walmart, Adrian worked in quality assurance and inventory environments, supporting inventory analysis, pick variation review, slotting improvements, food-safety segregation, damage reporting, seasonal area setup, quality audits, and associate coaching.",
+      "At Sam's Club/Walmart, Adrian worked in quality assurance and inventory environments, supporting inventory analysis, pick variation review, slotting improvements, food-safety segregation, damage reporting, seasonal area setup, quality audits, and associate coaching.",
     takeaways: [
       "Inventory visibility supports better decision-making.",
       "Slotting and aisle design affect travel time and productivity.",
