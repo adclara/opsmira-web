@@ -23,26 +23,26 @@ export function Brand({ dark = false, compact = false }: BrandProps) {
           fill="none"
         >
           <path
-            d="M8 12h9c4.4 0 8 3.6 8 8v8"
+            d="M9 11.5h13c5.1 0 9.2 4.1 9.2 9.2v13"
             stroke="currentColor"
-            strokeWidth="2.8"
+            strokeWidth="3.2"
             strokeLinecap="round"
           />
           <path
-            d="M14 8h9c5 0 9 4 9 9v11"
+            d="M9 18h9.5c4.7 0 8.5 3.8 8.5 8.5V33"
             stroke="currentColor"
-            strokeWidth="2.8"
+            strokeWidth="3.2"
             strokeLinecap="round"
-            opacity="0.72"
+            opacity="0.96"
           />
           <path
-            d="M8 20h8c3.9 0 7 3.1 7 7v5"
+            d="M9 25h5.5c3.2 0 5.8 2.6 5.8 5.8V35"
             stroke="currentColor"
-            strokeWidth="2.8"
+            strokeWidth="3.2"
             strokeLinecap="round"
-            opacity="0.56"
+            opacity="0.9"
           />
-          <circle cx="29" cy="29" r="2.8" fill="currentColor" />
+          <circle cx="29.5" cy="34" r="3.1" fill="#6b6cff" />
         </svg>
       </div>
 
@@ -61,9 +61,10 @@ export function Brand({ dark = false, compact = false }: BrandProps) {
           </div>
           <div
             className={clsx(
-              "mt-1 text-[10px] uppercase tracking-[0.28em]",
-              dark ? "text-white" : "text-neutral-500"
+              "mt-1 text-[11px] font-medium uppercase tracking-[0.34em]",
+              dark ? "text-white/90" : "text-neutral-500"
             )}
+            style={dark ? { textShadow: "0 1px 0 rgba(15,23,47,0.35)" } : undefined}
           >
             AI Innovations
           </div>
