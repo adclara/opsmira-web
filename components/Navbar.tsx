@@ -15,12 +15,12 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 pt-4">
       <div className="section-shell">
-        <div className="flex h-20 items-center justify-between gap-6 rounded-[1.85rem] border border-[#27345f] bg-[linear-gradient(180deg,rgba(15,23,47,0.99),rgba(21,31,63,0.97))] px-5 shadow-[0_22px_54px_rgba(15,23,47,0.3)] backdrop-blur-xl sm:px-7">
+        <div className="flex h-20 items-center justify-between gap-6 rounded-[1.85rem] border border-[#2d3b67] bg-[#18213d] px-5 shadow-[0_22px_54px_rgba(15,23,47,0.28)] sm:px-7">
           <Link href="/" className="group flex items-center gap-3">
             <Brand dark />
           </Link>
 
-          <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 lg:flex">
+          <nav className="hidden items-center gap-1 rounded-full border border-[#31406f] bg-[#202b4d] p-1 lg:flex">
             {navLinks.map((link) => {
               const active = pathname === link.href;
 
@@ -30,8 +30,8 @@ export function Navbar() {
                   href={link.href}
                   style={{ color: active ? "#ffffff" : "#eef2ff" }}
                   className={clsx(
-                    "rounded-full px-5 py-2.5 text-sm font-semibold tracking-[0.01em] transition hover:bg-white/10 hover:text-white",
-                    active && "bg-white/12 shadow-[0_10px_24px_rgba(15,23,47,0.22)]"
+                    "rounded-full px-5 py-2.5 text-sm font-semibold tracking-[0.01em] transition hover:bg-[#2c3a67] hover:text-white",
+                    active && "bg-[#31406f] shadow-[0_10px_24px_rgba(15,23,47,0.22)]"
                   )}
                 >
                   {link.label}
@@ -48,7 +48,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/12 bg-white/8 text-white lg:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#31406f] bg-[#202b4d] text-white lg:hidden"
             aria-expanded={open}
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setOpen((current) => !current)}
