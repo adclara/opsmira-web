@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background font-sans text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(221, 232, 194, 0.32), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(149, 161, 123, 0.14), transparent 26%);
+}
+
+* {
+  @apply border-stone-300;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-16 sm:py-20 lg:py-28;
+}
+
+.eyebrow {
+  @apply mb-4 inline-flex items-center rounded-full border border-stone-300 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-olive-700;
+}
+
+.section-title {
+  @apply max-w-4xl font-display text-4xl leading-tight text-foreground sm:text-5xl lg:text-6xl;
+}
+
+.section-copy {
+  @apply max-w-3xl text-base leading-7 text-neutral-600 sm:text-lg;
+}
+
+.card {
+  @apply rounded-[2rem] border border-stone-300 bg-white/90 shadow-soft backdrop-blur;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-olive-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-olive-800 focus:outline-none focus:ring-2 focus:ring-olive-700/40 focus:ring-offset-2;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:border-olive-300 hover:bg-olive-50 focus:outline-none focus:ring-2 focus:ring-olive-700/20 focus:ring-offset-2;
+}
