@@ -62,10 +62,10 @@ export function Brand({ dark = false, compact = false }: BrandProps) {
           <div
             className={clsx(
               "mt-1 text-[10px] uppercase tracking-[0.28em]",
-              dark ? "text-white/62" : "text-neutral-500"
+              dark ? "text-white" : "text-neutral-500"
             )}
           >
-            AI Operations
+            AI Innovations
           </div>
         </div>
       )}
