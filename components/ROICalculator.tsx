@@ -86,7 +86,7 @@ export function ROICalculator() {
   }, [adminHours, adminRate, ownerHours, ownerRate, recoveredJobs, jobValue, planPrice]);
 
   return (
-    <section className="section-shell section-space">
+    <section id="savings-calculator" className="section-shell section-space scroll-mt-28">
       <div className="overflow-hidden rounded-[2.5rem] border border-stone-200 bg-[linear-gradient(180deg,#eef2ff,#f7f8fc)] p-6 shadow-soft sm:p-8">
         <div className="grid gap-8 xl:grid-cols-[0.72fr_1.28fr]">
           <div>
@@ -240,19 +240,19 @@ export function ROICalculator() {
 
               <div className="rounded-[1.6rem] border border-stone-200 bg-white p-6">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
+                  <div className="rounded-[1.3rem] border border-stone-200 bg-[#fbfcff] p-4">
                     <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
                       Yearly value
                     </p>
-                    <p className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-foreground">
+                    <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">
                       {formatCurrency(results.yearlyValue)}
                     </p>
                   </div>
-                  <div>
+                  <div className="rounded-[1.3rem] border border-stone-200 bg-[#fbfcff] p-4">
                     <p className="text-xs uppercase tracking-[0.22em] text-neutral-500">
                       ROI multiple
                     </p>
-                    <p className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-foreground">
+                    <p className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">
                       {results.roi.toFixed(1)}x
                     </p>
                   </div>

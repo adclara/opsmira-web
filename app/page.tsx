@@ -24,10 +24,10 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustedBy />
+      <ROICalculator />
       <ServicesSection />
       <ComparisonSection />
       <EngagementSection />
-      <ROICalculator />
       <CaseStudySection />
       <ProcessSection />
       <IndustriesSection />
