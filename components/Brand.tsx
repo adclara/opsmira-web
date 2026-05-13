@@ -12,7 +12,7 @@ export function Brand({ dark = false, compact = false }: BrandProps) {
         className={clsx(
           "flex h-11 w-11 items-center justify-center rounded-2xl border shadow-sm",
           dark
-            ? "border-white/10 bg-white/[0.08] text-white"
+            ? "border-white/14 bg-white/[0.1] text-white"
             : "border-[#d9def3] bg-white text-[#18213d]"
         )}
       >
@@ -55,14 +55,14 @@ export function Brand({ dark = false, compact = false }: BrandProps) {
             )}
           >
             Ops
-            <span className={dark ? "text-brand-300" : "text-brand-500"}>
+            <span className={dark ? "text-[#8ea2ff]" : "text-brand-500"}>
               Mira
             </span>
           </div>
           <div
             className={clsx(
               "mt-1 text-[10px] uppercase tracking-[0.28em]",
-              dark ? "text-white/55" : "text-neutral-500"
+              dark ? "text-white/62" : "text-neutral-500"
             )}
           >
             AI Operations

@@ -15,7 +15,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 pt-4">
       <div className="section-shell">
-        <div className="flex h-20 items-center justify-between gap-6 rounded-[1.75rem] border border-white/10 bg-[#121b36]/92 px-5 shadow-[0_18px_44px_rgba(15,23,47,0.2)] backdrop-blur-xl sm:px-7">
+        <div className="flex h-20 items-center justify-between gap-6 rounded-[1.75rem] border border-[#27345f] bg-[linear-gradient(180deg,rgba(16,24,51,0.98),rgba(21,31,63,0.96))] px-5 shadow-[0_22px_54px_rgba(15,23,47,0.28)] backdrop-blur-xl sm:px-7">
           <Link href="/" className="group flex items-center gap-3">
             <Brand dark />
           </Link>
@@ -29,8 +29,8 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={clsx(
-                    "rounded-xl px-4 py-2 text-sm font-medium text-white/70 transition hover:bg-white/5 hover:text-white",
-                    active && "bg-white/8 text-white"
+                    "rounded-xl px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/8 hover:text-white",
+                    active && "bg-white/10 text-white"
                   )}
                 >
                   {link.label}
@@ -47,7 +47,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white lg:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/12 bg-white/8 text-white lg:hidden"
             aria-expanded={open}
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setOpen((current) => !current)}
