@@ -3,7 +3,7 @@ import { intakeOutputs, site } from "@/lib/data";
 
 export function ContactSection() {
   return (
-    <section className="section-shell section-space pt-8">
+    <section className="section-shell section-space">
       <div className="overflow-hidden rounded-2xl border border-stone-300 bg-[linear-gradient(135deg,#f8faff_0%,#eef2ff_48%,#dce4ff_100%)] p-6 shadow-soft sm:p-8 lg:p-10">
         <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>

@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="mt-8 bg-[#0f172f] text-white">
       <div className="section-shell py-10">
-        <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div className="max-w-xl">
             <Link href="/" className="inline-flex">
               <Brand dark />
