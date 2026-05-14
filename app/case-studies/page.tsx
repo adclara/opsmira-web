@@ -42,9 +42,9 @@ export default function CaseStudiesPage() {
                   <p className="text-xs uppercase tracking-[0.22em] text-brand-600">
                     Case Study {index + 1}
                   </p>
-                  <h2 className="mt-4 font-display text-4xl leading-tight text-foreground sm:text-5xl">
+                  <h3 className="mt-4 font-display text-4xl leading-tight text-foreground sm:text-5xl">
                     {study.title}
-                  </h2>
+                  </h3>
                   <p className="mt-4 text-lg font-medium text-neutral-700">
                     {study.subtitle}
                   </p>

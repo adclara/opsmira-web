@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0f172f"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)" opacity="0.5"/>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(80, 180) scale(0.45)">
+    <rect width="512" height="512" rx="144" fill="#1e293b" stroke="#2d3b67" stroke-width="4"/>
+    <path d="M118 138h156c61.86 0 112 50.14 112 112v154" stroke="#F5F7FF" stroke-width="34" stroke-linecap="round"/>
+    <path d="M118 220h112c55.23 0 100 44.77 100 100v84" stroke="#F5F7FF" stroke-width="34" stroke-linecap="round" opacity=".96"/>
+    <path d="M118 302h62c37.56 0 68 30.44 68 68v42" stroke="#F5F7FF" stroke-width="34" stroke-linecap="round" opacity=".9"/>
+    <circle cx="376" cy="412" r="33" fill="#6B6CFF"/>
+  </g>
+
+  <!-- OpsMira text -->
+  <text x="340" y="340" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" letter-spacing="-1">
+    <tspan fill="#9ca3ff">Ops</tspan><tspan fill="#ffffff">Mira</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="340" y="385" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="500" letter-spacing="4">
+    AI INNOVATIONS
+  </text>
+
+  <!-- Tagline -->
+  <text x="340" y="445" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400">
+    Cut admin cost with AI operations.
+  </text>
+
+  <!-- Description -->
+  <text x="340" y="490" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="20">
+    Done-for-you workflow automation for SMBs
+  </text>
+
+  <!-- Domain -->
+  <text x="340" y="540" fill="#6B6CFF" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600">
+    opsmira.ai
+  </text>
+
+  <!-- Decorative line -->
+  <rect x="80" y="590" width="1040" height="2" fill="#2d3b67" rx="1"/>
+</svg>

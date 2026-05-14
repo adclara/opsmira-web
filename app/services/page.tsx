@@ -45,9 +45,9 @@ export default function ServicesPage() {
                   <div className="w-fit rounded-2xl bg-[#eef0ff] p-3 text-brand-700">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h2 className="mt-5 text-2xl font-semibold tracking-[-0.02em] text-foreground">
+                  <h3 className="mt-5 text-2xl font-semibold tracking-[-0.02em] text-foreground">
                     {service.title}
-                  </h2>
+                  </h3>
                   <p className="mt-4 text-sm leading-7 text-neutral-600">
                     {service.description}
                   </p>
