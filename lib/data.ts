@@ -62,6 +62,26 @@ export type CaseStudy = {
   note?: string;
 };
 
+export type TestimonialAsset = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+};
+
+export type LogoAsset = {
+  name: string;
+  src: string;
+  alt: string;
+};
+
+export type WorkflowVisualAsset = {
+  title: string;
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 export const site = {
   name: "OpsMira",
   legalName: "TEIMECA LAND LLC d/b/a OpsMira",
@@ -69,7 +89,7 @@ export const site = {
     "OpsMira is a fictitious name / DBA owned by TEIMECA LAND LLC.",
   experienceDisclaimer:
     "Professional experience references are included for background context only. OpsMira is not affiliated with or endorsed by Amazon, Lowe's, Sam's Club, or Walmart.",
-  email: "adrianarmando9@gmail.com",
+  email: "adrianclara@opsmira.ai",
   linkedIn: "https://www.linkedin.com/in/adrian-clara-9721a9122",
   location: "Serving SMB operators in Florida and across the United States.",
   valueProp:
@@ -378,6 +398,10 @@ export const caseStudies: CaseStudy[] = [
       "Illustrative scenario based on common SMB reporting and dashboard needs."
   }
 ];
+
+export const testimonials: TestimonialAsset[] = [];
+export const proofLogos: LogoAsset[] = [];
+export const workflowVisuals: WorkflowVisualAsset[] = [];
 
 export const values = [
   "Operations-first before tool-first",

@@ -24,7 +24,7 @@ When starting a new session, share this summary:
 
 Current handoff summary:
 
-`OpsMira site is production-ready for opsmira.ai on GoDaddy. Full security headers (.htaccess), OG/Twitter tags on all pages, sitemap.xml, robots.txt, branded 404 page, and OG image are in place. GitHub Pages preview at https://adclara.github.io/opsmira-web/. To deploy: npm run build, upload out/ to GoDaddy public_html. Remaining work: replace mailto contact form with real backend, add real testimonials/logos/screenshots. Read SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md.`
+`OpsMira site is production-ready for opsmira.ai on GoDaddy. Full security headers (.htaccess), OG/Twitter tags on all pages, sitemap.xml, robots.txt, branded 404 page, and OG image are in place. Contact form submits to a self-hosted PHP handler (public/api/contact.php) that emails submissions — no third-party service needed. Proof-asset scaffolding (testimonials, logos, visuals) is typed and ready to populate in lib/data.ts. To deploy: npm run build, upload out/ to GoDaddy public_html. Remaining work: test live form submission on GoDaddy, add real testimonials/logos/screenshots, mobile responsive QA. Read SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md.`
 
 ## Workflow Notes
 
@@ -188,3 +188,16 @@ Current handoff summary:
 - Removed 6 design reference PNGs from `public/reference/`.
 - Build verification passed. All 10 pages generated cleanly. Pushed in commits `bab9956` and `f0a9859`.
 - Site is now ready for GoDaddy deployment: run `npm run build` then upload `out/` contents to `public_html`.
+
+### 2026-05-14 — Formspree Contact Form + Proof-Asset Scaffolding
+
+- Replaced the mailto-based contact form with async submission via new `lib/contact.ts`.
+- Created `public/api/contact.php` — self-hosted PHP handler that emails submissions to `adrianclara@opsmira.ai` via GoDaddy's `mail()`. No third-party service required.
+- Added honeypot spam protection (`_gotcha` field) to the contact form.
+- Form now tracks status as idle | submitting | success | error instead of boolean submitted + string error.
+- Submit button disables during submission; success/error messages display inline.
+- Removed the static GitHub Pages deployment disclaimer paragraph from the form.
+- Added proof-asset types (`TestimonialAsset`, `LogoAsset`, `WorkflowVisualAsset`) and empty typed arrays to `lib/data.ts`.
+- Case studies page shows a blue info banner when no real proof assets are available; renders proof sections when arrays are populated.
+- Updated `README.md`, `AI_CONTINUATION_PROMPT.md`, and `SESSION_CONTEXT.md`.
+- Remaining before production: deploy to GoDaddy and test one live `/contact` form submission.

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
-import { caseStudies } from "@/lib/data";
+import { caseStudies, testimonials, proofLogos, workflowVisuals } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Case Studies",
@@ -92,6 +93,49 @@ export default function CaseStudiesPage() {
             </article>
           ))}
         </div>
+
+        {testimonials.length === 0 && proofLogos.length === 0 && workflowVisuals.length === 0 ? (
+          <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50/70 px-6 py-5 text-sm leading-7 text-blue-800">
+            Current scenarios are representative of common SMB workflow patterns. Real client proof and approved assets will appear here as they become available.
+          </div>
+        ) : (
+          <>
+            {testimonials.length > 0 && (
+              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {testimonials.map((t) => (
+                  <div key={t.name} className="card p-6">
+                    <p className="text-sm leading-7 text-neutral-600 italic">&ldquo;{t.quote}&rdquo;</p>
+                    <p className="mt-4 text-sm font-semibold text-foreground">{t.name}</p>
+                    <p className="text-xs text-neutral-500">{t.role}, {t.company}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {proofLogos.length > 0 && (
+              <div className="mt-10">
+                <p className="text-xs uppercase tracking-[0.1em] text-neutral-500">Trusted by</p>
+                <div className="mt-4 flex flex-wrap items-center gap-8">
+                  {proofLogos.map((logo) => (
+                    <Image key={logo.name} src={logo.src} alt={logo.alt} width={120} height={40} className="h-8 w-auto object-contain grayscale" />
+                  ))}
+                </div>
+              </div>
+            )}
+            {workflowVisuals.length > 0 && (
+              <div className="mt-10 grid gap-6 sm:grid-cols-2">
+                {workflowVisuals.map((v) => (
+                  <figure key={v.title} className="card overflow-hidden">
+                    <Image src={v.src} alt={v.alt} width={600} height={400} className="w-full" />
+                    <figcaption className="p-5">
+                      <p className="text-sm font-semibold text-foreground">{v.title}</p>
+                      <p className="mt-1 text-xs text-neutral-500">{v.caption}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            )}
+          </>
+        )}
 
         <div className="luxury-panel mt-10 flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
           <div>

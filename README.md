@@ -102,15 +102,16 @@ npm.cmd run build
 ## Remaining High-Value Next Steps
 
 - Browser-based visual QA across desktop and mobile
-- Replace the current mailto-based contact submission with a live backend or external form handler if desired
-- Replace illustrative proof with real testimonials, logos, or case material
+- Test one live form submission on GoDaddy to confirm PHP mail() works
+- Replace illustrative proof with real testimonials, logos, or case material (typed scaffolding is ready in `lib/data.ts`)
 - Add real screenshots or workflow visuals if available
 
 ## Contact Form Behavior
 
-- The current contact form works on static hosting by opening a prefilled email draft to `adrianarmando9@gmail.com`.
-- This preserves static export compatibility on GitHub Pages and gives visitors a working intake path without a hosted backend.
-- If you want silent in-page submission instead of email-draft submission, the next step is integrating an external form service or moving off pure static hosting.
+- The contact form submits to `/api/contact.php` via client-side fetch.
+- The PHP handler runs on GoDaddy's Apache/PHP hosting and emails submissions to `adrianclara@opsmira.ai`.
+- A honeypot field (`_gotcha`) provides basic spam protection.
+- No third-party service or environment variables required.
 
 ## Working Rule
 

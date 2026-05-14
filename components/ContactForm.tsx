@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { contactPrompts, site } from "@/lib/data";
+import { contactPrompts } from "@/lib/data";
+import { submitContact, type FormStatus, type ContactFormData } from "@/lib/contact";
 
 export function ContactForm() {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<ContactFormData>({
     name: "",
     company: "",
     email: "",
@@ -14,10 +15,11 @@ export function ContactForm() {
     requestVolume: "Under 50 requests",
     urgentOutcome: "Reduce admin workload",
     problem: "",
-    tools: ""
+    tools: "",
+    _gotcha: ""
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   function updateField(name: string, value: string) {
     setForm((current) => ({
@@ -26,43 +28,27 @@ export function ContactForm() {
     }));
   }
 
-  function buildMailtoLink() {
-    const subject = `OpsMira workflow audit request - ${form.company || form.name || "New inquiry"}`;
-    const body = [
-      `Name: ${form.name}`,
-      `Company: ${form.company}`,
-      `Email: ${form.email}`,
-      `Preferred contact method: ${form.preferredContact}`,
-      `Phone: ${form.phone}`,
-      `Industry: ${form.industry}`,
-      `Approximate monthly request volume: ${form.requestVolume}`,
-      `Most urgent outcome: ${form.urgentOutcome}`,
-      "",
-      "Primary workflow problem:",
-      form.problem,
-      "",
-      "Current tools / channels involved:",
-      form.tools
-    ].join("\n");
-
-    return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
-
   return (
     <form
       className="card p-7 sm:p-8"
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
-        setError("");
+        setErrorMsg("");
 
         if (!form.name || !form.email || !form.problem) {
-          setSubmitted(false);
-          setError("Please fill in your name, email, and the main workflow problem before submitting.");
+          setStatus("error");
+          setErrorMsg("Please fill in your name, email, and the main workflow problem before submitting.");
           return;
         }
 
-        setSubmitted(true);
-        window.location.href = buildMailtoLink();
+        setStatus("submitting");
+        try {
+          await submitContact(form);
+          setStatus("success");
+        } catch (err) {
+          setStatus("error");
+          setErrorMsg(err instanceof Error ? err.message : "Submission failed. Please try again.");
+        }
       }}
     >
       <div className="mb-6 rounded-[1.6rem] border border-[#d9def3] bg-[#f8faff] p-5">
@@ -75,6 +61,16 @@ export function ContactForm() {
           designed to start the first implementation conversation.
         </p>
       </div>
+
+      <input
+        type="text"
+        name="_gotcha"
+        value={form._gotcha}
+        onChange={(e) => updateField("_gotcha", e.target.value)}
+        style={{ display: "none" }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
 
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm font-medium text-neutral-700">
@@ -212,20 +208,19 @@ export function ContactForm() {
         </div>
       </div>
 
-      <button type="submit" className="button-primary mt-6">
-        Request Workflow Audit
+      <button
+        type="submit"
+        className="button-primary mt-6"
+        disabled={status === "submitting"}
+      >
+        {status === "submitting" ? "Submitting…" : "Request Workflow Audit"}
       </button>
-      <p className="mt-4 text-xs leading-6 text-neutral-500">
-        On this static GitHub Pages deployment, submitting opens a prefilled
-        email draft to OpsMira so the intake still works without a hosted
-        backend.
-      </p>
-      {error ? (
-        <p className="mt-3 text-sm font-medium text-[#b42318]">{error}</p>
+      {status === "error" && errorMsg ? (
+        <p className="mt-3 text-sm font-medium text-[#b42318]">{errorMsg}</p>
       ) : null}
-      {submitted ? (
+      {status === "success" ? (
         <p className="mt-3 text-sm font-medium text-brand-700">
-          Thanks. Your email draft should open with the intake details prefilled.
+          Thanks — your intake has been submitted. We will review your workflow details and follow up shortly.
         </p>
       ) : null}
     </form>

@@ -22,7 +22,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Start with an implementation intake, not a generic inquiry."
-        description="Use this page to show where the business is losing time, follow-up, or visibility. OpsMira uses that context to identify the best first workflow to automate and what a realistic deployment should include."
+        description="Use this page to share where the business is losing time, follow-up, or visibility. OpsMira uses that context to identify the best first workflow to automate and outline a realistic deployment."
         stats={[
           { label: "Best first step", value: "Workflow audit" },
           { label: "Typical focus", value: "Admin bottlenecks" },

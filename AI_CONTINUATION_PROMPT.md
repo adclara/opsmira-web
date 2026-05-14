@@ -115,11 +115,19 @@ npm.cmd run build
 
 Do not change basePath — it auto-detects GitHub Actions vs production (empty basePath for GoDaddy root domain).
 
+## Recent Changes (2026-05-14)
+
+- The contact form now submits to a self-hosted PHP handler (`public/api/contact.php`) instead of opening a mailto link.
+- The PHP script emails submissions to `adrianclara@opsmira.ai` via GoDaddy's built-in `mail()`. No third-party service needed.
+- Honeypot spam protection (`_gotcha` field) added to the contact form.
+- Proof-asset types (`TestimonialAsset`, `LogoAsset`, `WorkflowVisualAsset`) are scaffolded in `lib/data.ts` with empty arrays.
+- Case studies page shows a blue info banner when no real proof assets are available.
+
 ## Highest-Value Remaining Work
 
-1. Replace mailto-based contact form with a real backend (Formspree, Netlify Forms, or custom)
-2. Replace illustrative proof with real testimonials, logos, or case material
-3. Add real screenshots, dashboards, or workflow visuals
+1. Test one live form submission on GoDaddy to confirm PHP `mail()` works
+2. Replace illustrative proof with real testimonials, logos, or case material (scaffolding ready)
+3. Add real screenshots, dashboards, or workflow visuals (scaffolding ready)
 4. Mobile responsive QA (was not testable in last session due to browser DPR)
 
 ## Success Criteria
