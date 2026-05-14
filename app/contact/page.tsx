@@ -8,7 +8,12 @@ import { intakeSteps, rolloutTimeline, site } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start an OpsMira workflow audit to identify where your SMB is losing admin time, missing follow-up, slowing response, or carrying unnecessary reporting burden."
+    "Start an OpsMira workflow audit to identify where your SMB is losing admin time, missing follow-up, slowing response, or carrying unnecessary reporting burden.",
+  openGraph: {
+    title: "Contact | OpsMira",
+    description: "Start a workflow audit — tell us where admin time, follow-up, or reporting is breaking down.",
+    url: "https://opsmira.ai/contact"
+  }
 };
 
 export default function ContactPage() {

@@ -5,7 +5,12 @@ import { PackagesSection } from "@/components/PackagesSection";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "OpsMira pricing plans scoped around workflow depth, coordination complexity, and operational impact for SMBs."
+    "OpsMira pricing plans scoped around workflow depth, coordination complexity, and operational impact for SMBs.",
+  openGraph: {
+    title: "Pricing | OpsMira",
+    description: "Plans from $299/mo scoped around workflow depth and operational impact. Starter, Professional, and Premium tiers.",
+    url: "https://opsmira.ai/pricing"
+  }
 };
 
 export default function PricingPage() {

@@ -6,7 +6,12 @@ import { caseStudies } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Review OpsMira implementation scenarios focused on workflow bottlenecks, automation logic, manual work reduced, and economic outcomes for SMB operations."
+    "Review OpsMira implementation scenarios focused on workflow bottlenecks, automation logic, manual work reduced, and economic outcomes for SMB operations.",
+  openGraph: {
+    title: "Case Studies | OpsMira",
+    description: "Implementation scenarios showing how OpsMira reduces admin labor, speeds response, and recovers missed opportunities.",
+    url: "https://opsmira.ai/case-studies"
+  }
 };
 
 export default function CaseStudiesPage() {

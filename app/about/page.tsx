@@ -6,7 +6,12 @@ import { site } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn how OpsMira approaches AI operations implementation for SMBs through workflow discipline, measurable ROI, human oversight, and post-launch optimization."
+    "Learn how OpsMira approaches AI operations implementation for SMBs through workflow discipline, measurable ROI, human oversight, and post-launch optimization.",
+  openGraph: {
+    title: "About | OpsMira",
+    description: "A delivery-first AI operations service built around workflow control and measurable ROI for SMBs.",
+    url: "https://opsmira.ai/about"
+  }
 };
 
 export default function AboutPage() {

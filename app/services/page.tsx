@@ -9,7 +9,12 @@ import { detailedServices } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "See what OpsMira implements for SMBs: workflow audits, AI agents, customer follow-up systems, scheduling coordination, owner dashboards, reporting automation, and launch support."
+    "See what OpsMira implements for SMBs: workflow audits, AI agents, customer follow-up systems, scheduling coordination, owner dashboards, reporting automation, and launch support.",
+  openGraph: {
+    title: "Services | OpsMira",
+    description: "Workflow audits, AI agents, customer follow-up, scheduling coordination, dashboards, and reporting automation for SMBs.",
+    url: "https://opsmira.ai/services"
+  }
 };
 
 export default function ServicesPage() {
