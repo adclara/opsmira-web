@@ -16,7 +16,7 @@ export interface ContactFormData {
 
 export async function submitContact(data: ContactFormData): Promise<void> {
   const res = await fetch(
-    "https://formsubmit.co/ajax/adrianclara@opsmira.ai",
+    "https://formspree.io/f/xbdwvddj",
     {
       method: "POST",
       headers: {
@@ -36,7 +36,6 @@ export async function submitContact(data: ContactFormData): Promise<void> {
         "Current Tools": data.tools,
         _subject: `OpsMira intake — ${data.company || data.name}`,
         _gotcha: data._gotcha,
-        _template: "table",
       }),
     }
   );
