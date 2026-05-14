@@ -24,11 +24,7 @@ When starting a new session, share this summary:
 
 Current handoff summary:
 
-`GitHub Pages is live at https://adclara.github.io/opsmira-web/. The homepage is 5 focused sections (Hero → Savings Calculator → Services → Process → Contact CTA). The full site has been through a design polish pass — tighter typography, smaller border radii, reduced spacing, and professional AI SaaS proportions. Savings Calculator has a 3-column layout with dynamic cards. Navbar includes Savings Calculator link. A /pricing route exists separately. Continue from main, read SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md.`
-
-Latest strategic handoff summary:
-
-`OpsMira is now positioned as a done-for-you AI operations implementation service for SMBs focused on cost savings, customer follow-up, scheduling coordination, reporting automation, and owner visibility. The main remaining work is likely browser QA, replacing the mailto intake with a real backend if desired, and adding stronger real proof assets. Read SESSION_CONTEXT.md, README.md, and AI_CONTINUATION_PROMPT.md before continuing.`
+`OpsMira site is production-ready for opsmira.ai on GoDaddy. Full security headers (.htaccess), OG/Twitter tags on all pages, sitemap.xml, robots.txt, branded 404 page, and OG image are in place. GitHub Pages preview at https://adclara.github.io/opsmira-web/. To deploy: npm run build, upload out/ to GoDaddy public_html. Remaining work: replace mailto contact form with real backend, add real testimonials/logos/screenshots. Read SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md.`
 
 ## Workflow Notes
 
@@ -171,3 +167,24 @@ Latest strategic handoff summary:
 - Applied consistently to: globals.css, Hero, ROICalculator, ServicesSection, ProcessSection, ContactSection, Footer, PageHero, PackagesSection, Navbar, data.ts.
 - Merged with upstream changes (PageHero `centered` prop, Hero spacing adjustments) during rebase.
 - Build verification passed. Pushed to main in commit `ccfd407`.
+
+### 2026-05-13 — Visual QA & Production Readiness Pass
+
+- Browser-based visual QA completed on all 6 pages at desktop resolution.
+- Fixed footer link cards stretching: added `lg:items-start` to footer grid so 3 right-column cards no longer stretch to match left column height.
+- Removed redundant `pt-8` from ContactSection (already overridden by `section-space`).
+- Pushed QA fixes in commit `3a72f6f`.
+- Full site audit completed covering design, frontend, backend, security, and deployment readiness.
+- Production domain set to `opsmira.ai`.
+- Updated `metadataBase` from GitHub Pages URL to `https://opsmira.ai`.
+- Added Open Graph and Twitter Card metadata to all 7 pages.
+- Created branded OG image (1200x630 PNG) at `public/og-image.png`.
+- Created `public/robots.txt` with sitemap reference.
+- Created `public/sitemap.xml` listing all 6 routes with priority weights.
+- Created `app/not-found.tsx` (404 page) with branded design.
+- Created `public/.htaccess` for GoDaddy Apache deployment with security headers (X-Frame-Options DENY, CSP, HSTS, X-Content-Type-Options, Referrer-Policy, Permissions-Policy), GZIP compression, browser caching, HTTPS redirect, and custom 404.
+- Removed non-functional `headers()` from `next.config.mjs` (doesn't apply to static export).
+- Fixed heading hierarchy: h2→h3 for service titles and case study titles (PageHero provides h1).
+- Removed 6 design reference PNGs from `public/reference/`.
+- Build verification passed. All 10 pages generated cleanly. Pushed in commits `bab9956` and `f0a9859`.
+- Site is now ready for GoDaddy deployment: run `npm run build` then upload `out/` contents to `public_html`.

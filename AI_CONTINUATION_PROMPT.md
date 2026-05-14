@@ -96,12 +96,31 @@ Remove-Item -LiteralPath .next -Recurse -Force
 npm.cmd run build
 ```
 
+## Production Readiness (Completed 2026-05-13)
+
+- Domain: `opsmira.ai` — metadataBase and all OG URLs point here
+- Open Graph + Twitter Card tags on all 7 pages
+- Branded OG image at `public/og-image.png` (1200x630)
+- `public/robots.txt` and `public/sitemap.xml` configured
+- `app/not-found.tsx` — branded 404 page
+- `public/.htaccess` — security headers (CSP, HSTS, X-Frame-Options, etc.), GZIP, caching, HTTPS redirect
+- Desktop visual QA completed; mobile QA still needed
+
+## GoDaddy Deployment
+
+1. Run `npm run build`
+2. Upload contents of `out/` folder to GoDaddy `public_html` via cPanel or FTP
+3. The `.htaccess` file handles security headers, compression, caching, and HTTPS redirect
+4. Verify SSL is active on GoDaddy for HSTS to work
+
+Do not change basePath — it auto-detects GitHub Actions vs production (empty basePath for GoDaddy root domain).
+
 ## Highest-Value Remaining Work
 
-1. Browser-based visual QA on desktop and mobile
-2. Replace mailto-based contact form with a real backend or external form handler
-3. Replace illustrative proof with real testimonials, logos, or case material
-4. Add real screenshots, dashboards, or workflow visuals
+1. Replace mailto-based contact form with a real backend (Formspree, Netlify Forms, or custom)
+2. Replace illustrative proof with real testimonials, logos, or case material
+3. Add real screenshots, dashboards, or workflow visuals
+4. Mobile responsive QA (was not testable in last session due to browser DPR)
 
 ## Success Criteria
 
