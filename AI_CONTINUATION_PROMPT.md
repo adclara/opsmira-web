@@ -17,12 +17,11 @@ Before editing anything, read:
 ## Project State Summary
 
 - This is the OpsMira marketing website built with Next.js and Tailwind.
-- The site went through a major simplification pass on 2026-05-13 to reduce cognitive load and improve conversion.
-- The homepage was reduced from 13 sections to 5 sections.
-- A new `/pricing` page was created with 3 pricing tiers.
-- Typography was fixed (letter-spacing and line-height improved across all headings).
-- The ROI Calculator was overhauled with better ranges, tooltip explanations, and less clutter.
-- The navbar and brand shell use a solid navy treatment with `AI Innovations` subtitle.
+- The site went through a major simplification pass (13 sections to 5) followed by a design polish pass on 2026-05-13.
+- The design polish tightened the entire visual system: typography scale reduced ~30-40%, border radii standardized to rounded-xl/2xl, letter-spacing on labels cut to 0.1em, section spacing reduced, shadows softened, buttons slimmed.
+- The homepage is 5 focused sections. A `/pricing` page exists separately.
+- The ROI Calculator has a 3-column layout: left descriptive panel with 3 dynamic savings cards, middle sliders with tooltips, right results panel with guidance footer.
+- The navbar uses a compact solid navy treatment with `AI Innovations` subtitle.
 
 ## Current Positioning
 
@@ -31,7 +30,7 @@ Before editing anything, read:
 ## Homepage Sections (5 total)
 
 1. `Hero` — headline, value prop, 2 CTAs, dashboard mockup with stats
-2. `ROICalculator` — interactive savings calculator with 6 sliders (each has ? tooltip), plan selector, live results
+2. `ROICalculator` — 3-column layout: left (headline + 3 dynamic savings cards), middle (6 sliders with ? tooltips + plan selector), right (monthly value, 4 breakdown cards, yearly/ROI, guidance)
 3. `ServicesSection` — core offer card + 4 service cards + integrated before/after comparison table
 4. `ProcessSection` — 3-step process: Audit | Build & Deploy | Measure & Refine
 5. `ContactSection` — CTA with 3 intake outputs
@@ -39,12 +38,13 @@ Before editing anything, read:
 ## Navbar
 
 - `Services` → `/services`
+- `Savings Calculator` → `/#savings-calculator`
 - `Pricing` → `/pricing`
 - `Case Studies` → `/case-studies`
 - `About` → `/about`
 - `Contact` → `/contact`
 
-Do not revert the solid navy navbar. Do not add back "Savings Calculator" to the nav — the calculator lives on the homepage below the hero.
+Do not revert the solid navy navbar. Keep "Savings Calculator" in the nav.
 
 ## Internal Pages
 
@@ -53,6 +53,20 @@ Do not revert the solid navy navbar. Do not add back "Savings Calculator" to the
 - `/case-studies` — Problem → implementation → outcome scenarios with economic logic
 - `/about` — Operating philosophy, implementation principles, values (simplified — no rollout timeline or engagement points)
 - `/contact` — Implementation intake form, fit section, rollout timeline sidebar
+
+## Design System (Post-Polish)
+
+- Section titles: `text-2xl sm:text-3xl lg:text-4xl` (via `.section-title` class)
+- Hero h1: `text-3xl sm:text-4xl xl:text-5xl`
+- Uppercase labels: `text-[0.65rem] tracking-[0.1em]`
+- Body text: `text-[0.8rem]` to `text-[0.9rem]`, leading-6
+- Border radii: `rounded-xl` for cards/panels, `rounded-lg` for inner elements, `rounded-2xl` for major containers
+- Buttons: `rounded-xl px-5 py-2.5 text-sm font-medium`
+- Section spacing: `py-10 sm:py-14 lg:py-16` (via `.section-space`)
+- Luxury panels: `rounded-2xl` with dark gradient
+- Shadows: `shadow-soft` (0 20px 60px rgba(15,23,47,0.08))
+
+Do not increase font sizes, border radii, letter-spacing, or padding back to previous oversized values.
 
 ## Messaging Rules
 
