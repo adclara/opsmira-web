@@ -24,7 +24,7 @@ When starting a new session, share this summary:
 
 Current handoff summary:
 
-`GitHub Pages is live at https://adclara.github.io/opsmira-web/. The homepage is now 5 focused sections (Hero → Savings Calculator → Services → Process → Contact CTA). The savings calculator has a 3-column layout with dynamic savings cards, tooltips on sliders, and full results panel. A /pricing route exists separately. Continue from the latest main branch state, review SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md, and focus future work on QA, live backend improvements, or stronger real proof assets.`
+`GitHub Pages is live at https://adclara.github.io/opsmira-web/. The homepage is 5 focused sections (Hero → Savings Calculator → Services → Process → Contact CTA). The full site has been through a design polish pass — tighter typography, smaller border radii, reduced spacing, and professional AI SaaS proportions. Savings Calculator has a 3-column layout with dynamic cards. Navbar includes Savings Calculator link. A /pricing route exists separately. Continue from main, read SESSION_CONTEXT.md and AI_CONTINUATION_PROMPT.md.`
 
 Latest strategic handoff summary:
 
@@ -156,3 +156,18 @@ Latest strategic handoff summary:
 - Restored the "Estimated monthly value created" subtitle text in the results panel.
 - Build verification passed. All 5 homepage sections render correctly: Hero → Savings Calculator → Services → Process → Contact CTA.
 - Pushed to main in commit `a15f345`.
+
+### 2026-05-13 — Design Polish Pass
+
+- Comprehensive typography and spacing refinement across all components for a professional AI SaaS look.
+- Typography scale reduced ~30-40%: section titles from text-6xl to text-4xl, hero h1 from 5.6rem to text-5xl, card values from text-4xl to text-2xl, body text tightened throughout.
+- Letter-spacing on uppercase labels reduced from 0.22-0.3em to 0.1em across all components.
+- Border radius standardized: all rounded-[1.4rem]+ reduced to rounded-xl or rounded-2xl. Luxury panels from rounded-[2.25rem] to rounded-2xl.
+- Section spacing tightened: section-space from py-28 to py-16, section gaps reduced proportionally.
+- Navbar: height from h-20 to h-16, nav pill border-radius from rounded-full to rounded-xl, font size from text-sm to text-[0.8rem].
+- "Savings Calculator" link restored to navbar navigation.
+- Buttons: rounded-2xl to rounded-xl, padding from px-6 py-3 to px-5 py-2.5, font-semibold to font-medium.
+- Shadow intensity reduced across all cards and panels.
+- Applied consistently to: globals.css, Hero, ROICalculator, ServicesSection, ProcessSection, ContactSection, Footer, PageHero, PackagesSection, Navbar, data.ts.
+- Merged with upstream changes (PageHero `centered` prop, Hero spacing adjustments) during rebase.
+- Build verification passed. Pushed to main in commit `ccfd407`.
