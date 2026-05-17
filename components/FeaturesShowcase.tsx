@@ -3,67 +3,67 @@
 import { motion } from "framer-motion";
 import {
   Bot,
-  CalendarCheck,
+  Package,
   BarChart3,
-  Eye,
+  ShoppingCart,
   ArrowRight,
 } from "lucide-react";
 
 const features = [
   {
     icon: Bot,
-    eyebrow: "Seguimiento automático",
-    title: "Respuesta instantánea a cada lead",
+    eyebrow: "AI Customer Agents",
+    title: "Instant response to every lead",
     description:
-      "Tu IA responde en segundos, clasifica la urgencia y agenda la siguiente acción — sin intervención humana.",
+      "Your AI agent responds in seconds, qualifies intent, schedules follow-ups, and routes hot leads to sales — no human needed.",
     color: "from-brand-500/20 to-brand-600/10",
     accent: "bg-brand-500",
     mockup: {
-      label: "Lead entrante",
+      label: "Lead response time",
       stat: "< 30s",
-      statLabel: "Tiempo de respuesta",
+      statLabel: "Fully automated",
     },
   },
   {
-    icon: CalendarCheck,
-    eyebrow: "Coordinación de agenda",
-    title: "Scheduling sin fricciones",
+    icon: Package,
+    eyebrow: "Supply Chain Optimization",
+    title: "End-to-end supply chain intelligence",
     description:
-      "Sincronización automática de crews, equipos y clientes. Conflictos detectados antes de que sucedan.",
+      "AI agents monitor inventory, predict demand, optimize routing, and flag bottlenecks before they impact production or delivery.",
     color: "from-emerald-500/20 to-emerald-600/10",
     accent: "bg-emerald-500",
     mockup: {
-      label: "Conflictos resueltos",
-      stat: "100%",
-      statLabel: "Automatizado",
+      label: "Stockout prevention",
+      stat: "94%",
+      statLabel: "Accuracy rate",
     },
   },
   {
     icon: BarChart3,
-    eyebrow: "Reportes inteligentes",
-    title: "Reportes que se escriben solos",
+    eyebrow: "Production Intelligence",
+    title: "Maximize throughput, minimize waste",
     description:
-      "Dashboards en tiempo real con métricas de rendimiento, costos y oportunidades perdidas — sin Excel.",
+      "Real-time production dashboards powered by AI — track efficiency, detect anomalies, and get recommendations to increase output.",
     color: "from-amber-500/20 to-amber-600/10",
     accent: "bg-amber-500",
     mockup: {
-      label: "Reportes generados",
-      stat: "24/7",
-      statLabel: "Monitoreo continuo",
+      label: "Production efficiency",
+      stat: "+37%",
+      statLabel: "Output increase",
     },
   },
   {
-    icon: Eye,
-    eyebrow: "Visibilidad del dueño",
-    title: "Todo en un solo vistazo",
+    icon: ShoppingCart,
+    eyebrow: "Sales & Revenue Agents",
+    title: "Never miss a revenue opportunity",
     description:
-      "Panel de control para el dueño: qué se hizo hoy, qué falta, dónde se pierde dinero. Sin reuniones innecesarias.",
+      "AI agents handle quote follow-ups, upsell detection, churn prevention, and pipeline management — driving sales while you sleep.",
     color: "from-cyan-500/20 to-cyan-600/10",
     accent: "bg-cyan-500",
     mockup: {
-      label: "Decisiones informadas",
-      stat: "10min",
-      statLabel: "Review diario",
+      label: "Revenue recovered",
+      stat: "$42k",
+      statLabel: "Per quarter avg.",
     },
   },
 ];
@@ -72,13 +72,13 @@ export function FeaturesShowcase() {
   return (
     <section className="section-shell section-space">
       <div className="mb-12 max-w-2xl">
-        <span className="eyebrow">Capacidades</span>
+        <span className="eyebrow">Capabilities</span>
         <h2 className="section-title mt-3">
-          Lo que OpsMira implementa por ti
+          What our AI agents do for you
         </h2>
         <p className="section-copy mt-4">
-          Cada módulo se despliega en días, no meses. Sin código. Sin
-          interrupciones.
+          Each agent deploys in days, not months. No code. No disruption.
+          Measurable impact from week one.
         </p>
       </div>
 
@@ -111,12 +111,11 @@ export function FeaturesShowcase() {
                 href="/services"
                 className="group/link mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-600 transition hover:text-brand-700"
               >
-                Conocer más
+                Learn more
                 <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
               </a>
             </div>
 
-            {/* Mockup card — inspired by pump.co colored feature panels */}
             <div
               className={`rounded-2xl bg-gradient-to-br ${feature.color} p-6 lg:p-8`}
             >
@@ -138,10 +137,6 @@ export function FeaturesShowcase() {
                       className="w-5 rounded-sm"
                       style={{
                         height: `${18 + ((j * 37 + i * 13) % 32)}px`,
-                        backgroundColor:
-                          j >= 5
-                            ? "var(--tw-shadow-color, #4338CA)"
-                            : "#E5E7EB",
                         background:
                           j >= 5
                             ? "linear-gradient(to top, #4338CA, #5B4CF0)"

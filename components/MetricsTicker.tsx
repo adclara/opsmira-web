@@ -1,18 +1,18 @@
 "use client";
 
 const items = [
-  "Construcción",
-  "Roofing",
-  "HVAC",
-  "Logística",
-  "Paisajismo",
-  "Almacenamiento",
-  "Cadena de Suministro",
-  "Operaciones",
-  "Permisos",
-  "Scheduling",
-  "Automatización",
-  "Reportes IA",
+  "Supply Chain",
+  "Production",
+  "Logistics",
+  "Cost Reduction",
+  "Sales Automation",
+  "AI Agents",
+  "Workflow Optimization",
+  "Inventory Management",
+  "Demand Forecasting",
+  "Profit Maximization",
+  "Operations",
+  "Quality Control",
 ];
 
 export function MetricsTicker() {
@@ -37,7 +37,6 @@ export function MetricsTicker() {
         ))}
       </div>
 
-      {/* Fade edges */}
       <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#f8faff] to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#f8faff] to-transparent" />
     </section>

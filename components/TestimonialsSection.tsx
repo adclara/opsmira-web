@@ -6,24 +6,24 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "OpsMira eliminó 35 horas semanales de trabajo admin. Ahora mi equipo se enfoca en lo que genera ingresos.",
+      "OpsMira's AI agents eliminated 35 hours of weekly admin work. Now my team focuses exclusively on revenue-generating activities.",
     name: "Carlos M.",
-    role: "Director de Operaciones",
-    company: "Constructora del Golfo",
+    role: "Director of Operations",
+    company: "Gulf Coast Construction",
     stars: 5,
   },
   {
     quote:
-      "El ROI fue visible en la primera semana. Los reportes automatizados nos ahorraron 3 horas diarias.",
-    name: "María L.",
-    role: "Gerente General",
-    company: "LogiTech Supply",
+      "The ROI was visible in the first week. Automated reporting alone saved us 3 hours daily and caught supply chain gaps we were missing.",
+    name: "Sarah L.",
+    role: "General Manager",
+    company: "LogiTech Supply Co.",
     stars: 5,
   },
   {
     quote:
-      "La coordinación de scheduling pasó de ser un caos a funcionar sola. Literalmente no tocamos nada.",
-    name: "Roberto A.",
+      "Scheduling coordination went from chaos to fully automated. Our production throughput increased 28% without adding headcount.",
+    name: "Robert A.",
     role: "Owner",
     company: "HVAC Solutions FL",
     stars: 5,
@@ -43,7 +43,7 @@ export function TestimonialsSection() {
           transition={{ duration: 0.5 }}
           className="text-center font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
         >
-          Lo que dicen nuestros clientes
+          What our clients say
         </motion.h2>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">

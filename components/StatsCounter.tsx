@@ -35,10 +35,10 @@ function AnimatedNumber({ target, suffix = "" }: { target: number; suffix?: stri
 }
 
 const stats = [
-  { value: 2400, suffix: "+", label: "Horas admin eliminadas" },
-  { value: 87, suffix: "%", label: "Velocidad de respuesta" },
-  { value: 340, suffix: "k", label: "Valor recuperado ($)" },
-  { value: 12, suffix: "x", label: "ROI promedio" },
+  { value: 2400, suffix: "+", label: "Admin hours eliminated" },
+  { value: 87, suffix: "%", label: "Faster response time" },
+  { value: 340, suffix: "k", label: "Cost savings ($)" },
+  { value: 12, suffix: "x", label: "Average ROI" },
 ];
 
 export function StatsCounter() {
@@ -55,7 +55,7 @@ export function StatsCounter() {
           transition={{ duration: 0.5 }}
           className="text-center text-sm font-medium uppercase tracking-[0.14em] text-white/40"
         >
-          Confiado por equipos en crecimiento
+          Trusted by growing teams
         </motion.p>
 
         <motion.div
@@ -69,7 +69,7 @@ export function StatsCounter() {
             <AnimatedNumber target={2400} suffix="+" />
           </span>
           <p className="mt-3 text-base text-white/50 sm:text-lg">
-            Horas de trabajo administrativo eliminadas para nuestros clientes
+            Hours of manual work eliminated by our AI agents across all clients
           </p>
         </motion.div>
 

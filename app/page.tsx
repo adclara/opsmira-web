@@ -10,13 +10,13 @@ import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "OpsMira | Inteligencia Artificial para tu Cadena de Suministro",
+  title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
   description:
-    "OpsMira optimiza tu cadena de suministro con IA. Automatización de permisos, optimización logística y visibilidad operativa en una sola plataforma.",
+    "OpsMira deploys AI agents across your operations — supply chain, production, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
   openGraph: {
-    title: "OpsMira | Inteligencia Artificial para tu Cadena de Suministro",
+    title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
     description:
-      "Automatización de permisos estructurales y optimización logística con IA.",
+      "Deploy intelligent AI agents to optimize your supply chain, automate operations, and maximize profit.",
     url: "https://opsmira.ai",
   },
 };

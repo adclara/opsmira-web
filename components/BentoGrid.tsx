@@ -16,13 +16,13 @@ export function BentoGrid() {
   return (
     <section className="section-shell section-space">
       <div className="mb-10 max-w-2xl">
-        <span className="eyebrow">Productos</span>
+        <span className="eyebrow">Products</span>
         <h2 className="section-title mt-3">
-          Una plataforma, tres motores de eficiencia
+          One platform, three engines of efficiency
         </h2>
         <p className="section-copy mt-4">
-          Cada módulo trabaja de forma autónoma y en conjunto para eliminar
-          fricción operativa.
+          Each module works autonomously and together to eliminate operational
+          friction across your entire business.
         </p>
       </div>
 
@@ -45,17 +45,16 @@ export function BentoGrid() {
               OpsMira Automate
             </p>
             <h3 className="mt-2 text-2xl font-bold tracking-tight text-white lg:text-3xl">
-              Automatiza sin código
+              Zero-code automation
             </h3>
             <p className="mt-3 max-w-md text-sm leading-6 text-white/55">
-              Permisos, seguimientos y reportes — todos en piloto automático.
-              Configura una vez, opera para siempre.
+              AI agents handle follow-ups, scheduling, approvals, and reporting
+              — all on autopilot. Set it once, let it run forever.
             </p>
           </div>
 
-          {/* Process flow visual */}
           <div className="mt-8 flex items-center gap-3">
-            {["Intake", "Proceso", "Entrega"].map((step, i) => (
+            {["Intake", "Process", "Deliver"].map((step, i) => (
               <div key={step} className="flex items-center gap-3">
                 <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-xs font-medium text-white/70">
                   {step}
@@ -72,7 +71,7 @@ export function BentoGrid() {
               href="/services"
               className="group inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition hover:text-brand-100"
             >
-              Explorar Automate
+              Explore Automate
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
@@ -96,15 +95,14 @@ export function BentoGrid() {
               OpsMira Analyze
             </p>
             <h3 className="mt-2 text-xl font-bold tracking-tight text-foreground">
-              Visibilidad en tiempo real
+              Real-time visibility
             </h3>
             <p className="mt-2 text-sm leading-6 text-neutral-500">
-              Dashboards operativos que muestran exactamente dónde se pierde
-              tiempo y dinero.
+              Operational dashboards that show exactly where you lose time,
+              money, and production capacity.
             </p>
           </div>
 
-          {/* Mini bar chart */}
           <div className="mt-6 flex items-end gap-1.5">
             {[40, 55, 35, 70, 50, 85, 65, 90, 75].map((h, i) => (
               <div
@@ -125,7 +123,7 @@ export function BentoGrid() {
             href="/services"
             className="group mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-600 transition hover:text-brand-700"
           >
-            Explorar Analyze
+            Explore Analyze
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>
@@ -153,11 +151,11 @@ export function BentoGrid() {
               OpsMira Intelligence
             </p>
             <h3 className="mt-2 text-xl font-bold tracking-tight text-white">
-              IA que aprende de tu operación
+              AI that learns your operation
             </h3>
             <p className="mt-2 text-sm leading-6 text-white/55">
-              Predicciones, anomalías y recomendaciones que mejoran cada
-              semana.
+              Predictive insights, anomaly detection, and recommendations that
+              improve every week — driving profit automatically.
             </p>
           </div>
 
@@ -165,7 +163,7 @@ export function BentoGrid() {
             href="/services"
             className="group mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition hover:text-brand-100"
           >
-            Explorar Intelligence
+            Explore Intelligence
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>

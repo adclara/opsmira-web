@@ -32,12 +32,12 @@ export function CTASection() {
           </motion.div>
 
           <h2 className="mx-auto mt-6 max-w-2xl font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Deja de perder tiempo en tareas que una IA puede hacer mejor
+            Stop losing money on tasks AI agents can handle
           </h2>
 
           <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-white/55">
-            Agenda una auditoría gratuita de 30 minutos. Te mostramos exactamente
-            qué workflows automatizar y cuánto puedes ahorrar.
+            Book a free 30-minute operations audit. We&apos;ll show you exactly
+            which workflows to automate and how much you can save.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -45,19 +45,19 @@ export function CTASection() {
               href="/contact"
               className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(79,70,229,0.3)] transition hover:-translate-y-0.5"
             >
-              Agendar auditoría gratuita
+              Book a free audit
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href="/pricing"
               className="inline-flex items-center justify-center rounded-xl border border-white/12 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
             >
-              Ver planes y precios
+              View plans & pricing
             </Link>
           </div>
 
           <p className="mt-6 text-xs text-white/30">
-            Sin compromiso · Setup en 5 días · Resultados medibles desde la semana 1
+            No commitment · Setup in 5 days · Measurable results from week 1
           </p>
         </div>
       </motion.div>

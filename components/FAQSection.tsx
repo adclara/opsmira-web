@@ -6,34 +6,34 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "¿Cuánto tiempo toma la implementación?",
+    question: "How long does implementation take?",
     answer:
-      "El primer workflow se despliega en 5–7 días hábiles. Incluye auditoría, configuración, pruebas y entrega. No necesitas hacer nada técnico — nosotros manejamos todo.",
+      "Your first AI agent is deployed within 5–7 business days. This includes an operational audit, configuration, testing, and handoff. You don't need to do anything technical — we handle everything.",
   },
   {
-    question: "¿Necesito conocimientos técnicos?",
+    question: "Do I need technical knowledge?",
     answer:
-      "No. OpsMira es 100% done-for-you. No necesitas saber programar, configurar APIs ni manejar dashboards complejos. Tú solo validas los resultados.",
+      "No. OpsMira is 100% done-for-you. You don't need to code, configure APIs, or manage dashboards. You just review the results and watch your costs drop.",
   },
   {
-    question: "¿Cómo funciona el modelo de pricing?",
+    question: "How does pricing work?",
     answer:
-      "Ofrecemos tres planes mensuales (Starter $299, Professional $599, Premium $899) según la cantidad de workflows y el nivel de soporte. Todos incluyen setup inicial y mantenimiento.",
+      "We offer three monthly plans (Starter $299, Professional $599, Premium $899) based on the number of AI agents and support level. All plans include initial setup, training, and ongoing maintenance.",
   },
   {
-    question: "¿Qué pasa si no veo resultados?",
+    question: "What if I don't see results?",
     answer:
-      "Medimos el impacto desde el día uno con métricas claras: horas ahorradas, velocidad de respuesta, oportunidades recuperadas. Si no ves valor en los primeros 30 días, ajustamos o pausamos sin compromiso.",
+      "We measure impact from day one with clear metrics: hours saved, response speed, cost reduction, and revenue recovered. If you don't see value within 30 days, we adjust or pause — no questions asked.",
   },
   {
-    question: "¿Funciona con las herramientas que ya uso?",
+    question: "Does it work with my existing tools?",
     answer:
-      "Sí. OpsMira se integra con tus sistemas existentes — CRM, calendarios, email, WhatsApp, herramientas de gestión de proyectos. No reemplazamos, optimizamos lo que ya tienes.",
+      "Yes. OpsMira integrates with your current stack — CRM, calendars, email, ERP, inventory management, and project tools. We don't replace what works, we optimize it with AI agents.",
   },
   {
-    question: "¿Es seguro? ¿Quién tiene acceso a mis datos?",
+    question: "How do AI agents improve my supply chain?",
     answer:
-      "Tu data está encriptada y solo se accede con permisos de solo lectura donde sea necesario. Cumplimos con las mejores prácticas de seguridad y nunca compartimos información con terceros.",
+      "Our agents monitor inventory levels, predict demand patterns, optimize procurement timing, and flag supply chain bottlenecks in real time. They learn from your historical data to make increasingly accurate recommendations.",
   },
 ];
 
@@ -98,7 +98,7 @@ export function FAQSection() {
               transition={{ duration: 0.5 }}
               className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl"
             >
-              Preguntas frecuentes
+              Frequently asked questions
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 12 }}
@@ -107,8 +107,8 @@ export function FAQSection() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-4 text-sm leading-6 text-white/40"
             >
-              ¿No encuentras lo que buscas? Escríbenos y te respondemos en menos
-              de 24 horas.
+              Can&apos;t find what you&apos;re looking for? Reach out and
+              we&apos;ll respond within 24 hours.
             </motion.p>
           </div>
 
