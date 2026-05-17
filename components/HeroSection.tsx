@@ -202,8 +202,8 @@ export function HeroSection() {
             </div>
           </div>
           <p className="max-w-md text-center text-sm leading-6 text-white/50 sm:text-left">
-            We deploy AI agents that automate operations, optimize your supply
-            chain, and drive measurable profit growth.
+            We deploy AI agents that automate operations, optimize your
+            business processes, and drive measurable profit growth.
           </p>
           <div className="flex gap-3">
             <Link
