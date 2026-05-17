@@ -42,7 +42,7 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <Link href="/contact" className="button-primary">
-              Book Workflow Audit
+              Book Operations Audit
             </Link>
           </div>
 
@@ -85,7 +85,7 @@ export function Navbar() {
                 className="button-primary w-full"
                 onClick={() => setOpen(false)}
               >
-                Book Workflow Audit
+                Book Operations Audit
               </Link>
             </div>
 

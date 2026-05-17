@@ -9,8 +9,8 @@ export function ProcessSection() {
           Three steps to measurable savings.
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-[0.9rem] leading-6 text-neutral-600">
-          Every engagement follows the same clear path from workflow audit to
-          live deployment and optimization.
+          Every engagement follows the same clear path from operations audit to
+          AI agent deployment and optimization.
         </p>
       </div>
 

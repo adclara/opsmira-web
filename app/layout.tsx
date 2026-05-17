@@ -6,11 +6,11 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://opsmira.ai"),
   title: {
-    default: "OpsMira | Delivery-First AI Operations For SMBs",
+    default: "OpsMira | AI Agents That Cut Costs & Maximize Output",
     template: "%s | OpsMira"
   },
   description:
-    "OpsMira implements done-for-you AI operations systems for SMBs, including workflow automation, customer follow-up, scheduling coordination, reporting automation, and owner visibility dashboards.",
+    "OpsMira deploys AI agents across your operations — supply chain, production, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
   icons: {
     icon: "/icon.svg"
   },
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "OpsMira",
-    title: "OpsMira | Delivery-First AI Operations For SMBs",
+    title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
     description:
-      "Done-for-you AI operations for SMBs — workflow automation, customer follow-up, scheduling coordination, reporting, and owner dashboards.",
+      "Deploy intelligent AI agents to optimize your supply chain, automate operations, and maximize profit.",
     url: "https://opsmira.ai",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "OpsMira — AI Operations For SMBs" }]
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "OpsMira — AI Agents for Business" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "OpsMira | Delivery-First AI Operations For SMBs",
+    title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
     description:
-      "Done-for-you AI operations for SMBs — cut admin cost, recover missed opportunities, and gain owner visibility.",
+      "AI agents for supply chain, production, sales, and operations — reduce costs and grow profit on autopilot.",
     images: ["/og-image.png"]
   },
   robots: {

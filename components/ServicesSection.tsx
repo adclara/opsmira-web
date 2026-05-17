@@ -12,8 +12,8 @@ export function ServicesSection() {
             The work that costs you the most time.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[0.9rem] leading-6 text-neutral-600">
-            OpsMira focuses on operational workflows that create labor cost,
-            slow customer response, and reduce visibility.
+            OpsMira deploys AI agents that eliminate operational waste,
+            speed up response times, and maximize production output.
           </p>
         </div>
 

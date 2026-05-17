@@ -12,13 +12,12 @@ export function Footer() {
               <Brand dark />
             </Link>
             <p className="mt-4 text-[0.7rem] font-medium uppercase tracking-[0.1em] text-brand-200">
-              Done-for-you AI operations for SMBs
+              AI Agents for Business Operations
             </p>
             <p className="mt-4 max-w-lg text-[0.8rem] leading-6 text-white/66">
-              OpsMira helps owners remove administrative drag, recover missed
-              opportunities, improve scheduling coordination, automate
-              reporting, and launch a working AI operations layer with human
-              oversight.
+              OpsMira deploys intelligent AI agents that cut costs, optimize
+              supply chains, maximize production output, and drive profit
+              growth — all on autopilot with human oversight.
             </p>
             <div className="mt-5 space-y-1.5 text-[0.8rem] leading-6 text-white/60">
               <p>{site.legalName}</p>

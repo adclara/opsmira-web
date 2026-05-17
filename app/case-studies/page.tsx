@@ -7,10 +7,10 @@ import { caseStudies, testimonials, proofLogos, workflowVisuals } from "@/lib/da
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Review OpsMira implementation scenarios focused on workflow bottlenecks, automation logic, manual work reduced, and economic outcomes for SMB operations.",
+    "See how OpsMira AI agents recover lost revenue, optimize supply chains, and increase production throughput — with measurable cost savings and economic outcomes.",
   openGraph: {
     title: "Case Studies | OpsMira",
-    description: "Implementation scenarios showing how OpsMira reduces admin labor, speeds response, and recovers missed opportunities.",
+    description: "Real implementation scenarios showing how AI agents reduce costs, speed operations, and recover missed revenue.",
     url: "https://opsmira.ai/case-studies"
   }
 };
@@ -20,17 +20,17 @@ export default function CaseStudiesPage() {
     <>
       <PageHero
         eyebrow="Case Studies"
-        title="Implementation scenarios shaped around business problems and economic outcomes."
-        description="OpsMira case studies are framed to help buyers understand where savings come from: what broke down operationally, what workflow layer gets implemented, and how the result improves labor cost, response speed, or owner visibility."
+        title="AI agent deployments with measurable business outcomes."
+        description="Each case study shows the operational problem, which AI agents were deployed, and the economic result — cost savings, revenue recovered, or throughput gained."
         stats={[
-          { label: "Structure", value: "Problem -> build -> outcome" },
-          { label: "Primary lens", value: "Operational payback" },
+          { label: "Structure", value: "Problem → Deploy → Result" },
+          { label: "Primary lens", value: "Cost savings & ROI" },
           { label: "Use", value: "Buyer evaluation" }
         ]}
         highlights={[
-          "Focused on representative SMB workflow bottlenecks",
-          "Shows implementation logic instead of vague transformation claims",
-          "Connects delivery choices to measurable business value"
+          "Focused on supply chain, production, and revenue recovery",
+          "Shows which AI agents were deployed and how they integrate",
+          "Connects deployment decisions to measurable dollar impact"
         ]}
       />
 
@@ -96,7 +96,7 @@ export default function CaseStudiesPage() {
 
         {testimonials.length === 0 && proofLogos.length === 0 && workflowVisuals.length === 0 ? (
           <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50/70 px-6 py-5 text-sm leading-7 text-blue-800">
-            Current scenarios are representative of common SMB workflow patterns. Real client proof and approved assets will appear here as they become available.
+            These scenarios represent common operational patterns where AI agents deliver the highest ROI. Client proof and approved assets will appear here as they become available.
           </div>
         ) : (
           <>
@@ -143,19 +143,19 @@ export default function CaseStudiesPage() {
               Next step
             </p>
             <h3 className="mt-4 font-display text-4xl text-white">
-              If one of these patterns sounds familiar, start with the highest-payback workflow.
+              See a pattern that matches your business? Let&apos;s deploy the right agents.
             </h3>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-white/72">
-              OpsMira uses the intake process to identify which operational lane
-              is leaking the most labor, time, or follow-up value so the first
-              deployment is easier to justify.
+              OpsMira identifies which operational bottleneck is costing you the
+              most and deploys AI agents to eliminate it — measurable savings
+              from the first week.
             </p>
           </div>
           <Link
             href="/contact"
             className="inline-flex items-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-brand-700"
           >
-            Book Workflow Audit
+            Book Operations Audit
           </Link>
         </div>
       </section>

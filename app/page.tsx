@@ -1,29 +1,40 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/Hero";
+import { HeroSection } from "@/components/HeroSection";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { MetricsTicker } from "@/components/MetricsTicker";
+import { BentoGrid } from "@/components/BentoGrid";
+import { StatsCounter } from "@/components/StatsCounter";
+import { FeaturesShowcase } from "@/components/FeaturesShowcase";
 import { ROICalculator } from "@/components/ROICalculator";
-import { ServicesSection } from "@/components/ServicesSection";
-import { ProcessSection } from "@/components/ProcessSection";
-import { ContactSection } from "@/components/ContactSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FAQSection } from "@/components/FAQSection";
+import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "OpsMira | Delivery-First AI Operations For SMBs",
+  title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
   description:
-    "OpsMira implements AI agents, workflow automation, customer follow-up, scheduling coordination, reporting automation, and owner visibility dashboards for SMBs focused on cost savings.",
+    "OpsMira deploys AI agents across your operations — supply chain, production, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
   openGraph: {
-    title: "OpsMira | Delivery-First AI Operations For SMBs",
-    description: "Cut admin cost with AI operations. Done-for-you workflow automation, follow-up, scheduling, and reporting for SMBs.",
-    url: "https://opsmira.ai"
-  }
+    title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
+    description:
+      "Deploy intelligent AI agents to optimize your supply chain, automate operations, and maximize profit.",
+    url: "https://opsmira.ai",
+  },
 };
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <HeroSection />
+      <TrustedBySection />
+      <MetricsTicker />
+      <BentoGrid />
+      <StatsCounter />
+      <FeaturesShowcase />
       <ROICalculator />
-      <ServicesSection />
-      <ProcessSection />
-      <ContactSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <CTASection />
     </>
   );
 }

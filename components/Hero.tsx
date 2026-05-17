@@ -88,7 +88,7 @@ export function Hero() {
           <div className="relative grid items-center gap-12 xl:grid-cols-[0.92fr_1.08fr]">
             <div className="max-w-[40rem]">
               <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.68rem] font-medium uppercase tracking-[0.1em] text-brand-100">
-                Done-for-you AI operations for SMBs
+                AI Agents for Business Operations
               </span>
               <h1 className="mt-5 max-w-[16ch] font-display text-3xl font-semibold leading-[1.15] tracking-[-0.02em] text-white sm:text-4xl xl:text-5xl">
                 Cut admin cost with AI operations.
@@ -101,7 +101,7 @@ export function Hero() {
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact" className="button-primary">
-                  Book Workflow Audit
+                  Book Operations Audit
                 </Link>
                 <Link
                   href="/services"

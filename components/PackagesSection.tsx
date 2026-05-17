@@ -10,11 +10,11 @@ export function PackagesSection() {
             Pricing
           </span>
           <h2 className="mt-4 font-display text-2xl font-semibold leading-[1.15] tracking-[-0.02em] text-white sm:text-3xl">
-            Plans built around workflow scope.
+            Plans built around operational impact.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[0.9rem] leading-6 text-white/68">
-            Each plan is scoped around workflow depth, coordination complexity,
-            and operational impact.
+            Each plan is scoped around AI agent complexity, number of workflows
+            automated, and measurable cost reduction.
           </p>
         </div>
 
@@ -31,24 +31,50 @@ export function PackagesSection() {
                     : "rounded-xl border border-white/10 bg-white px-5 py-5 text-foreground"
                 }
               >
-                <p
-                  className={
-                    featured
-                      ? "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-white/70"
-                      : "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-brand-600"
-                  }
-                >
-                  {pkg.title}
-                </p>
-                <p
-                  className={
-                    featured
-                      ? "mt-3 text-3xl font-semibold tracking-[-0.02em] text-white"
-                      : "mt-3 text-3xl font-semibold tracking-[-0.02em] text-foreground"
-                  }
-                >
-                  {pkg.price}
-                </p>
+                <div className="flex items-center justify-between">
+                  <p
+                    className={
+                      featured
+                        ? "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-white/70"
+                        : "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-brand-600"
+                    }
+                  >
+                    {pkg.title}
+                  </p>
+                  {pkg.originalPrice && (
+                    <span
+                      className={
+                        featured
+                          ? "rounded-full bg-white/20 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-white"
+                          : "rounded-full bg-green-100 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-green-700"
+                      }
+                    >
+                      30% off
+                    </span>
+                  )}
+                </div>
+                <div className="mt-3 flex items-baseline gap-2.5">
+                  <p
+                    className={
+                      featured
+                        ? "text-3xl font-semibold tracking-[-0.02em] text-white"
+                        : "text-3xl font-semibold tracking-[-0.02em] text-foreground"
+                    }
+                  >
+                    {pkg.price}
+                  </p>
+                  {pkg.originalPrice && (
+                    <span
+                      className={
+                        featured
+                          ? "text-base font-medium text-white/40 line-through"
+                          : "text-base font-medium text-neutral-400 line-through"
+                      }
+                    >
+                      {pkg.originalPrice}
+                    </span>
+                  )}
+                </div>
                 <p
                   className={
                     featured
@@ -108,7 +134,7 @@ export function PackagesSection() {
         </div>
 
         <p className="mt-5 text-center text-[0.8rem] leading-5 text-white/50">
-          Final scope depends on workflow volume, integrations, and reporting depth.
+          Final scope depends on operational complexity, integrations, and number of AI agents deployed.
         </p>
       </div>
     </section>
