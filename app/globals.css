@@ -83,6 +83,15 @@ body::before {
   @apply text-xs font-medium uppercase tracking-[0.1em] text-brand-600;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .luxury-panel {
   @apply rounded-2xl border text-white;
   border-color: rgba(255, 255, 255, 0.08);
