@@ -15,9 +15,9 @@ export function Footer() {
               AI Agents for Business Operations
             </p>
             <p className="mt-4 max-w-lg text-[0.8rem] leading-6 text-white/66">
-              OpsMira deploys intelligent AI agents that cut costs, optimize
-              supply chains, maximize production output, and drive profit
-              growth — all on autopilot with human oversight.
+              OpsMira deploys intelligent AI agents that cut costs, streamline
+              operations, maximize output, and drive profit growth — all on
+              autopilot with human oversight.
             </p>
             <div className="mt-5 space-y-1.5 text-[0.8rem] leading-6 text-white/60">
               <p>{site.legalName}</p>

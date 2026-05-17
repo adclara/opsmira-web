@@ -31,9 +31,9 @@ const faqs = [
       "Yes. OpsMira integrates with your current stack — CRM, calendars, email, ERP, inventory management, and project tools. We don't replace what works, we optimize it with AI agents.",
   },
   {
-    question: "How do AI agents improve my supply chain?",
+    question: "How do AI agents improve my operations?",
     answer:
-      "Our agents monitor inventory levels, predict demand patterns, optimize procurement timing, and flag supply chain bottlenecks in real time. They learn from your historical data to make increasingly accurate recommendations.",
+      "Our agents monitor key metrics, predict bottlenecks, optimize scheduling and resource allocation, and flag operational issues in real time. They learn from your historical data to make increasingly accurate recommendations.",
   },
 ];
 

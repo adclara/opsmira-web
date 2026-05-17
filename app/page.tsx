@@ -13,11 +13,11 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
   description:
-    "OpsMira deploys AI agents across your operations — supply chain, production, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
+    "OpsMira deploys AI agents across your operations — production, logistics, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
   openGraph: {
     title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
     description:
-      "Deploy intelligent AI agents to optimize your supply chain, automate operations, and maximize profit.",
+      "Deploy intelligent AI agents to streamline your operations, automate processes, and maximize profit.",
     url: "https://opsmira.ai",
   },
 };

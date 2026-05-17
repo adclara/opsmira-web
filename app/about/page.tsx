@@ -6,7 +6,7 @@ import { site } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn how OpsMira deploys AI agents to cut operational costs, optimize supply chains, and maximize production output — with human oversight and measurable ROI.",
+    "Learn how OpsMira deploys AI agents to cut operational costs, streamline processes, and maximize output — with human oversight and measurable ROI.",
   openGraph: {
     title: "About | OpsMira",
     description: "An AI-first operations company built around deploying intelligent agents that reduce costs and grow profit.",
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About OpsMira"
         title="AI agents deployed to cut costs and maximize output."
-        description="OpsMira is not a consulting firm or a generic SaaS platform. We deploy purpose-built AI agents that integrate directly into your operations — supply chain, production, sales, and admin — delivering measurable cost reduction and profit growth from day one."
+        description="OpsMira is not a consulting firm or a generic SaaS platform. We deploy purpose-built AI agents that integrate directly into your operations — production, logistics, sales, and admin — delivering measurable cost reduction and profit growth from day one."
         stats={[
           { label: "Operating style", value: "AI-first deployment" },
           { label: "Primary lens", value: "Measurable ROI" },
