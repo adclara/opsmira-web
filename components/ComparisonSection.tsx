@@ -23,7 +23,7 @@ export function ComparisonSection({ embedded = false }: { embedded?: boolean }) 
 
         <div className="overflow-hidden rounded-[2rem] border border-stone-300 bg-white/95 shadow-soft">
           <div className="grid grid-cols-[0.9fr_1.05fr_1.05fr] border-b border-stone-200 bg-[#f5f7ff] px-5 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-neutral-500 sm:px-6">
-            <div>Workflow</div>
+            <div>Operation</div>
             <div>Before OpsMira</div>
             <div>After OpsMira</div>
           </div>

@@ -9,15 +9,15 @@ export function ContactSection() {
           <div>
             <span className="eyebrow">Get started</span>
             <h2 className="section-title">
-              Start with the workflow costing you the most.
+              Start with the bottleneck costing you the most.
             </h2>
             <p className="mt-3 max-w-xl text-[0.9rem] leading-6 text-neutral-600">
-              Bring the follow-up problem, scheduling friction, or reporting
-              burden. We will identify the highest-value workflow to fix first.
+              Tell us about your supply chain delays, production gaps, or missed
+              revenue. We identify the highest-value AI agent deployment first.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="button-primary">
-                Book Workflow Audit
+                Book Operations Audit
               </Link>
               <Link href="/services" className="button-secondary">
                 Review Deliverables

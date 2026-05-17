@@ -37,7 +37,7 @@ export function ContactForm() {
 
         if (!form.name || !form.email || !form.problem) {
           setStatus("error");
-          setErrorMsg("Please fill in your name, email, and the main workflow problem before submitting.");
+          setErrorMsg("Please fill in your name, email, and the main operational problem before submitting.");
           return;
         }
 
@@ -56,9 +56,9 @@ export function ContactForm() {
           Implementation intake
         </p>
         <p className="mt-3 text-sm leading-7 text-neutral-600">
-          Share the workflow bottleneck, where admin time is getting burned, or
-          which customer or scheduling process keeps slipping. This page is
-          designed to start the first implementation conversation.
+          Tell us where your business is losing money — supply chain delays,
+          production bottlenecks, missed leads, or manual admin. We use this
+          to identify the best first AI agent deployment.
         </p>
       </div>
 
@@ -169,7 +169,7 @@ export function ContactForm() {
       </div>
 
       <label className="mt-5 block text-sm font-medium text-neutral-700">
-        What workflow is costing you the most time, money, or follow-up right now?
+        What operational bottleneck is costing you the most time, money, or revenue right now?
         <textarea
           name="problem"
           rows={6}
@@ -213,14 +213,14 @@ export function ContactForm() {
         className="button-primary mt-6"
         disabled={status === "submitting"}
       >
-        {status === "submitting" ? "Submitting…" : "Request Workflow Audit"}
+        {status === "submitting" ? "Submitting…" : "Request Operations Audit"}
       </button>
       {status === "error" && errorMsg ? (
         <p className="mt-3 text-sm font-medium text-[#b42318]">{errorMsg}</p>
       ) : null}
       {status === "success" ? (
         <p className="mt-3 text-sm font-medium text-brand-700">
-          Thanks — your intake has been submitted. We will review your workflow details and follow up shortly.
+          Thanks — your intake has been submitted. We will review your operational details and follow up shortly.
         </p>
       ) : null}
     </form>

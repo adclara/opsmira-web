@@ -315,7 +315,7 @@ export function ROICalculator() {
                 </p>
                 <div className="mt-3 grid gap-2 sm:grid-cols-2">
                   <div className="rounded-lg border border-stone-200 bg-[#f8faff] px-3 py-3 text-[0.8rem] leading-6 text-neutral-700">
-                    Use this estimate to choose the first workflow worth deploying.
+                    Use this estimate to choose the first AI agent worth deploying.
                   </div>
                   <div className="rounded-lg border border-stone-200 bg-[#f8faff] px-3 py-3 text-[0.8rem] leading-6 text-neutral-700">
                     Then scope the plan around the operational lane with the clearest payback.

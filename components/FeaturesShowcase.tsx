@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Bot,
@@ -136,13 +137,13 @@ export function FeaturesShowcase() {
               <p className="mt-3 text-sm leading-6 text-neutral-500">
                 {feature.description}
               </p>
-              <a
+              <Link
                 href="/services"
                 className="group/link mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-600 transition hover:text-brand-700"
               >
                 Learn more
                 <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
-              </a>
+              </Link>
             </div>
 
             <motion.div

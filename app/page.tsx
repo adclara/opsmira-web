@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/HeroSection";
+import { TrustedBySection } from "@/components/TrustedBySection";
 import { MetricsTicker } from "@/components/MetricsTicker";
 import { BentoGrid } from "@/components/BentoGrid";
 import { StatsCounter } from "@/components/StatsCounter";
@@ -25,6 +26,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <TrustedBySection />
       <MetricsTicker />
       <BentoGrid />
       <StatsCounter />

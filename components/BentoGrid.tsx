@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Zap, BarChart3, Brain, ArrowRight } from "lucide-react";
 
@@ -104,13 +105,13 @@ export function BentoGrid() {
           </div>
 
           <div className="mt-8">
-            <a
+            <Link
               href="/services"
               className="group inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition hover:text-brand-100"
             >
               Explore Automate
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
         </motion.div>
 
@@ -163,13 +164,13 @@ export function BentoGrid() {
             ))}
           </div>
 
-          <a
+          <Link
             href="/services"
             className="group mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-600 transition hover:text-brand-700"
           >
             Explore Analyze
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </motion.div>
 
         {/* Card 3 — Intelligence (dark) */}
@@ -211,13 +212,13 @@ export function BentoGrid() {
             </p>
           </div>
 
-          <a
+          <Link
             href="/services"
             className="group mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition hover:text-brand-100"
           >
             Explore Intelligence
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

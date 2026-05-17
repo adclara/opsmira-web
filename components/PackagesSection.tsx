@@ -10,11 +10,11 @@ export function PackagesSection() {
             Pricing
           </span>
           <h2 className="mt-4 font-display text-2xl font-semibold leading-[1.15] tracking-[-0.02em] text-white sm:text-3xl">
-            Plans built around workflow scope.
+            Plans built around operational impact.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[0.9rem] leading-6 text-white/68">
-            Each plan is scoped around workflow depth, coordination complexity,
-            and operational impact.
+            Each plan is scoped around AI agent complexity, number of workflows
+            automated, and measurable cost reduction.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export function PackagesSection() {
         </div>
 
         <p className="mt-5 text-center text-[0.8rem] leading-5 text-white/50">
-          Final scope depends on workflow volume, integrations, and reporting depth.
+          Final scope depends on operational complexity, integrations, and number of AI agents deployed.
         </p>
       </div>
     </section>

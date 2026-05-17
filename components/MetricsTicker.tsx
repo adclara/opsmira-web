@@ -7,7 +7,7 @@ const items = [
   "Cost Reduction",
   "Sales Automation",
   "AI Agents",
-  "Workflow Optimization",
+  "Process Optimization",
   "Inventory Management",
   "Demand Forecasting",
   "Profit Maximization",
