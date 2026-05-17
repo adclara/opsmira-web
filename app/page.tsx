@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { HeroSection } from "@/components/HeroSection";
 import { MetricsTicker } from "@/components/MetricsTicker";
 import { BentoGrid } from "@/components/BentoGrid";
+import { StatsCounter } from "@/components/StatsCounter";
+import { FeaturesShowcase } from "@/components/FeaturesShowcase";
 import { ROICalculator } from "@/components/ROICalculator";
-import { ServicesSection } from "@/components/ServicesSection";
-import { ProcessSection } from "@/components/ProcessSection";
-import { ContactSection } from "@/components/ContactSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FAQSection } from "@/components/FAQSection";
+import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "OpsMira | Inteligencia Artificial para tu Cadena de Suministro",
@@ -25,10 +27,12 @@ export default function HomePage() {
       <HeroSection />
       <MetricsTicker />
       <BentoGrid />
+      <StatsCounter />
+      <FeaturesShowcase />
       <ROICalculator />
-      <ServicesSection />
-      <ProcessSection />
-      <ContactSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <CTASection />
     </>
   );
 }
