@@ -72,35 +72,64 @@ export function FeaturesShowcase() {
   return (
     <section className="section-shell section-space">
       <div className="mb-12 max-w-2xl">
-        <span className="eyebrow">Capabilities</span>
-        <h2 className="section-title mt-3">
+        <motion.span
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="eyebrow"
+        >
+          Capabilities
+        </motion.span>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="section-title mt-3"
+        >
           What our AI agents do for you
-        </h2>
-        <p className="section-copy mt-4">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="section-copy mt-4"
+        >
           Each agent deploys in days, not months. No code. No disruption.
           Measurable impact from week one.
-        </p>
+        </motion.p>
       </div>
 
       <div className="space-y-6">
         {features.map((feature, i) => (
           <motion.div
             key={feature.title}
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, delay: i * 0.08 }}
-            className="group grid items-center gap-8 overflow-hidden rounded-2xl border border-stone-300/70 bg-white/95 p-6 shadow-soft backdrop-blur transition hover:shadow-lg sm:p-8 lg:grid-cols-[1fr_1fr] lg:p-10"
+            transition={{ duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -4, transition: { duration: 0.3 } }}
+            className="group grid items-center gap-8 overflow-hidden rounded-2xl border border-stone-300/70 bg-white/95 p-6 shadow-soft backdrop-blur transition-shadow hover:shadow-lg sm:p-8 lg:grid-cols-[1fr_1fr] lg:p-10"
           >
             <div>
-              <div
+              <motion.div
+                whileHover={{ rotate: 12, scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
                 className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${feature.accent}`}
               >
                 <feature.icon className="h-5 w-5 text-white" />
-              </div>
-              <p className="mt-4 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-neutral-400">
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
+                className="mt-4 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-neutral-400"
+              >
                 {feature.eyebrow}
-              </p>
+              </motion.p>
               <h3 className="mt-2 text-xl font-bold tracking-tight text-foreground lg:text-2xl">
                 {feature.title}
               </h3>
@@ -116,37 +145,53 @@ export function FeaturesShowcase() {
               </a>
             </div>
 
-            <div
-              className={`rounded-2xl bg-gradient-to-br ${feature.color} p-6 lg:p-8`}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.08 }}
+              className={`rounded-2xl bg-gradient-to-br ${feature.color} p-6 transition-transform group-hover:scale-[1.02] lg:p-8`}
             >
               <div className="rounded-xl border border-white/60 bg-white/80 p-5 shadow-sm backdrop-blur">
                 <p className="text-xs font-medium uppercase tracking-[0.1em] text-neutral-400">
                   {feature.mockup.label}
                 </p>
-                <p className="mt-2 text-4xl font-bold tracking-tight text-foreground">
+                <motion.p
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 + i * 0.08, type: "spring" }}
+                  className="mt-2 text-4xl font-bold tracking-tight text-foreground"
+                >
                   {feature.mockup.stat}
-                </p>
+                </motion.p>
                 <p className="mt-1 text-sm text-neutral-500">
                   {feature.mockup.statLabel}
                 </p>
 
                 <div className="mt-4 flex items-end gap-1">
-                  {Array.from({ length: 7 }).map((_, j) => (
-                    <div
-                      key={j}
-                      className="w-5 rounded-sm"
-                      style={{
-                        height: `${18 + ((j * 37 + i * 13) % 32)}px`,
-                        background:
-                          j >= 5
-                            ? "linear-gradient(to top, #4338CA, #5B4CF0)"
-                            : "#E5E7EB",
-                      }}
-                    />
-                  ))}
+                  {Array.from({ length: 7 }).map((_, j) => {
+                    const h = 18 + ((j * 37 + i * 13) % 32);
+                    return (
+                      <motion.div
+                        key={j}
+                        initial={{ height: 0 }}
+                        whileInView={{ height: `${h}px` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 + j * 0.06 }}
+                        className="w-5 rounded-sm"
+                        style={{
+                          background:
+                            j >= 5
+                              ? "linear-gradient(to top, #4338CA, #5B4CF0)"
+                              : "#E5E7EB",
+                        }}
+                      />
+                    );
+                  })}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>

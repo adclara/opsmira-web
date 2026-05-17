@@ -30,6 +30,20 @@ const testimonials = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 32, scale: 0.96 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      delay: i * 0.15,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  }),
+};
+
 export function TestimonialsSection() {
   return (
     <section className="relative overflow-hidden bg-[#0a0f1e] py-20 lg:py-28">
@@ -37,32 +51,48 @@ export function TestimonialsSection() {
 
       <div className="section-shell relative z-10">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="text-center font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
         >
           What our clients say
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mx-auto mt-4 max-w-lg text-center text-sm leading-6 text-white/40"
+        >
+          Real results from businesses running OpsMira AI agents
+        </motion.p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="flex flex-col justify-between rounded-2xl border border-white/8 bg-white/[0.04] p-7 backdrop-blur"
+              variants={cardVariants}
+              whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              className="flex flex-col justify-between rounded-2xl border border-white/8 bg-white/[0.04] p-7 backdrop-blur transition-shadow hover:shadow-[0_20px_60px_rgba(79,70,229,0.1)]"
             >
               <div>
                 <div className="flex gap-1">
                   {Array.from({ length: t.stars }).map((_, j) => (
-                    <Star
+                    <motion.div
                       key={j}
-                      className="h-4 w-4 fill-amber-400 text-amber-400"
-                    />
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.3 + i * 0.15 + j * 0.06 }}
+                    >
+                      <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+                    </motion.div>
                   ))}
                 </div>
                 <p className="mt-4 text-sm leading-6 text-white/70">
@@ -72,9 +102,12 @@ export function TestimonialsSection() {
 
               <div className="mt-6 border-t border-white/8 pt-5">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-500/20 text-sm font-bold text-brand-300">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-500/20 text-sm font-bold text-brand-300"
+                  >
                     {t.name[0]}
-                  </div>
+                  </motion.div>
                   <div>
                     <p className="text-sm font-semibold text-white">
                       {t.name}
