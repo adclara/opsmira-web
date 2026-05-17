@@ -9,10 +9,10 @@ import { detailedServices } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "See what OpsMira implements for SMBs: workflow audits, AI agents, customer follow-up systems, scheduling coordination, owner dashboards, reporting automation, and launch support.",
+    "See what OpsMira deploys: AI agents for supply chain optimization, production intelligence, customer recovery, sales automation, and operational cost reduction.",
   openGraph: {
     title: "Services | OpsMira",
-    description: "Workflow audits, AI agents, customer follow-up, scheduling coordination, dashboards, and reporting automation for SMBs.",
+    description: "AI agent deployments for supply chain, production, sales, and operations — cut costs and maximize output.",
     url: "https://opsmira.ai/services"
   }
 };
@@ -22,12 +22,12 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="What OpsMira implements."
-        description="Done-for-you AI operations systems for SMBs — workflow audit, system configuration, launch support, and measurable reductions in admin burden and response delays."
+        title="What OpsMira deploys."
+        description="Done-for-you AI agent systems that optimize supply chains, automate production workflows, recover lost revenue, and eliminate operational waste — with measurable ROI from week one."
         stats={[
-          { label: "Delivery model", value: "Managed implementation" },
-          { label: "Primary value", value: "Cost savings first" },
-          { label: "Best fit", value: "SMB service operators" }
+          { label: "Delivery model", value: "Managed AI deployment" },
+          { label: "Primary value", value: "Cost reduction + growth" },
+          { label: "Best fit", value: "Operations-heavy businesses" }
         ]}
       />
 
@@ -77,17 +77,17 @@ export default function ServicesPage() {
         <div className="luxury-panel mt-10 flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <h3 className="font-display text-3xl text-white">
-              Ready to scope the right first workflow?
+              Ready to deploy AI agents on your highest-cost workflow?
             </h3>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-white/72">
-              OpsMira identifies the highest-value bottleneck to target first.
+              OpsMira identifies the bottleneck costing you the most and deploys agents to fix it first.
             </p>
           </div>
           <Link
             href="/contact"
             className="inline-flex items-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-brand-700"
           >
-            Book Workflow Audit
+            Book Operations Audit
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>

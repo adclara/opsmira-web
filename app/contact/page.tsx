@@ -8,10 +8,10 @@ import { intakeSteps, rolloutTimeline, site } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start an OpsMira workflow audit to identify where your SMB is losing admin time, missing follow-up, slowing response, or carrying unnecessary reporting burden.",
+    "Start a free OpsMira operations audit to identify where your business is losing money on manual processes, missed follow-ups, and inefficient supply chain or production workflows.",
   openGraph: {
     title: "Contact | OpsMira",
-    description: "Start a workflow audit — tell us where admin time, follow-up, or reporting is breaking down.",
+    description: "Book a free operations audit — we'll show you which workflows to automate and how much you'll save.",
     url: "https://opsmira.ai/contact"
   }
 };
@@ -21,17 +21,17 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Start with an implementation intake, not a generic inquiry."
-        description="Use this page to share where the business is losing time, follow-up, or visibility. OpsMira uses that context to identify the best first workflow to automate and outline a realistic deployment."
+        title="Start with an operations audit, not a generic inquiry."
+        description="Tell us where your business is losing money — supply chain delays, production bottlenecks, missed leads, or manual admin. OpsMira uses that context to identify the best first AI agent deployment and outline measurable savings."
         stats={[
-          { label: "Best first step", value: "Workflow audit" },
-          { label: "Typical focus", value: "Admin bottlenecks" },
-          { label: "Goal", value: "Clear implementation scope" }
+          { label: "Best first step", value: "Operations audit" },
+          { label: "Typical focus", value: "Highest-cost bottleneck" },
+          { label: "Goal", value: "Measurable cost reduction" }
         ]}
         highlights={[
-          "Tell us where response, scheduling, or reporting is breaking down",
-          "The first priority is finding the workflow with the clearest payback",
-          "OpsMira is designed for practical rollout, not abstract discovery"
+          "Tell us where costs, delays, or missed revenue are hurting most",
+          "We identify the workflow with the clearest payback for AI agents",
+          "OpsMira deploys fast — results from week one, not month six"
         ]}
       />
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
                 Direct contact
               </p>
               <h2 className="mt-4 font-display text-4xl text-white">
-                Intake support
+                Get started
               </h2>
               <div className="mt-5 space-y-3 text-sm leading-7 text-white/72">
                 <p>

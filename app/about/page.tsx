@@ -6,10 +6,10 @@ import { site } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn how OpsMira approaches AI operations implementation for SMBs through workflow discipline, measurable ROI, human oversight, and post-launch optimization.",
+    "Learn how OpsMira deploys AI agents to cut operational costs, optimize supply chains, and maximize production output — with human oversight and measurable ROI.",
   openGraph: {
     title: "About | OpsMira",
-    description: "A delivery-first AI operations service built around workflow control and measurable ROI for SMBs.",
+    description: "An AI-first operations company built around deploying intelligent agents that reduce costs and grow profit.",
     url: "https://opsmira.ai/about"
   }
 };
@@ -19,17 +19,17 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About OpsMira"
-        title="A delivery-first AI operations service built around workflow control."
-        description="OpsMira is not positioned as a personal brand or vague consulting practice. It is a productized implementation service that helps SMBs remove administrative drag, improve coordination, and launch practical AI-supported operational systems."
+        title="AI agents deployed to cut costs and maximize output."
+        description="OpsMira is not a consulting firm or a generic SaaS platform. We deploy purpose-built AI agents that integrate directly into your operations — supply chain, production, sales, and admin — delivering measurable cost reduction and profit growth from day one."
         stats={[
-          { label: "Operating style", value: "Implementation-led" },
-          { label: "Primary lens", value: "Measured ROI" },
+          { label: "Operating style", value: "AI-first deployment" },
+          { label: "Primary lens", value: "Measurable ROI" },
           { label: "Service model", value: "Done-for-you" }
         ]}
         highlights={[
-          "Operations-first before tool-first",
-          "Founder background supports the work but does not dominate the message",
-          "Focused on systems that teams can actually use after launch"
+          "Operations-first — we fix the process, then deploy AI to run it",
+          "Human oversight on every agent — automation with accountability",
+          "Results from week one, not month six"
         ]}
       />
       <AboutFounder />
@@ -45,10 +45,10 @@ export default function AboutPage() {
               Positioning summary
             </p>
             <p className="mt-4 text-lg leading-8 text-white/78">
-              OpsMira exists to help owners gain a more controlled operation:
-              fewer manual handoffs, faster response, clearer reporting, and a
-              stronger business case for automation than generic consulting
-              language usually provides.
+              OpsMira exists to help businesses gain operational control through
+              AI: lower costs, faster throughput, fewer missed opportunities, and
+              a clear path from manual processes to intelligent automation that
+              pays for itself.
             </p>
           </div>
         </div>
