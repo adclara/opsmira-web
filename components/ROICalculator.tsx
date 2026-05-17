@@ -3,9 +3,9 @@
 import { useMemo, useState } from "react";
 
 const plans = [
-  { label: "Starter", price: 299 },
-  { label: "Professional", price: 599 },
-  { label: "Premium", price: 899 }
+  { label: "Starter", price: 250 },
+  { label: "Professional", price: 419 },
+  { label: "Premium", price: 629 }
 ];
 
 function formatCurrency(value: number) {

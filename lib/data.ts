@@ -39,6 +39,7 @@ export type IndustryCard = {
 export type PackageCard = {
   title: string;
   price: string;
+  originalPrice?: string;
   setup: string;
   bestFor: string;
   body: string;
@@ -213,22 +214,24 @@ export const industries: IndustryCard[] = [
 export const packages: PackageCard[] = [
   {
     title: "Starter",
-    price: "$299/mo",
-    setup: "From $750 setup",
+    price: "$250/mo",
+    setup: "From $700 setup — based on business structure",
     bestFor: "One high-impact AI agent",
     body:
       "Start with the fastest-payback deployment — lead response, scheduling automation, or reporting intelligence.",
     bullets: [
       "Operations audit & mapping",
       "One AI agent deployed",
+      "Dedicated AI agent device included",
       "Launch support & training",
       "Basic performance reporting"
     ]
   },
   {
     title: "Professional",
-    price: "$599/mo",
-    setup: "From $1,500 setup",
+    price: "$419/mo",
+    originalPrice: "$599/mo",
+    setup: "From $700 setup — based on business structure",
     bestFor: "Core operations automation",
     body:
       "Multiple AI agents across sales, scheduling, supply chain, and reporting — working together as one system.",
@@ -241,8 +244,9 @@ export const packages: PackageCard[] = [
   },
   {
     title: "Premium",
-    price: "$899/mo",
-    setup: "From $2,500 setup",
+    price: "$629/mo",
+    originalPrice: "$899/mo",
+    setup: "From $700 setup — based on business structure",
     bestFor: "Full operational intelligence",
     body:
       "Enterprise-grade AI agent coverage across your entire operation — from supply chain to sales to production.",

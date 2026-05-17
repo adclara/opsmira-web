@@ -31,24 +31,50 @@ export function PackagesSection() {
                     : "rounded-xl border border-white/10 bg-white px-5 py-5 text-foreground"
                 }
               >
-                <p
-                  className={
-                    featured
-                      ? "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-white/70"
-                      : "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-brand-600"
-                  }
-                >
-                  {pkg.title}
-                </p>
-                <p
-                  className={
-                    featured
-                      ? "mt-3 text-3xl font-semibold tracking-[-0.02em] text-white"
-                      : "mt-3 text-3xl font-semibold tracking-[-0.02em] text-foreground"
-                  }
-                >
-                  {pkg.price}
-                </p>
+                <div className="flex items-center justify-between">
+                  <p
+                    className={
+                      featured
+                        ? "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-white/70"
+                        : "text-[0.65rem] font-medium uppercase tracking-[0.1em] text-brand-600"
+                    }
+                  >
+                    {pkg.title}
+                  </p>
+                  {pkg.originalPrice && (
+                    <span
+                      className={
+                        featured
+                          ? "rounded-full bg-white/20 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-white"
+                          : "rounded-full bg-green-100 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-green-700"
+                      }
+                    >
+                      30% off
+                    </span>
+                  )}
+                </div>
+                <div className="mt-3 flex items-baseline gap-2.5">
+                  <p
+                    className={
+                      featured
+                        ? "text-3xl font-semibold tracking-[-0.02em] text-white"
+                        : "text-3xl font-semibold tracking-[-0.02em] text-foreground"
+                    }
+                  >
+                    {pkg.price}
+                  </p>
+                  {pkg.originalPrice && (
+                    <span
+                      className={
+                        featured
+                          ? "text-base font-medium text-white/40 line-through"
+                          : "text-base font-medium text-neutral-400 line-through"
+                      }
+                    >
+                      {pkg.originalPrice}
+                    </span>
+                  )}
+                </div>
                 <p
                   className={
                     featured
