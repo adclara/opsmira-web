@@ -56,8 +56,8 @@ export function ContactForm() {
           Implementation intake
         </p>
         <p className="mt-3 text-sm leading-7 text-neutral-600">
-          Tell us where your business is losing money — supply chain delays,
-          production bottlenecks, missed leads, or manual admin. We use this
+          Tell us where your business is losing money — operational delays,
+          process bottlenecks, missed leads, or manual admin. We use this
           to identify the best first AI agent deployment.
         </p>
       </div>

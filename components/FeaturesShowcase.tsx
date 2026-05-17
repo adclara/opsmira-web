@@ -27,10 +27,10 @@ const features = [
   },
   {
     icon: Package,
-    eyebrow: "Supply Chain Optimization",
-    title: "End-to-end supply chain intelligence",
+    eyebrow: "Operations Optimization",
+    title: "End-to-end operational intelligence",
     description:
-      "AI agents monitor inventory, predict demand, optimize routing, and flag bottlenecks before they impact production or delivery.",
+      "AI agents monitor workflows, predict bottlenecks, optimize resource allocation, and flag issues before they impact your team or delivery.",
     color: "from-emerald-500/20 to-emerald-600/10",
     accent: "bg-emerald-500",
     mockup: {

@@ -12,7 +12,7 @@ export function ContactSection() {
               Start with the bottleneck costing you the most.
             </h2>
             <p className="mt-3 max-w-xl text-[0.9rem] leading-6 text-neutral-600">
-              Tell us about your supply chain delays, production gaps, or missed
+              Tell us about your operational delays, process gaps, or missed
               revenue. We identify the highest-value AI agent deployment first.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">

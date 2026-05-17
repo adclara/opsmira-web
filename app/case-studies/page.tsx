@@ -7,7 +7,7 @@ import { caseStudies, testimonials, proofLogos, workflowVisuals } from "@/lib/da
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "See how OpsMira AI agents recover lost revenue, optimize supply chains, and increase production throughput — with measurable cost savings and economic outcomes.",
+    "See how OpsMira AI agents recover lost revenue, optimize operations, and increase production throughput — with measurable cost savings and economic outcomes.",
   openGraph: {
     title: "Case Studies | OpsMira",
     description: "Real implementation scenarios showing how AI agents reduce costs, speed operations, and recover missed revenue.",
@@ -28,7 +28,7 @@ export default function CaseStudiesPage() {
           { label: "Use", value: "Buyer evaluation" }
         ]}
         highlights={[
-          "Focused on supply chain, production, and revenue recovery",
+          "Focused on operations, production, and revenue recovery",
           "Shows which AI agents were deployed and how they integrate",
           "Connects deployment decisions to measurable dollar impact"
         ]}

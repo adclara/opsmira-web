@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     quote:
-      "The ROI was visible in the first week. Automated reporting alone saved us 3 hours daily and caught supply chain gaps we were missing.",
+      "The ROI was visible in the first week. Automated reporting alone saved us 3 hours daily and caught operational gaps we were missing.",
     name: "Sarah L.",
     role: "General Manager",
     company: "LogiTech Supply Co.",

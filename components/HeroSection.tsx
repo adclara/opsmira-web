@@ -145,7 +145,7 @@ export function HeroSection() {
               className="mt-6 max-w-xl text-base leading-7 text-white/60 sm:text-lg"
             >
               We deploy intelligent AI agents across your operations — from
-              supply chain and production to sales and admin — so you reduce
+              production and logistics to sales and admin — so you reduce
               costs, increase throughput, and grow profit on autopilot.
             </motion.p>
 

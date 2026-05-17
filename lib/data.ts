@@ -96,7 +96,7 @@ export const site = {
   linkedIn: "https://www.linkedin.com/in/adrian-clara-9721a9122",
   location: "Serving businesses in Florida and across the United States.",
   valueProp:
-    "AI agents that cut costs, optimize supply chains, maximize production output, and grow profit on autopilot.",
+    "AI agents that cut costs, streamline operations, maximize output, and grow profit on autopilot.",
   trustLine:
     "Operational audit, AI agent deployment, launch support, and continuous optimization.",
   founderSummary:
@@ -120,9 +120,9 @@ export const services: IconCard[] = [
     icon: Bot
   },
   {
-    title: "Supply chain optimization",
+    title: "Process optimization",
     body:
-      "AI-powered demand forecasting, inventory management, routing optimization, and bottleneck detection.",
+      "AI-powered process analysis, resource management, task optimization, and bottleneck detection.",
     icon: Package
   },
   {
@@ -140,7 +140,7 @@ export const services: IconCard[] = [
   {
     title: "Operations dashboards",
     body:
-      "Real-time visibility into costs, production, supply chain, and team performance in one place.",
+      "Real-time visibility into costs, production, operations, and team performance in one place.",
     icon: LayoutDashboard
   }
 ];
@@ -175,7 +175,7 @@ export const industries: IndustryCard[] = [
   },
   {
     title: "Manufacturing",
-    pain: "Production inefficiencies and supply chain gaps go undetected.",
+    pain: "Production inefficiencies and operational gaps go undetected.",
     outcome: "Real-time AI monitoring maximizes throughput and cuts waste.",
     icon: Factory
   },
@@ -234,10 +234,10 @@ export const packages: PackageCard[] = [
     setup: "From $700 setup — based on business structure",
     bestFor: "Core operations automation",
     body:
-      "Multiple AI agents across sales, scheduling, supply chain, and reporting — working together as one system.",
+      "Multiple AI agents across sales, scheduling, operations, and reporting — working together as one system.",
     bullets: [
       "Multiple AI agent deployment",
-      "Supply chain / production monitoring",
+      "Operations / production monitoring",
       "Sales & follow-up automation",
       "Executive dashboard"
     ]
@@ -249,7 +249,7 @@ export const packages: PackageCard[] = [
     setup: "From $700 setup — based on business structure",
     bestFor: "Full operational intelligence",
     body:
-      "Enterprise-grade AI agent coverage across your entire operation — from supply chain to sales to production.",
+      "Enterprise-grade AI agent coverage across your entire organization — from operations to sales to production.",
     bullets: [
       "Cross-functional AI agents",
       "Predictive analytics & forecasting",
@@ -268,7 +268,7 @@ export const detailedServices: ServiceDetail[] = [
       "Process mapping",
       "Cost leakage analysis",
       "Production bottleneck review",
-      "Supply chain assessment",
+      "Operations assessment",
       "Revenue opportunity scan",
       "AI deployment roadmap"
     ],
@@ -293,9 +293,9 @@ export const detailedServices: ServiceDetail[] = [
     icon: Bot
   },
   {
-    title: "Supply chain & production intelligence",
+    title: "Operations & production intelligence",
     description:
-      "AI agents that monitor your supply chain end-to-end — predicting demand, optimizing inventory, flagging bottlenecks, and maximizing production throughput.",
+      "AI agents that monitor your operations end-to-end — predicting bottlenecks, optimizing resources, flagging issues, and maximizing production throughput.",
     deliverables: [
       "Demand forecasting",
       "Inventory optimization",
@@ -305,20 +305,20 @@ export const detailedServices: ServiceDetail[] = [
       "Waste reduction analytics"
     ],
     impact:
-      "Reduced stockouts, lower carrying costs, higher production efficiency, and a supply chain that adapts in real time.",
+      "Lower costs, higher production efficiency, reduced waste, and operations that adapt in real time.",
     icon: Package
   },
   {
     title: "Executive dashboards & reporting automation",
     description:
-      "We centralize the metrics that matter — costs, production, sales, supply chain — into real-time dashboards so leadership makes decisions faster without chasing spreadsheets.",
+      "We centralize the metrics that matter — costs, production, sales, operations — into real-time dashboards so leadership makes decisions faster without chasing spreadsheets.",
     deliverables: [
       "Executive dashboards",
       "Automated weekly reports",
       "KPI tracking",
       "Cost analytics",
       "Production metrics",
-      "Supply chain visibility"
+      "Operations visibility"
     ],
     impact:
       "Clear operational visibility without manual reporting, enabling faster and better-informed decisions.",
@@ -364,19 +364,19 @@ export const caseStudies: CaseStudy[] = [
       "Illustrative scenario based on common service business patterns."
   },
   {
-    title: "Supply chain optimization for a distribution company",
+    title: "Operations optimization for a distribution company",
     subtitle: "Representative implementation scenario",
     problem:
       "Inventory stockouts and overstock situations were costing the business $15k/month in lost sales and excess carrying costs. Demand forecasting relied on gut feeling and spreadsheets.",
     implementation:
-      "OpsMira deployed AI supply chain agents that analyze historical data, predict demand patterns, optimize reorder points, and alert the team to potential stockouts 2 weeks in advance.",
+      "OpsMira deployed AI operations agents that analyze historical data, predict demand patterns, optimize reorder points, and alert the team to potential stockouts 2 weeks in advance.",
     outcome:
       "Stockout incidents dropped 78%, carrying costs decreased 23%, and the purchasing team saved 20 hours per week previously spent on manual forecasting.",
     economics:
       "The combination of reduced stockouts and lower inventory costs delivered over $12k/month in savings against a $599/month platform investment.",
     takeaways: [
       "AI demand forecasting outperforms manual methods significantly.",
-      "Early stockout alerts prevent cascading supply chain failures.",
+      "Early stockout alerts prevent cascading operational failures.",
       "Reduced carrying costs compound over time.",
       "Purchasing teams can focus on strategy instead of spreadsheets."
     ],
@@ -439,9 +439,9 @@ export const comparisonRows = [
     after: "AI agents respond in < 30 seconds, qualify, and schedule."
   },
   {
-    label: "Supply chain",
-    before: "Spreadsheet forecasting, reactive ordering, stockouts.",
-    after: "AI-powered demand prediction, automated reorder, real-time alerts."
+    label: "Operation",
+    before: "Spreadsheet tracking, reactive decisions, missed deadlines.",
+    after: "AI-powered forecasting, automated task management, real-time alerts."
   },
   {
     label: "Production",
@@ -509,7 +509,7 @@ export const buyerFaqs = [
   {
     question: "What does OpsMira deploy first?",
     answer:
-      "The AI agent with the fastest payback — usually lead response, supply chain monitoring, production optimization, or reporting automation."
+      "The AI agent with the fastest payback — usually lead response, operations monitoring, production optimization, or reporting automation."
   },
   {
     question: "Is this software I have to manage myself?",
@@ -525,7 +525,7 @@ export const buyerFaqs = [
 
 export const fitSignals = {
   bestFit: [
-    "You're losing money to manual processes, slow response, or supply chain gaps.",
+    "You're losing money to manual processes, slow response, or operational gaps.",
     "You want measurable cost reduction and profit growth, not vague innovation.",
     "You prefer done-for-you implementation over managing another tool.",
     "You're ready to see ROI within 30-60 days, not 6 months."

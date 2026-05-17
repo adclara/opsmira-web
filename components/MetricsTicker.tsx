@@ -1,7 +1,7 @@
 "use client";
 
 const items = [
-  "Supply Chain",
+  "Business Operations",
   "Production",
   "Logistics",
   "Cost Reduction",

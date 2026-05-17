@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | OpsMira"
   },
   description:
-    "OpsMira deploys AI agents across your operations — supply chain, production, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
+    "OpsMira deploys AI agents across your operations — production, logistics, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
   icons: {
     icon: "/icon.svg"
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "OpsMira",
     title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
     description:
-      "Deploy intelligent AI agents to optimize your supply chain, automate operations, and maximize profit.",
+      "Deploy intelligent AI agents to streamline your operations, automate processes, and maximize profit.",
     url: "https://opsmira.ai",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "OpsMira — AI Agents for Business" }]
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
     description:
-      "AI agents for supply chain, production, sales, and operations — reduce costs and grow profit on autopilot.",
+      "AI agents for production, logistics, sales, and operations — reduce costs and grow profit on autopilot.",
     images: ["/og-image.png"]
   },
   robots: {

@@ -9,10 +9,10 @@ import { detailedServices } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "See what OpsMira deploys: AI agents for supply chain optimization, production intelligence, customer recovery, sales automation, and operational cost reduction.",
+    "See what OpsMira deploys: AI agents for operations optimization, production intelligence, customer recovery, sales automation, and cost reduction.",
   openGraph: {
     title: "Services | OpsMira",
-    description: "AI agent deployments for supply chain, production, sales, and operations — cut costs and maximize output.",
+    description: "AI agent deployments for operations, production, sales, and admin — cut costs and maximize output.",
     url: "https://opsmira.ai/services"
   }
 };
@@ -23,7 +23,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="What OpsMira deploys."
-        description="Done-for-you AI agent systems that optimize supply chains, automate production workflows, recover lost revenue, and eliminate operational waste — with measurable ROI from week one."
+        description="Done-for-you AI agent systems that optimize your operations, automate production workflows, recover lost revenue, and eliminate waste — with measurable ROI from week one."
         stats={[
           { label: "Delivery model", value: "Managed AI deployment" },
           { label: "Primary value", value: "Cost reduction + growth" },

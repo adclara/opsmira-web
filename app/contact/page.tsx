@@ -8,7 +8,7 @@ import { intakeSteps, rolloutTimeline, site } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a free OpsMira operations audit to identify where your business is losing money on manual processes, missed follow-ups, and inefficient supply chain or production workflows.",
+    "Start a free OpsMira operations audit to identify where your business is losing money on manual processes, missed follow-ups, and inefficient workflows.",
   openGraph: {
     title: "Contact | OpsMira",
     description: "Book a free operations audit — we'll show you which workflows to automate and how much you'll save.",
@@ -22,7 +22,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Start with an operations audit, not a generic inquiry."
-        description="Tell us where your business is losing money — supply chain delays, production bottlenecks, missed leads, or manual admin. OpsMira uses that context to identify the best first AI agent deployment and outline measurable savings."
+        description="Tell us where your business is losing money — operational delays, process bottlenecks, missed leads, or manual admin. OpsMira uses that context to identify the best first AI agent deployment and outline measurable savings."
         stats={[
           { label: "Best first step", value: "Operations audit" },
           { label: "Typical focus", value: "Highest-cost bottleneck" },
