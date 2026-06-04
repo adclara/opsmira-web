@@ -4,12 +4,6 @@ import Image from "next/image";
 
 const clients = [
   {
-    name: "Habitat Solutions Group",
-    logo: "/logos/habitat-solutions-group.png",
-    width: 140,
-    height: 48,
-  },
-  {
     name: "Teimeca",
     logo: "/logos/teimeca.png",
     width: 140,
