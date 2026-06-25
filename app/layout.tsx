@@ -6,11 +6,11 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://opsmira.ai"),
   title: {
-    default: "OpsMira | AI Agents That Cut Costs & Maximize Output",
+    default: "OpsMira | Operations & Supply-Chain Consulting That Pays for Itself",
     template: "%s | OpsMira"
   },
   description:
-    "OpsMira deploys AI agents across your operations — production, logistics, sales, and admin — to reduce costs, increase throughput, and grow profit on autopilot.",
+    "OpsMira diagnoses where your business is losing money and delivers the fix — better processes, standards, custom apps, dashboards, and AI agents. The diagnosis is free; you pay for the improvement.",
   icons: {
     icon: "/icon.svg"
   },
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "OpsMira",
-    title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
+    title: "OpsMira | Operations & Supply-Chain Consulting",
     description:
-      "Deploy intelligent AI agents to streamline your operations, automate processes, and maximize profit.",
+      "Free operations diagnosis. You pay for the improvement — processes, standards, custom apps, dashboards, or AI agents, scoped to the value they create.",
     url: "https://opsmira.ai",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "OpsMira — AI Agents for Business" }]
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "OpsMira — Operations & Supply-Chain Consulting" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "OpsMira | AI Agents That Cut Costs & Maximize Output",
+    title: "OpsMira | Operations & Supply-Chain Consulting",
     description:
-      "AI agents for production, logistics, sales, and operations — reduce costs and grow profit on autopilot.",
+      "Free operations diagnosis. You pay for the improvement — processes, apps, dashboards, and AI agents, scoped to the value they create.",
     images: ["/og-image.png"]
   },
   robots: {

@@ -7,20 +7,21 @@ export function ServicesSection() {
     <section className="section-shell section-space">
       <div className="grid gap-10">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="eyebrow">What OpsMira implements</span>
+          <span className="eyebrow">What we deliver</span>
           <h2 className="section-title mx-auto">
-            The work that costs you the most time.
+            Consulting that ends in a working solution.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[0.9rem] leading-6 text-neutral-600">
-            OpsMira deploys AI agents that eliminate operational waste,
-            speed up response times, and maximize production output.
+            From the first diagnosis to the standards, tools, and automation
+            that make it last — every engagement cuts cost and improves how your
+            business runs.
           </p>
         </div>
 
         <article className="luxury-panel grid gap-6 overflow-hidden p-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="text-[0.65rem] uppercase tracking-[0.1em] text-white/55">
-              Core offer
+              Core practice
             </p>
             <h3 className="mt-3 max-w-[16ch] font-display text-2xl font-semibold leading-[1.15] tracking-[-0.02em] text-white sm:text-3xl">
               {featuredService.title}
@@ -79,7 +80,7 @@ export function ServicesSection() {
 
         <div className="overflow-hidden rounded-xl border border-stone-200 bg-white shadow-soft">
           <div className="border-b border-stone-200 px-5 py-4">
-            <h3 className="text-[0.9rem] font-semibold text-foreground">What it replaces</h3>
+            <h3 className="text-[0.9rem] font-semibold text-foreground">Before OpsMira → After OpsMira</h3>
           </div>
           <div className="divide-y divide-stone-200">
             {comparisonRows.map((row) => (

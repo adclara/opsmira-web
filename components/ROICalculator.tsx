@@ -1,12 +1,7 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
-
-const plans = [
-  { label: "Starter", price: 250 },
-  { label: "Professional", price: 419 },
-  { label: "Premium", price: 629 }
-];
 
 function formatCurrency(value: number) {
   return new Intl.NumberFormat("en-US", {
@@ -75,13 +70,12 @@ function SliderRow({
 }
 
 export function ROICalculator() {
-  const [adminHours, setAdminHours] = useState(30);
+  const [adminHours, setAdminHours] = useState(60);
   const [adminRate, setAdminRate] = useState(25);
   const [ownerHours, setOwnerHours] = useState(15);
   const [ownerRate, setOwnerRate] = useState(50);
-  const [recoveredJobs, setRecoveredJobs] = useState(1);
+  const [recoveredJobs, setRecoveredJobs] = useState(2);
   const [jobValue, setJobValue] = useState(3500);
-  const [planPrice, setPlanPrice] = useState(plans[1].price);
 
   const results = useMemo(() => {
     const laborSavings = adminHours * adminRate;
@@ -89,19 +83,9 @@ export function ROICalculator() {
     const revenueRecovery = recoveredJobs * jobValue;
     const monthlyValue = laborSavings + ownerSavings + revenueRecovery;
     const yearlyValue = monthlyValue * 12;
-    const monthlyNet = monthlyValue - planPrice;
-    const roi = planPrice > 0 ? monthlyValue / planPrice : 0;
 
-    return {
-      laborSavings,
-      ownerSavings,
-      revenueRecovery,
-      monthlyValue,
-      yearlyValue,
-      monthlyNet,
-      roi
-    };
-  }, [adminHours, adminRate, ownerHours, ownerRate, recoveredJobs, jobValue, planPrice]);
+    return { laborSavings, ownerSavings, revenueRecovery, monthlyValue, yearlyValue };
+  }, [adminHours, adminRate, ownerHours, ownerRate, recoveredJobs, jobValue]);
 
   return (
     <section id="savings-calculator" className="section-shell section-space scroll-mt-24">
@@ -109,14 +93,14 @@ export function ROICalculator() {
         <div className="grid gap-6 xl:grid-cols-[0.72fr_1.28fr]">
           {/* Left descriptive column */}
           <div>
-            <span className="eyebrow">Savings calculator</span>
+            <span className="eyebrow">Value estimator</span>
             <h2 className="section-title">
-              Show the business case before the implementation gets larger.
+              See what the improvements are worth before you invest a dollar.
             </h2>
             <p className="mt-3 text-[0.9rem] leading-6 text-neutral-600">
-              OpsMira is positioned around cost savings first. Use this model to
-              estimate how admin labor saved, owner time recovered, and missed
-              opportunities captured can justify the monthly service cost.
+              Estimate the value an OpsMira engagement could unlock — admin labor
+              saved, owner time recovered, and missed work captured. The
+              diagnosis that confirms it is free.
             </p>
 
             <div className="mt-6 grid gap-3">
@@ -166,7 +150,7 @@ export function ROICalculator() {
                 tooltip="Hours your team spends on manual follow-ups, scheduling, and reporting each month"
                 value={adminHours}
                 min={0}
-                max={120}
+                max={160}
                 step={5}
                 suffix=" hrs/mo"
                 onChange={setAdminHours}
@@ -184,7 +168,7 @@ export function ROICalculator() {
               />
               <SliderRow
                 label="Owner hours recovered"
-                tooltip="Hours you personally spend on tasks that could be automated"
+                tooltip="Hours you personally spend on tasks that could be standardized or automated"
                 value={ownerHours}
                 min={0}
                 max={60}
@@ -197,7 +181,7 @@ export function ROICalculator() {
                 tooltip="Value of your time per hour as the business owner"
                 value={ownerRate}
                 min={25}
-                max={75}
+                max={100}
                 step={5}
                 prefix="$"
                 suffix="/hr"
@@ -205,10 +189,10 @@ export function ROICalculator() {
               />
               <SliderRow
                 label="Recovered jobs per month"
-                tooltip="Customer jobs or leads you estimate are lost due to slow follow-up"
+                tooltip="Customer jobs or leads you estimate are lost to slow, manual processes"
                 value={recoveredJobs}
                 min={0}
-                max={5}
+                max={10}
                 step={1}
                 onChange={setRecoveredJobs}
               />
@@ -217,46 +201,17 @@ export function ROICalculator() {
                 tooltip="Average revenue per customer project or job"
                 value={jobValue}
                 min={500}
-                max={10000}
+                max={15000}
                 step={500}
                 prefix="$"
                 onChange={setJobValue}
               />
-
-              <div className="rounded-xl border border-stone-200 bg-white p-3.5">
-                <label className="text-[0.8rem] font-medium text-foreground">
-                  Plan used in estimate
-                </label>
-                <div className="mt-3 grid gap-2 sm:grid-cols-3">
-                  {plans.map((plan) => {
-                    const active = plan.price === planPrice;
-
-                    return (
-                      <button
-                        key={plan.label}
-                        type="button"
-                        onClick={() => setPlanPrice(plan.price)}
-                        className={
-                          active
-                            ? "rounded-lg border border-brand-300 bg-[linear-gradient(135deg,#5b4cf0,#4338ca)] px-3 py-3 text-left text-white"
-                            : "rounded-lg border border-stone-200 bg-[#f7f8fc] px-3 py-3 text-left text-foreground"
-                        }
-                      >
-                        <p className="text-[0.8rem] font-medium">{plan.label}</p>
-                        <p className="mt-0.5 text-[0.8rem]">
-                          {formatCurrency(plan.price)}/mo
-                        </p>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
             </div>
 
             <div className="space-y-3">
               <div className="luxury-panel p-5">
                 <p className="text-[0.65rem] uppercase tracking-[0.1em] text-white/55">
-                  Estimated monthly value created
+                  Estimated monthly value of improvements
                 </p>
                 <p className="mt-3 text-4xl font-semibold leading-none tracking-[-0.02em] text-white">
                   {formatCurrency(results.monthlyValue)}
@@ -272,10 +227,10 @@ export function ROICalculator() {
                   ["Admin labor saved", results.laborSavings],
                   ["Owner time recovered", results.ownerSavings],
                   ["Opportunities recovered", results.revenueRecovery],
-                  ["Monthly net value", results.monthlyNet]
+                  ["Annual value", results.yearlyValue]
                 ].map(([label, value]) => (
                   <div
-                    key={label}
+                    key={label as string}
                     className="rounded-xl border border-stone-200 bg-white p-4"
                   >
                     <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
@@ -288,39 +243,18 @@ export function ROICalculator() {
                 ))}
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div className="rounded-xl border border-stone-200 bg-white p-4">
-                  <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
-                    Yearly value
+              <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-brand-100 bg-[#eef0ff] p-4">
+                <div>
+                  <p className="text-[0.85rem] font-semibold text-brand-700">
+                    The diagnosis is free.
                   </p>
-                  <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
-                    {formatCurrency(results.yearlyValue)}
-                  </p>
-                </div>
-                <div className="rounded-xl border border-stone-200 bg-white p-4">
-                  <p className="text-[0.65rem] uppercase tracking-[0.1em] text-neutral-500">
-                    ROI multiple
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
-                    {results.roi.toFixed(1)}x
+                  <p className="mt-1 text-[0.8rem] leading-6 text-neutral-600">
+                    Investment is scoped to the improvement we deliver — and sized to pay back fast.
                   </p>
                 </div>
-              </div>
-
-              <div className="rounded-xl border border-stone-200 bg-white p-4">
-                <p className="text-[0.8rem] leading-6 text-neutral-600">
-                  A smaller plan often pays for itself with labor savings alone.
-                  Broader deployments are easier to justify when response speed,
-                  recovered jobs, and reporting reduction are added.
-                </p>
-                <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                  <div className="rounded-lg border border-stone-200 bg-[#f8faff] px-3 py-3 text-[0.8rem] leading-6 text-neutral-700">
-                    Use this estimate to choose the first AI agent worth deploying.
-                  </div>
-                  <div className="rounded-lg border border-stone-200 bg-[#f8faff] px-3 py-3 text-[0.8rem] leading-6 text-neutral-700">
-                    Then scope the plan around the operational lane with the clearest payback.
-                  </div>
-                </div>
+                <Link href="/contact" className="button-primary">
+                  Book Free Diagnosis
+                </Link>
               </div>
             </div>
           </div>

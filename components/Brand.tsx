@@ -23,12 +23,12 @@ export function Brand({ dark = false, compact = false }: BrandProps) {
           </div>
           <div
             className={clsx(
-              "mt-1 text-[11px] font-medium uppercase tracking-[0.34em]",
+              "mt-1 text-[11px] font-medium uppercase tracking-[0.30em]",
               dark ? "text-white/90" : "text-neutral-500"
             )}
             style={dark ? { textShadow: "0 1px 0 rgba(15,23,47,0.35)" } : undefined}
           >
-            AI Innovations
+            Operations Consulting
           </div>
         </div>
       )}

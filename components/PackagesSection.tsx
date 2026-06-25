@@ -7,14 +7,15 @@ export function PackagesSection() {
       <div className="overflow-hidden rounded-2xl bg-[linear-gradient(180deg,#131b34,#0f172f)] px-6 py-8 text-white shadow-[0_20px_60px_rgba(15,23,47,0.18)] sm:px-8 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.68rem] font-medium uppercase tracking-[0.1em] text-brand-100">
-            Pricing
+            Engagement model
           </span>
           <h2 className="mt-4 font-display text-2xl font-semibold leading-[1.15] tracking-[-0.02em] text-white sm:text-3xl">
-            Plans built around operational impact.
+            You pay for the improvement, not the advice.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[0.9rem] leading-6 text-white/68">
-            Each plan is scoped around AI agent complexity, number of workflows
-            automated, and measurable cost reduction.
+            The diagnosis is free. From there, every engagement is scoped to a
+            specific deliverable and priced to the value it creates — better
+            processes, an app, dashboards, or AI agents.
           </p>
         </div>
 
@@ -41,15 +42,9 @@ export function PackagesSection() {
                   >
                     {pkg.title}
                   </p>
-                  {pkg.originalPrice && (
-                    <span
-                      className={
-                        featured
-                          ? "rounded-full bg-white/20 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-white"
-                          : "rounded-full bg-green-100 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-green-700"
-                      }
-                    >
-                      30% off
+                  {featured && (
+                    <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-white">
+                      Where you invest
                     </span>
                   )}
                 </div>
@@ -57,23 +52,12 @@ export function PackagesSection() {
                   <p
                     className={
                       featured
-                        ? "text-3xl font-semibold tracking-[-0.02em] text-white"
-                        : "text-3xl font-semibold tracking-[-0.02em] text-foreground"
+                        ? "text-2xl font-semibold tracking-[-0.02em] text-white"
+                        : "text-2xl font-semibold tracking-[-0.02em] text-foreground"
                     }
                   >
                     {pkg.price}
                   </p>
-                  {pkg.originalPrice && (
-                    <span
-                      className={
-                        featured
-                          ? "text-base font-medium text-white/40 line-through"
-                          : "text-base font-medium text-neutral-400 line-through"
-                      }
-                    >
-                      {pkg.originalPrice}
-                    </span>
-                  )}
                 </div>
                 <p
                   className={
@@ -125,7 +109,7 @@ export function PackagesSection() {
                         : "inline-flex w-full items-center justify-center rounded-xl bg-[#eef0ff] px-4 py-2.5 text-[0.8rem] font-medium text-brand-700"
                     }
                   >
-                    Talk through this plan
+                    Book Free Diagnosis
                   </Link>
                 </div>
               </article>
@@ -134,7 +118,7 @@ export function PackagesSection() {
         </div>
 
         <p className="mt-5 text-center text-[0.8rem] leading-5 text-white/50">
-          Final scope depends on operational complexity, integrations, and number of AI agents deployed.
+          The advice is free. You pay for results — process improvements, apps, dashboards, or AI agents, scoped and priced to the value they create.
         </p>
       </div>
     </section>

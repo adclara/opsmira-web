@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Zap, BarChart3, Brain, ArrowRight } from "lucide-react";
+import { Route, BarChart3, Bot, ArrowRight } from "lucide-react";
 
 const cardVariant = {
   hidden: { opacity: 0, y: 28 },
@@ -24,7 +24,7 @@ export function BentoGrid() {
           transition={{ duration: 0.4 }}
           className="eyebrow"
         >
-          Products
+          From diagnosis to done
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export function BentoGrid() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="section-title mt-3"
         >
-          One platform, three engines of efficiency
+          We don't just advise — we build the fix
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -42,13 +42,14 @@ export function BentoGrid() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="section-copy mt-4"
         >
-          Each module works autonomously and together to eliminate operational
-          friction across your entire business.
+          The diagnosis is free. From there we deliver the improvement that pays
+          back fastest — engineered processes, the tools to run them, and
+          automation where it earns its keep.
         </motion.p>
       </div>
 
       <div className="grid gap-5 md:grid-cols-[1.6fr_1fr] md:grid-rows-2" style={{ minHeight: "520px" }}>
-        {/* Card 1 — Automate (spans 2 rows, dark) */}
+        {/* Card 1 — Process & cost engineering (spans 2 rows, dark) */}
         <motion.div
           custom={0}
           initial="hidden"
@@ -64,22 +65,23 @@ export function BentoGrid() {
               transition={{ type: "spring", stiffness: 300 }}
               className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20"
             >
-              <Zap className="h-6 w-6 text-brand-300" />
+              <Route className="h-6 w-6 text-brand-300" />
             </motion.div>
             <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-brand-300">
-              OpsMira Automate
+              Core practice
             </p>
             <h3 className="mt-2 text-2xl font-bold tracking-tight text-white lg:text-3xl">
-              Zero-code automation
+              Process &amp; cost engineering
             </h3>
             <p className="mt-3 max-w-md text-sm leading-6 text-white/55">
-              AI agents handle follow-ups, scheduling, approvals, and reporting
-              — all on autopilot. Set it once, let it run forever.
+              We redesign how work flows and strip out the cost your operation
+              can't see — documented standards, SOPs, and measurable efficiency
+              gains your team can actually sustain.
             </p>
           </div>
 
           <div className="mt-8 flex items-center gap-3">
-            {["Intake", "Process", "Deliver"].map((step, i) => (
+            {["Diagnose", "Redesign", "Standardize"].map((step, i) => (
               <div key={step} className="flex items-center gap-3">
                 <motion.div
                   initial={{ opacity: 0, x: -10 }}
@@ -109,13 +111,13 @@ export function BentoGrid() {
               href="/services"
               className="group inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition hover:text-brand-100"
             >
-              Explore Automate
+              Explore advisory
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </motion.div>
 
-        {/* Card 2 — Analyze (light) */}
+        {/* Card 2 — Custom apps & dashboards (light) */}
         <motion.div
           custom={1}
           initial="hidden"
@@ -134,14 +136,14 @@ export function BentoGrid() {
               <BarChart3 className="h-6 w-6 text-brand-600" />
             </motion.div>
             <p className="mt-4 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-brand-600">
-              OpsMira Analyze
+              Build
             </p>
             <h3 className="mt-2 text-xl font-bold tracking-tight text-foreground">
-              Real-time visibility
+              Custom apps &amp; dashboards
             </h3>
             <p className="mt-2 text-sm leading-6 text-neutral-500">
-              Operational dashboards that show exactly where you lose time,
-              money, and production capacity.
+              Software and visibility built around your real workflow — not a
+              generic template.
             </p>
           </div>
 
@@ -168,12 +170,12 @@ export function BentoGrid() {
             href="/services"
             className="group mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-600 transition hover:text-brand-700"
           >
-            Explore Analyze
+            Explore tools
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>
 
-        {/* Card 3 — Intelligence (dark) */}
+        {/* Card 3 — AI agents & automation (dark, add-on) */}
         <motion.div
           custom={2}
           initial="hidden"
@@ -190,25 +192,21 @@ export function BentoGrid() {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20"
               >
-                <Brain className="h-6 w-6 text-brand-300" />
+                <Bot className="h-6 w-6 text-brand-300" />
               </motion.div>
-              <motion.span
-                animate={{ opacity: [0.7, 1, 0.7] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="rounded-full bg-brand-500/15 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-brand-300"
-              >
-                AI-Powered
-              </motion.span>
+              <span className="rounded-full bg-brand-500/15 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-brand-300">
+                Add-on
+              </span>
             </div>
             <p className="mt-4 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-brand-300">
-              OpsMira Intelligence
+              Automate
             </p>
             <h3 className="mt-2 text-xl font-bold tracking-tight text-white">
-              AI that learns your operation
+              AI agents &amp; automation
             </h3>
             <p className="mt-2 text-sm leading-6 text-white/55">
-              Predictive insights, anomaly detection, and recommendations that
-              improve every week — driving profit automatically.
+              Where it earns its keep, we layer in AI agents to handle
+              follow-ups, reporting, and repetitive work.
             </p>
           </div>
 
@@ -216,7 +214,7 @@ export function BentoGrid() {
             href="/services"
             className="group mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition hover:text-brand-100"
           >
-            Explore Intelligence
+            Explore automation
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>

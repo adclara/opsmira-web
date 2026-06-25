@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  AppWindow,
   BarChart3,
   Bot,
   BriefcaseBusiness,
@@ -8,15 +9,19 @@ import {
   ClipboardCheck,
   Factory,
   Gauge,
+  GraduationCap,
   HardHat,
   LayoutDashboard,
   MessageSquareMore,
   Package,
   PhoneCall,
+  Route,
   ScanSearch,
+  SearchCheck,
   Settings2,
   ShieldCheck,
   ShoppingCart,
+  TrendingDown,
   Truck,
   Warehouse
 } from "lucide-react";
@@ -91,78 +96,90 @@ export const site = {
   legalDisclaimer:
     "OpsMira is a fictitious name / DBA owned by TEIMECA LAND LLC.",
   experienceDisclaimer:
-    "Professional experience references are included for background context only. OpsMira is not affiliated with or endorsed by Amazon, Lowe's, Sam's Club, or Walmart.",
+    "Professional experience references are included for background context only. OpsMira is an independent firm and is not affiliated with or endorsed by Amazon, Lowe's, Sam's Club, or Walmart.",
   email: "adrianclara@opsmira.ai",
   linkedIn: "https://www.linkedin.com/in/adrian-clara-9721a9122",
   location: "Serving businesses in Florida and across the United States.",
   valueProp:
-    "AI agents that cut costs, streamline operations, maximize output, and grow profit on autopilot.",
+    "Operations and supply-chain consulting that pays for itself — process improvements, custom apps, dashboards, and AI agents, scoped to the value they create.",
   trustLine:
-    "Operational audit, AI agent deployment, launch support, and continuous optimization.",
+    "Free operations diagnosis, scoped proposal, delivery, and continuous optimization.",
   founderSummary:
-    "OpsMira translates enterprise-grade AI and operations expertise into practical, measurable implementations for growing businesses."
+    "OpsMira translates enterprise-grade operations and supply-chain expertise into practical, measurable improvements for growing businesses."
 };
 
 export const navLinks: NavLink[] = [
   { label: "Services", href: "/services" },
-  { label: "ROI Calculator", href: "/#savings-calculator" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Value Estimator", href: "/#savings-calculator" },
+  { label: "Engagement", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
 ];
 
 export const services: IconCard[] = [
   {
+    title: "Operations & supply-chain advisory",
+    body:
+      "On-site or remote diagnosis of your operations, supply chain, and cost structure — with a prioritized, practical roadmap.",
+    icon: SearchCheck
+  },
+  {
+    title: "Process design & standards",
+    body:
+      "Redesigned workflows, SOPs, and documented standards your team can actually follow day to day.",
+    icon: ClipboardCheck
+  },
+  {
+    title: "Cost reduction & efficiency audits",
+    body:
+      "Deep audits that surface where money leaks — labor, inventory, routing, overhead — and exactly how to stop it.",
+    icon: TrendingDown
+  },
+  {
+    title: "Custom apps & tools",
+    body:
+      "Software built around your real workflow: intake, scheduling, tracking, approvals — not a generic template.",
+    icon: AppWindow
+  },
+  {
+    title: "Dashboards & analytics",
+    body:
+      "Real-time visibility into cost, output, and team performance, consolidated into one operational view.",
+    icon: BarChart3
+  },
+  {
     title: "AI agents & automation",
     body:
-      "Intelligent agents that handle follow-ups, scheduling, approvals, and reporting — all on autopilot.",
+      "Where it pays off, AI agents handle follow-ups, reporting, and repetitive work — a layer on top, not the whole plan.",
     icon: Bot
   },
   {
-    title: "Process optimization",
+    title: "Training & change management",
     body:
-      "AI-powered process analysis, resource management, task optimization, and bottleneck detection.",
-    icon: Package
-  },
-  {
-    title: "Production intelligence",
-    body:
-      "Real-time monitoring, anomaly detection, throughput optimization, and waste reduction across your operations.",
-    icon: Factory
-  },
-  {
-    title: "Sales & revenue agents",
-    body:
-      "Automated lead qualification, quote follow-ups, churn prevention, and pipeline management.",
-    icon: ShoppingCart
-  },
-  {
-    title: "Operations dashboards",
-    body:
-      "Real-time visibility into costs, production, operations, and team performance in one place.",
-    icon: LayoutDashboard
+      "We bring your team along — training, documentation, and adoption support so the improvements actually stick.",
+    icon: GraduationCap
   }
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Audit",
+    title: "Free diagnosis",
     body:
-      "We map your operations, identify where costs leak and production stalls, and define the highest-impact AI agent deployment."
+      "We visit or meet remotely, map your operations and supply chain, and pinpoint the highest-impact opportunities. No cost, no obligation."
   },
   {
     step: "02",
-    title: "Deploy",
+    title: "Scoped proposal",
     body:
-      "We configure and launch AI agents with human oversight, integrate with your existing tools, and support your team through adoption."
+      "You get a clear plan with fixed scope: the improvement, the deliverable, and the expected payback. You only invest in the fix."
   },
   {
     step: "03",
-    title: "Optimize",
+    title: "Build & optimize",
     body:
-      "We track performance, tune agent logic, and expand coverage so cost savings and output gains keep compounding."
+      "We deliver the processes, standards, apps, dashboards, or agents — then support adoption and tune for measurable results."
   }
 ];
 
@@ -170,194 +187,191 @@ export const industries: IndustryCard[] = [
   {
     title: "Construction & trades",
     pain: "Leads and field updates get buried across calls and texts.",
-    outcome: "AI agents catch every lead and automate coordination.",
+    outcome: "Standardized intake and coordination capture every job.",
     icon: HardHat
   },
   {
     title: "Manufacturing",
     pain: "Production inefficiencies and operational gaps go undetected.",
-    outcome: "Real-time AI monitoring maximizes throughput and cuts waste.",
+    outcome: "Process redesign and monitoring maximize throughput and cut waste.",
     icon: Factory
   },
   {
     title: "Logistics & distribution",
     pain: "Routing, scheduling, and demand forecasting rely on guesswork.",
-    outcome: "AI agents optimize routes, predict demand, and reduce costs.",
+    outcome: "Optimized routes, demand planning, and lower operating cost.",
     icon: Truck
   },
   {
     title: "HVAC & service companies",
     pain: "Dispatching and follow-up depend on manual effort.",
-    outcome: "Automated scheduling, missed-call recovery, and faster response.",
+    outcome: "Standardized scheduling, faster response, and recovered jobs.",
     icon: Gauge
   },
   {
     title: "Retail & e-commerce",
     pain: "Inventory management and sales follow-up create revenue leaks.",
-    outcome: "AI-driven inventory optimization and automated sales recovery.",
+    outcome: "Inventory standards and sales recovery built into the workflow.",
     icon: ShoppingCart
   },
   {
     title: "Multi-location operations",
     pain: "Owners become the manual routing layer for every decision.",
-    outcome: "AI agents give visibility and control across all locations.",
+    outcome: "Documented standards and dashboards give control across locations.",
     icon: BriefcaseBusiness
   },
   {
     title: "Warehousing & fulfillment",
     pain: "Status reporting and inventory tracking spread across spreadsheets.",
-    outcome: "Unified dashboards and AI-powered inventory management.",
+    outcome: "Unified dashboards and standardized inventory management.",
     icon: Warehouse
   }
 ];
 
 export const packages: PackageCard[] = [
   {
-    title: "Starter",
-    price: "$250/mo",
-    setup: "From $700 setup — based on business structure",
-    bestFor: "One high-impact AI agent",
+    title: "Diagnose",
+    price: "Free",
+    setup: "No cost · no obligation",
+    bestFor: "Where you're losing money",
     body:
-      "Start with the fastest-payback deployment — lead response, scheduling automation, or reporting intelligence.",
+      "An on-site or remote assessment of your operations, supply chain, and cost structure — with a prioritized roadmap.",
     bullets: [
-      "Operations audit & mapping",
-      "One AI agent deployed",
-      "Dedicated AI agent device included",
-      "Launch support & training",
-      "Basic performance reporting"
+      "Operations & cost mapping",
+      "Quick-win identification",
+      "Prioritized roadmap",
+      "Clear next steps"
     ]
   },
   {
-    title: "Professional",
-    price: "$419/mo",
-    originalPrice: "$599/mo",
-    setup: "From $700 setup — based on business structure",
-    bestFor: "Core operations automation",
+    title: "Build",
+    price: "Scoped to the fix",
+    setup: "Priced to the value it creates",
+    bestFor: "The improvement that pays back",
     body:
-      "Multiple AI agents across sales, scheduling, operations, and reporting — working together as one system.",
+      "You invest only in what we deliver — process redesign, standards, a custom app, dashboards, or AI agents.",
     bullets: [
-      "Multiple AI agent deployment",
-      "Operations / production monitoring",
-      "Sales & follow-up automation",
-      "Executive dashboard"
+      "Fixed scope & deliverable",
+      "Expected payback up front",
+      "Built around your workflow",
+      "Launch & training included"
     ]
   },
   {
-    title: "Premium",
-    price: "$629/mo",
-    originalPrice: "$899/mo",
-    setup: "From $700 setup — based on business structure",
-    bestFor: "Full operational intelligence",
+    title: "Optimize",
+    price: "Optional retainer",
+    setup: "Only if it keeps earning",
+    bestFor: "Compounding the gains",
     body:
-      "Enterprise-grade AI agent coverage across your entire organization — from operations to sales to production.",
+      "Continuous improvement, tuning, and new opportunities as your operation grows and changes.",
     bullets: [
-      "Cross-functional AI agents",
-      "Predictive analytics & forecasting",
-      "Custom integrations",
-      "Continuous optimization & support"
+      "Performance tracking",
+      "Iterative improvements",
+      "Priority support",
+      "Expansion planning"
     ]
   }
 ];
 
 export const detailedServices: ServiceDetail[] = [
   {
-    title: "Operations audit & AI strategy",
+    title: "Operations audit & improvement strategy",
     description:
-      "Every engagement starts by mapping your current operations, identifying where costs leak and production stalls, and designing an AI agent deployment plan that delivers measurable ROI.",
+      "Every engagement starts by mapping your current operations, identifying where costs leak and processes stall, and designing an improvement plan that delivers measurable ROI.",
     deliverables: [
       "Process mapping",
       "Cost leakage analysis",
       "Production bottleneck review",
       "Operations assessment",
       "Revenue opportunity scan",
-      "AI deployment roadmap"
+      "Prioritized improvement roadmap"
     ],
     impact:
-      "You get a clear, prioritized plan showing exactly which AI agents to deploy first and the expected cost savings.",
+      "You get a clear, prioritized plan showing exactly which improvements to make first and the expected cost savings.",
     icon: ScanSearch
   },
   {
-    title: "AI customer & sales agents",
+    title: "Process design & standards",
     description:
-      "We deploy AI agents that respond to leads in seconds, qualify intent, schedule follow-ups, handle quote reminders, and prevent revenue from slipping through the cracks.",
+      "We redesign how work flows and document the standards and SOPs your team needs — so execution is consistent, repeatable, and easy to onboard into.",
     deliverables: [
-      "Instant lead response",
-      "Lead qualification & routing",
-      "Quote follow-up automation",
-      "Appointment scheduling",
-      "Churn detection",
-      "Pipeline management"
+      "Workflow redesign",
+      "SOP documentation",
+      "Operating standards",
+      "Role & responsibility maps",
+      "Quality checkpoints",
+      "Rollout playbooks"
     ],
     impact:
-      "Faster response times, higher conversion rates, and recovered revenue that was previously lost to slow follow-up.",
-    icon: Bot
+      "Consistent execution, faster onboarding, and processes that hold up as you grow.",
+    icon: ClipboardCheck
   },
   {
-    title: "Operations & production intelligence",
+    title: "Custom apps, dashboards & analytics",
     description:
-      "AI agents that monitor your operations end-to-end — predicting bottlenecks, optimizing resources, flagging issues, and maximizing production throughput.",
+      "We build software and real-time visibility around your actual workflow — intake, scheduling, tracking, approvals — and surface the metrics that matter.",
     deliverables: [
-      "Demand forecasting",
-      "Inventory optimization",
-      "Supplier performance tracking",
-      "Production monitoring",
-      "Bottleneck detection",
-      "Waste reduction analytics"
-    ],
-    impact:
-      "Lower costs, higher production efficiency, reduced waste, and operations that adapt in real time.",
-    icon: Package
-  },
-  {
-    title: "Executive dashboards & reporting automation",
-    description:
-      "We centralize the metrics that matter — costs, production, sales, operations — into real-time dashboards so leadership makes decisions faster without chasing spreadsheets.",
-    deliverables: [
-      "Executive dashboards",
-      "Automated weekly reports",
+      "Custom internal tools",
+      "Operational dashboards",
       "KPI tracking",
       "Cost analytics",
       "Production metrics",
-      "Operations visibility"
+      "Automated reporting"
     ],
     impact:
       "Clear operational visibility without manual reporting, enabling faster and better-informed decisions.",
     icon: LayoutDashboard
   },
   {
-    title: "Deployment, integration & optimization",
+    title: "AI agents & automation",
     description:
-      "OpsMira isn't a handoff-only service. We deploy AI agents into your existing stack, support your team through adoption, and continuously optimize for better results.",
+      "Where it pays off, we layer in AI agents to handle follow-ups, reporting, scheduling, and repetitive work — an add-on to the process improvements, not a replacement for them.",
+    deliverables: [
+      "Instant lead response",
+      "Follow-up automation",
+      "Appointment scheduling",
+      "Reporting automation",
+      "Repetitive-task agents",
+      "Integration with your stack"
+    ],
+    impact:
+      "Less time on busywork, faster response, and capacity reclaimed for higher-value work.",
+    icon: Bot
+  },
+  {
+    title: "Delivery, integration & optimization",
+    description:
+      "OpsMira isn't advice-only. We implement the improvement into your existing stack, support your team through adoption, and continuously optimize for results.",
     deliverables: [
       "Tool integration",
-      "AI agent configuration",
+      "Implementation",
       "Team training",
       "Process documentation",
       "Performance tuning",
       "Expansion planning"
     ],
     impact:
-      "AI agents that actually work within your existing operations and keep improving over time.",
+      "Improvements that actually work within your operations and keep improving over time.",
     icon: ShieldCheck
   }
 ];
 
 export const caseStudies: CaseStudy[] = [
   {
-    title: "AI lead recovery for a service business",
-    subtitle: "Representative implementation scenario",
+    title: "Process standardization for a service business",
+    subtitle: "Representative engagement scenario",
     problem:
-      "Inbound leads were falling through the cracks during peak hours and after business hours, creating preventable revenue loss and slow follow-up that cost the business an estimated $8k/month.",
+      "Inbound leads were falling through the cracks during peak hours and after business hours because intake and follow-up were ad hoc, costing the business an estimated $8k/month in lost work.",
     implementation:
-      "OpsMira deployed an AI customer agent that responds to every lead within 30 seconds, qualifies intent, schedules appointments, and sends automated follow-ups — all integrated with the existing CRM.",
+      "OpsMira mapped the intake process, designed a standardized response-and-scheduling workflow, documented the SOP, and added an AI follow-up agent integrated with the existing CRM.",
     outcome:
-      "The business recovered 15+ leads per month that were previously lost, reduced response time by 90%, and saw a 3.2x ROI within the first 60 days.",
+      "The business recovered 15+ jobs per month that were previously lost, cut response time by 90%, and saw a 3.2x return on the engagement within the first 60 days.",
     economics:
-      "At an average deal value of $2,500, recovering even 4 additional deals per month covers the platform cost multiple times over.",
+      "At an average deal value of $2,500, recovering even 4 additional jobs per month covers the engagement cost multiple times over.",
     takeaways: [
-      "Speed of response directly protects revenue.",
-      "AI agents handle volume that humans can't scale for.",
-      "Integration with existing CRM prevents workflow disruption.",
+      "A standardized process protects revenue more than any single tool.",
+      "Automation pays off once the process underneath it is sound.",
+      "Integration with existing systems prevents workflow disruption.",
       "Measurable ROI within 30-60 days."
     ],
     note:
@@ -365,18 +379,18 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     title: "Operations optimization for a distribution company",
-    subtitle: "Representative implementation scenario",
+    subtitle: "Representative engagement scenario",
     problem:
-      "Inventory stockouts and overstock situations were costing the business $15k/month in lost sales and excess carrying costs. Demand forecasting relied on gut feeling and spreadsheets.",
+      "Inventory stockouts and overstock were costing the business $15k/month in lost sales and excess carrying costs. Demand planning relied on gut feeling and spreadsheets.",
     implementation:
-      "OpsMira deployed AI operations agents that analyze historical data, predict demand patterns, optimize reorder points, and alert the team to potential stockouts 2 weeks in advance.",
+      "OpsMira audited the operation, redesigned reorder processes, built a demand-planning dashboard, and set standards that alert the team to potential stockouts two weeks in advance.",
     outcome:
       "Stockout incidents dropped 78%, carrying costs decreased 23%, and the purchasing team saved 20 hours per week previously spent on manual forecasting.",
     economics:
-      "The combination of reduced stockouts and lower inventory costs delivered over $12k/month in savings against a $599/month platform investment.",
+      "Reduced stockouts plus lower inventory costs delivered over $12k/month in savings against the engagement investment.",
     takeaways: [
-      "AI demand forecasting outperforms manual methods significantly.",
-      "Early stockout alerts prevent cascading operational failures.",
+      "Better processes and visibility outperform manual methods significantly.",
+      "Early alerts prevent cascading operational failures.",
       "Reduced carrying costs compound over time.",
       "Purchasing teams can focus on strategy instead of spreadsheets."
     ],
@@ -385,20 +399,20 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     title: "Production throughput optimization for manufacturing",
-    subtitle: "Representative implementation scenario",
+    subtitle: "Representative engagement scenario",
     problem:
-      "Production line inefficiencies, undetected anomalies, and poor scheduling coordination were limiting output to 65% of theoretical capacity and causing quality issues.",
+      "Production line inefficiencies, undocumented standards, and poor scheduling coordination were limiting output to 65% of theoretical capacity and causing quality issues.",
     implementation:
-      "OpsMira deployed AI production agents that monitor equipment performance in real time, detect anomalies before they cause downtime, optimize scheduling, and provide actionable throughput recommendations.",
+      "OpsMira mapped the line, redesigned scheduling and standard work, built a throughput dashboard, and layered monitoring on top to flag anomalies before they cause downtime.",
     outcome:
       "Production output increased 31%, unplanned downtime dropped 45%, and quality defect rates decreased by 28% — all without adding headcount.",
     economics:
       "At the company's per-unit margins, the output increase alone generated an additional $40k/month in revenue capacity.",
     takeaways: [
-      "Real-time AI monitoring catches issues humans miss.",
-      "Predictive maintenance prevents costly unplanned downtime.",
+      "Standard work and scheduling catch losses that tooling alone misses.",
+      "Monitoring prevents costly unplanned downtime.",
       "Throughput gains compound with existing fixed costs.",
-      "AI scheduling optimization reduces idle time between shifts."
+      "Reduced idle time between shifts adds up fast."
     ],
     note:
       "Illustrative scenario based on common manufacturing and production patterns."
@@ -410,74 +424,74 @@ export const proofLogos: LogoAsset[] = [];
 export const workflowVisuals: WorkflowVisualAsset[] = [];
 
 export const values = [
-  "Operations-first, not tool-first",
+  "Diagnosis first, tools second",
   "Measured ROI before broader rollout",
-  "AI agents with human oversight",
-  "Deploy fast, optimize continuously",
+  "Process improvements that last",
+  "Deliver fast, optimize continuously",
   "Integrate with existing systems",
   "Focus on cost savings and profit growth"
 ];
 
 export const footerLinks = [
-  { label: "Book Operations Audit", href: "/contact" },
+  { label: "Book Free Diagnosis", href: "/contact" },
   { label: "Explore Services", href: "/services" },
   { label: "View Case Studies", href: "/case-studies" }
 ];
 
 export const heroStats = [
   { label: "Cost reduction", value: "20-40%" },
-  { label: "Response speed", value: "50-90% faster" },
-  { label: "Typical ROI", value: "3x-10x+" }
+  { label: "Process cycle time", value: "-35%" },
+  { label: "Typical payback", value: "30-90 days" }
 ];
 
 export const ctaArrow = ArrowRight;
 
 export const comparisonRows = [
   {
-    label: "Lead response",
-    before: "Missed calls, delayed callbacks, lost deals.",
-    after: "AI agents respond in < 30 seconds, qualify, and schedule."
+    label: "Cost visibility",
+    before: "Costs buried across spreadsheets and gut feel.",
+    after: "Audited cost structure with a prioritized savings plan."
   },
   {
-    label: "Operation",
-    before: "Spreadsheet tracking, reactive decisions, missed deadlines.",
-    after: "AI-powered forecasting, automated task management, real-time alerts."
+    label: "Processes",
+    before: "Tribal knowledge, inconsistent execution.",
+    after: "Documented SOPs and standards your team follows."
   },
   {
-    label: "Production",
-    before: "Manual monitoring, undetected bottlenecks, wasted capacity.",
-    after: "AI monitoring, predictive maintenance, throughput optimization."
+    label: "Tools",
+    before: "Manual workarounds and disconnected apps.",
+    after: "Custom tools and dashboards built around your workflow."
   },
   {
-    label: "Reporting",
-    before: "Hours spent compiling data across disconnected tools.",
-    after: "Real-time dashboards and automated executive summaries."
+    label: "Repetitive work",
+    before: "Staff buried in follow-ups and reporting.",
+    after: "Automated where it pays — AI agents handle the busywork."
   }
 ];
 
 export const aboutStandards = [
   {
-    title: "Deploy AI that delivers ROI",
+    title: "Deliver improvements that pay back",
     body:
-      "OpsMira is structured around measurable outcomes — cost reduction, output increase, and profit growth — not theoretical AI capabilities."
+      "OpsMira is structured around measurable outcomes — cost reduction, faster processes, and profit growth — not theoretical capability."
   },
   {
-    title: "Human oversight stays in place",
+    title: "The advice is free; you pay for results",
     body:
-      "AI agents handle the repetitive work while approvals, exceptions, and strategic decisions stay with your team."
+      "Diagnosis comes at no cost. You invest only in the improvement we deliver, scoped and priced to the value it creates."
   },
   {
     title: "Start where impact is fastest",
     body:
-      "Every engagement begins with the operation most likely to reduce costs, speed up response, or increase output within 30 days."
+      "Every engagement begins with the operation most likely to reduce cost, speed up processes, or increase output within 30 days."
   }
 ];
 
 export const implementationPrinciples = [
-  "Map current operations before proposing AI solutions.",
+  "Map current operations before proposing solutions.",
   "Prioritize cost savings and profit growth first.",
   "Build around real workflows, not idealized processes.",
-  "Integrate AI agents with existing tools and systems.",
+  "Integrate improvements with existing tools and systems.",
   "Optimize continuously based on measured performance."
 ];
 
@@ -485,41 +499,41 @@ export const intakeSteps = [
   {
     title: "Share the bottleneck",
     body:
-      "Tell us where costs are leaking, production is stalling, or sales opportunities are being missed."
+      "Tell us where costs are leaking, processes are stalling, or opportunities are being missed."
   },
   {
-    title: "Scope the first AI agent",
+    title: "Get a free diagnosis",
     body:
-      "OpsMira identifies the highest-ROI deployment and outlines exactly what gets built and the expected impact."
+      "OpsMira maps your operations and identifies the highest-ROI improvement, with the expected impact spelled out."
   },
   {
-    title: "Deploy with support",
+    title: "Build with support",
     body:
-      "Your AI agent goes live with human oversight, team training, and continuous optimization from day one."
+      "Your improvement is delivered with team training and continuous optimization from day one."
   }
 ];
 
 export const intakeOutputs = [
-  "The highest-impact operation to automate first",
-  "What the first AI agent deployment includes",
+  "The highest-impact operation to improve first",
+  "What the first engagement would deliver",
   "Realistic ROI projections based on your data"
 ];
 
 export const buyerFaqs = [
   {
-    question: "What does OpsMira deploy first?",
+    question: "What does the free diagnosis include?",
     answer:
-      "The AI agent with the fastest payback — usually lead response, operations monitoring, production optimization, or reporting automation."
+      "An on-site or remote assessment of your operations and cost structure, plus a prioritized roadmap of the highest-impact improvements — at no cost and no obligation."
   },
   {
-    question: "Is this software I have to manage myself?",
+    question: "How does pricing work?",
     answer:
-      "No. OpsMira is a done-for-you service. You get deployed AI agents, launch support, and continuous optimization — not another tool to manage."
+      "The diagnosis is free. From there, every engagement is scoped to a specific deliverable and priced to the value it creates — process redesign, standards, an app, dashboards, or AI agents."
   },
   {
-    question: "Do AI agents replace my team?",
+    question: "Do you replace my team?",
     answer:
-      "No. AI agents handle repetitive, time-consuming tasks so your team can focus on higher-value work that drives growth."
+      "No. We improve how your team works — better processes, tools, and (where it pays) automation — so they can focus on higher-value work."
   }
 ];
 
@@ -527,18 +541,18 @@ export const fitSignals = {
   bestFit: [
     "You're losing money to manual processes, slow response, or operational gaps.",
     "You want measurable cost reduction and profit growth, not vague innovation.",
-    "You prefer done-for-you implementation over managing another tool.",
+    "You prefer a delivered improvement over managing another tool.",
     "You're ready to see ROI within 30-60 days, not 6 months."
   ],
   notFit: [
     "You want fully autonomous AI with zero human oversight.",
-    "Your operation doesn't have enough volume for AI to make an impact.",
-    "You want a broad AI transformation before proving one use case.",
+    "Your operation doesn't have enough volume for improvements to matter.",
+    "You want a broad transformation before proving one improvement.",
     "You're only shopping for the cheapest software subscription."
   ],
   needsFromClient: [
-    "Clarity on where costs are leaking or production is stalling.",
-    "Willingness to start with one high-impact AI agent.",
+    "Clarity on where costs are leaking or processes are stalling.",
+    "Willingness to start with one high-impact improvement.",
     "Access to the operational data or context needed for setup.",
     "A results-first mindset focused on measurable outcomes."
   ]
@@ -547,26 +561,26 @@ export const fitSignals = {
 export const rolloutTimeline = [
   {
     phase: "First 30 days",
-    title: "Audit & deploy",
+    title: "Diagnose & build",
     body:
-      "Map your operations, identify the highest-ROI opportunity, and deploy your first AI agent with full support."
+      "Map your operations, identify the highest-ROI opportunity, and deliver the first improvement with full support."
   },
   {
     phase: "Days 30-60",
     title: "Measure & expand",
     body:
-      "Track performance, validate cost savings, and expand AI agent coverage to additional operations."
+      "Track performance, validate cost savings, and expand to additional operations."
   },
   {
     phase: "Days 60-90",
     title: "Optimize & scale",
     body:
-      "Tune agent performance, add predictive capabilities, and build toward full operational intelligence."
+      "Tune performance, add new capabilities, and build toward full operational excellence."
   }
 ];
 
 export const contactPrompts = [
-  "Where are costs leaking or production stalling?",
+  "Where are costs leaking or processes stalling?",
   "What manual processes consume the most team hours?",
   "Current tools and systems in your stack",
   "Most urgent operational bottleneck"
@@ -574,8 +588,8 @@ export const contactPrompts = [
 
 export const engagementSummary = {
   opsmiraHandles: [
-    "Operations audit and AI strategy",
-    "AI agent configuration and deployment",
+    "Operations diagnosis and improvement strategy",
+    "Process redesign, standards, apps, and dashboards",
     "Integration, launch support, and optimization"
   ],
   clientKeeps: [
@@ -585,7 +599,7 @@ export const engagementSummary = {
   ],
   measuredOutcomes: [
     "Cost reduction and savings",
-    "Production output increase",
+    "Faster, more consistent processes",
     "Revenue recovered and profit growth"
   ]
 };

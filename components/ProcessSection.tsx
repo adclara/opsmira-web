@@ -2,15 +2,15 @@ import { processSteps } from "@/lib/data";
 
 export function ProcessSection() {
   return (
-    <section className="section-shell section-space">
+    <section id="how-it-works" className="section-shell section-space scroll-mt-24">
       <div className="mx-auto max-w-3xl text-center">
         <span className="eyebrow">How it works</span>
         <h2 className="section-title mx-auto">
-          Three steps to measurable savings.
+          The advice is free. You pay for results.
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-[0.9rem] leading-6 text-neutral-600">
-          Every engagement follows the same clear path from operations audit to
-          AI agent deployment and optimization.
+          Start with a no-cost diagnosis. You only invest once there's a clear
+          improvement and an expected payback on the table.
         </p>
       </div>
 
