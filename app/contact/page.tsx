@@ -13,7 +13,7 @@
 
 import { useState } from "react";
 import { Check } from "lucide-react";
-import { contactPrompts, site } from "@/lib/data";
+import { site } from "@/lib/data";
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -91,17 +91,6 @@ export default function ContactPage() {
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-1.5 block text-[0.8rem] font-semibold text-foreground">Company</span>
-                  <input
-                    name="company"
-                    placeholder="Business name"
-                    className="w-full rounded-xl border border-stone-300 bg-white px-3.5 py-2.5 text-sm text-foreground outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
-                  />
-                </label>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <label className="block">
                   <span className="mb-1.5 block text-[0.8rem] font-semibold text-foreground">Email</span>
                   <input
                     required
@@ -111,29 +100,17 @@ export default function ContactPage() {
                     className="w-full rounded-xl border border-stone-300 bg-white px-3.5 py-2.5 text-sm text-foreground outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
                   />
                 </label>
-                <label className="block">
-                  <span className="mb-1.5 block text-[0.8rem] font-semibold text-foreground">Industry</span>
-                  <select
-                    name="industry"
-                    defaultValue=""
-                    className="w-full rounded-xl border border-stone-300 bg-white px-3.5 py-2.5 text-sm text-foreground outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
-                  >
-                    <option value="" disabled>Select…</option>
-                    {["Construction & trades", "Manufacturing", "Logistics & distribution", "HVAC & service", "Retail & e-commerce", "Warehousing", "Other"].map((o) => (
-                      <option key={o}>{o}</option>
-                    ))}
-                  </select>
-                </label>
               </div>
 
               <label className="block">
                 <span className="mb-1.5 block text-[0.8rem] font-semibold text-foreground">
-                  Your most urgent operational bottleneck
+                  What&apos;s going on?{" "}
+                  <span className="font-normal text-neutral-400">(optional)</span>
                 </span>
                 <textarea
                   name="message"
-                  rows={4}
-                  placeholder={contactPrompts.join("  ·  ")}
+                  rows={3}
+                  placeholder="Briefly, where's your operation losing time or money?"
                   className="w-full resize-y rounded-xl border border-stone-300 bg-white px-3.5 py-2.5 text-sm text-foreground outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
                 />
               </label>
