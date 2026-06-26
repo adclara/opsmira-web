@@ -113,7 +113,7 @@ export function HeroSection() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-brand-300 backdrop-blur"
             >
-              AI Agents for Business
+              Operations &amp; supply-chain consulting
             </motion.span>
 
             <motion.h1
@@ -122,7 +122,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="mt-6 max-w-[18ch] font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              AI agents that cut costs and{" "}
+              Free operations diagnosis.{" "}
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -134,7 +134,7 @@ export function HeroSection() {
                   backgroundClip: "text",
                 }}
               >
-                maximize output
+                You pay for the improvement.
               </motion.span>
             </motion.h1>
 
@@ -144,9 +144,10 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-6 max-w-xl text-base leading-7 text-white/60 sm:text-lg"
             >
-              We deploy intelligent AI agents across your operations — from
-              production and logistics to sales and admin — so you reduce
-              costs, increase throughput, and grow profit on autopilot.
+              OpsMira maps how your business runs, pinpoints where cost leaks and
+              processes stall, and delivers the fix — streamlined processes,
+              documented standards, custom apps, dashboards, or AI agents.
+              Scoped to the value it creates.
             </motion.p>
 
             <motion.div
@@ -159,16 +160,26 @@ export function HeroSection() {
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_32px_rgba(79,70,229,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(79,70,229,0.4)]"
               >
-                Get Started
+                Book Free Diagnosis
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/contact"
+                href="/services"
                 className="inline-flex items-center justify-center rounded-xl border border-white/12 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
-                Book a Demo
+                See What We Deliver
               </Link>
             </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-5 max-w-md text-xs leading-5 text-white/40"
+            >
+              Built on years optimizing operations and supply chain at the scale
+              of the largest U.S. retailers.
+            </motion.p>
           </div>
 
           <div className="relative hidden xl:block">
@@ -197,26 +208,27 @@ export function HeroSection() {
               <TrendingUp className="h-4 w-4 text-brand-300" />
             </motion.div>
             <div>
-              <span className="text-xl font-bold text-white">3x–10x</span>
-              <span className="ml-2 text-sm text-white/50">Estimated ROI</span>
+              <span className="text-xl font-bold text-white">20–40%</span>
+              <span className="ml-2 text-sm text-white/50">Typical cost reduction</span>
             </div>
           </div>
           <p className="max-w-md text-center text-sm leading-6 text-white/50 sm:text-left">
-            We deploy AI agents that automate operations, optimize your
-            business processes, and drive measurable profit growth.
+            We diagnose where your operations leak cost, then deliver the fix —
+            better processes, documented standards, custom apps, dashboards, and
+            AI agents where they pay.
           </p>
           <div className="flex gap-3">
             <Link
-              href="/contact"
+              href="/services"
               className="rounded-lg border border-white/12 bg-white/5 px-4 py-2 text-xs font-medium text-white transition hover:bg-white/10"
             >
-              Start free
+              See what we deliver
             </Link>
             <Link
               href="/contact"
               className="rounded-lg bg-white px-4 py-2 text-xs font-medium text-foreground transition hover:bg-white/90"
             >
-              Book a demo
+              Book free diagnosis
             </Link>
           </div>
         </div>

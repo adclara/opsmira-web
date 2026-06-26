@@ -12,12 +12,12 @@ export function ComparisonSection({ embedded = false }: { embedded?: boolean }) 
         <div>
           <span className="eyebrow">What it replaces or improves</span>
           <h2 className="section-title text-3xl sm:text-4xl lg:text-[3.15rem]">
-            Replace manual operational drag with a system that runs with more control.
+            What changes after the engagement.
           </h2>
           <p className="mt-5 text-base leading-8 text-neutral-600">
-            Buyers should not have to guess what changes after implementation.
-            OpsMira is designed to reduce repetitive coordination, improve
-            response speed, and make visibility easier for owners and managers.
+            Buyers should not have to guess what changes after the work. OpsMira
+            reduces cost leakage and repetitive coordination, tightens processes,
+            and makes operations easier to see and control.
           </p>
         </div>
 

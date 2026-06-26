@@ -6,34 +6,34 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "How long does implementation take?",
+    question: "What does the free diagnosis include?",
     answer:
-      "Your first AI agent is deployed within 5–7 business days. This includes an operational audit, configuration, testing, and handoff. You don't need to do anything technical — we handle everything.",
-  },
-  {
-    question: "Do I need technical knowledge?",
-    answer:
-      "No. OpsMira is 100% done-for-you. You don't need to code, configure APIs, or manage dashboards. You just review the results and watch your costs drop.",
+      "An on-site or remote assessment of your operations and cost structure, plus a prioritized roadmap of the highest-impact improvements — at no cost and no obligation.",
   },
   {
     question: "How does pricing work?",
     answer:
-      "We offer three monthly plans (Starter $299, Professional $599, Premium $899) based on the number of AI agents and support level. All plans include initial setup, training, and ongoing maintenance.",
+      "The diagnosis is free. From there, every engagement is scoped to a specific deliverable and priced to the value it creates — process redesign, standards, an app, dashboards, or AI agents. No monthly tiers, no setup fees.",
   },
   {
-    question: "What if I don't see results?",
+    question: "How fast do we see results?",
     answer:
-      "We measure impact from day one with clear metrics: hours saved, response speed, cost reduction, and revenue recovered. If you don't see value within 30 days, we adjust or pause — no questions asked.",
+      "Most engagements are scoped to show measurable impact within 30–90 days. The diagnosis pinpoints the fastest-payback improvement so you see ROI early, not in month six.",
   },
   {
-    question: "Does it work with my existing tools?",
+    question: "Do you replace my team?",
     answer:
-      "Yes. OpsMira integrates with your current stack — CRM, calendars, email, ERP, inventory management, and project tools. We don't replace what works, we optimize it with AI agents.",
+      "No. We improve how your team works — better processes, tools, and (where it pays) automation — so they can focus on higher-value work.",
   },
   {
-    question: "How do AI agents improve my operations?",
+    question: "Where do AI agents fit in?",
     answer:
-      "Our agents monitor key metrics, predict bottlenecks, optimize scheduling and resource allocation, and flag operational issues in real time. They learn from your historical data to make increasingly accurate recommendations.",
+      "AI agents are one add-on capability, not the headline. Once the process underneath is sound, we automate the follow-ups, reporting, and repetitive work where it clearly pays off.",
+  },
+  {
+    question: "Does it work with our existing tools?",
+    answer:
+      "Yes. We build around and integrate with your current stack — CRM, calendars, email, ERP, inventory, and project tools. We improve what works rather than replacing it.",
   },
 ];
 

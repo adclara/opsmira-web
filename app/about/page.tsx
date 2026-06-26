@@ -6,10 +6,10 @@ import { site } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn how OpsMira deploys AI agents to cut operational costs, streamline processes, and maximize output — with human oversight and measurable ROI.",
+    "OpsMira is an operations and supply-chain consulting practice. The diagnosis is free; you pay for the improvement we deliver — better processes, standards, custom apps, dashboards, and AI agents where they pay.",
   openGraph: {
     title: "About | OpsMira",
-    description: "An AI-first operations company built around deploying intelligent agents that reduce costs and grow profit.",
+    description: "Operations and supply-chain consulting that pays for itself.",
     url: "https://opsmira.ai/about"
   }
 };
@@ -19,17 +19,17 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About OpsMira"
-        title="AI agents deployed to cut costs and maximize output."
-        description="OpsMira is not a consulting firm or a generic SaaS platform. We deploy purpose-built AI agents that integrate directly into your operations — production, logistics, sales, and admin — delivering measurable cost reduction and profit growth from day one."
+        title="Operations and supply-chain consulting that pays for itself."
+        description="OpsMira is an operations and supply-chain consulting practice. We diagnose where your business is losing money, then deliver the fix — better processes, standards, custom apps, dashboards, and AI agents where they pay. The advice is free; you pay for the improvement."
         stats={[
-          { label: "Operating style", value: "AI-first deployment" },
+          { label: "Approach", value: "Diagnosis first" },
           { label: "Primary lens", value: "Measurable ROI" },
-          { label: "Service model", value: "Done-for-you" }
+          { label: "Engagement", value: "You pay for the fix" }
         ]}
         highlights={[
-          "Operations-first — we fix the process, then deploy AI to run it",
-          "Human oversight on every agent — automation with accountability",
-          "Results from week one, not month six"
+          "Diagnosis first — we map the problem before proposing a fix",
+          "You invest only in the improvement we deliver",
+          "Results in 30–90 days, not month six"
         ]}
       />
       <AboutFounder />
@@ -45,10 +45,11 @@ export default function AboutPage() {
               Positioning summary
             </p>
             <p className="mt-4 text-lg leading-8 text-white/78">
-              OpsMira exists to help businesses gain operational control through
-              AI: lower costs, faster throughput, fewer missed opportunities, and
-              a clear path from manual processes to intelligent automation that
-              pays for itself.
+              OpsMira exists to help businesses gain operational control: lower
+              costs, faster and more consistent processes, and fewer missed
+              opportunities — through better processes, standards, custom tools,
+              and AI agents where they pay. The advice is free; you pay for the
+              improvement.
             </p>
           </div>
         </div>

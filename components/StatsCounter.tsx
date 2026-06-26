@@ -34,40 +34,29 @@ function AnimatedNumber({ target, suffix = "" }: { target: number; suffix?: stri
   );
 }
 
-function LiveCounter() {
+function CountUp({ target }: { target: number }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
-  const [value, setValue] = useState(2400);
+  const [value, setValue] = useState(0);
 
   useEffect(() => {
     if (!inView) return;
-    let current = 2400;
     const duration = 2000;
     const steps = 60;
-    const increment = current / steps;
+    const increment = target / steps;
     let v = 0;
     const countUp = setInterval(() => {
       v += increment;
-      if (v >= current) {
-        setValue(current);
+      if (v >= target) {
+        setValue(target);
         clearInterval(countUp);
       } else {
         setValue(Math.floor(v));
       }
     }, duration / steps);
 
-    const tick = setTimeout(() => {
-      const interval = setInterval(() => {
-        setValue((prev) => prev + Math.floor(Math.random() * 3) + 1);
-      }, 3000);
-      return () => clearInterval(interval);
-    }, duration + 500);
-
-    return () => {
-      clearInterval(countUp);
-      clearTimeout(tick);
-    };
-  }, [inView]);
+    return () => clearInterval(countUp);
+  }, [inView, target]);
 
   return (
     <span ref={ref}>
@@ -77,10 +66,10 @@ function LiveCounter() {
 }
 
 const stats = [
-  { value: 2400, suffix: "+", label: "Admin hours eliminated" },
-  { value: 87, suffix: "%", label: "Faster response time" },
-  { value: 340, suffix: "k", label: "Cost savings ($)" },
-  { value: 12, suffix: "x", label: "Average ROI" },
+  { value: 40, suffix: "%", label: "Cost reduction (up to)" },
+  { value: 90, suffix: " days", label: "Typical payback" },
+  { value: 35, suffix: "%", label: "Faster process cycles" },
+  { value: 3, suffix: "x", label: "Return on engagement" },
 ];
 
 export function StatsCounter() {
@@ -97,7 +86,7 @@ export function StatsCounter() {
           transition={{ duration: 0.5 }}
           className="text-center text-sm font-medium uppercase tracking-[0.14em] text-white/40"
         >
-          Trusted by growing teams
+          The cost of standing still
         </motion.p>
 
         <motion.div
@@ -108,10 +97,11 @@ export function StatsCounter() {
           className="mt-6 text-center"
         >
           <span className="font-display text-5xl font-extrabold tracking-[-0.04em] text-white sm:text-7xl lg:text-8xl">
-            <LiveCounter />
+            <CountUp target={2400} />
           </span>
-          <p className="mt-3 text-base text-white/50 sm:text-lg">
-            Hours of manual work eliminated by our AI agents across all clients
+          <p className="mx-auto mt-3 max-w-2xl text-base text-white/50 sm:text-lg">
+            Hours of manual work a mid-sized operation can reclaim in a year by
+            standardizing and automating the right tasks.
           </p>
         </motion.div>
 
@@ -135,6 +125,10 @@ export function StatsCounter() {
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-xs text-white/30">
+          Illustrative, typical-range figures. Your diagnosis sets the real targets.
+        </p>
       </div>
     </section>
   );

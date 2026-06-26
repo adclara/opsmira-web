@@ -1,18 +1,18 @@
 "use client";
 
 const items = [
-  "Business Operations",
-  "Production",
+  "Operations diagnosis",
+  "Process design",
+  "Cost reduction",
+  "Supply chain",
+  "SOPs & standards",
+  "Custom dashboards",
+  "Demand forecasting",
+  "Inventory management",
+  "Quality control",
+  "AI agents (add-on)",
   "Logistics",
-  "Cost Reduction",
-  "Sales Automation",
-  "AI Agents",
-  "Process Optimization",
-  "Inventory Management",
-  "Demand Forecasting",
-  "Profit Maximization",
-  "Operations",
-  "Quality Control",
+  "Profit growth",
 ];
 
 export function MetricsTicker() {

@@ -12,11 +12,12 @@ export function AboutFounder() {
         <div>
           <span className="eyebrow">How OpsMira operates</span>
           <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl">
-            AI-powered operational systems businesses can actually run.
+            Operational improvements businesses can actually run.
           </h2>
           <p className="section-copy mt-5">
-            OpsMira helps owners replace repetitive coordination, reporting,
-            and follow-up work with a controlled operational layer.
+            OpsMira helps owners replace ad-hoc coordination, reporting, and
+            follow-up with documented processes, the right tools, and automation
+            where it pays.
           </p>
           <div className="mt-8 grid gap-3">
             {aboutStandards.map((item) => (

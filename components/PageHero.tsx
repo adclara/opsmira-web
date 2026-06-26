@@ -20,8 +20,8 @@ export function PageHero({
       ? stats
       : [
           { label: "Focus", value: "Operational clarity" },
-          { label: "Approach", value: "AI with oversight" },
-          { label: "Outcome", value: "Faster execution" }
+          { label: "Approach", value: "Diagnosis first" },
+          { label: "Outcome", value: "Measurable ROI" }
         ];
 
   return (

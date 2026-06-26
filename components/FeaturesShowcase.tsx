@@ -3,68 +3,68 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+  SearchCheck,
+  ClipboardCheck,
+  LayoutDashboard,
   Bot,
-  Package,
-  BarChart3,
-  ShoppingCart,
   ArrowRight,
 } from "lucide-react";
 
 const features = [
   {
-    icon: Bot,
-    eyebrow: "AI Customer Agents",
-    title: "Instant response to every lead",
+    icon: SearchCheck,
+    eyebrow: "Diagnosis",
+    title: "Find where you're losing money",
     description:
-      "Your AI agent responds in seconds, qualifies intent, schedules follow-ups, and routes hot leads to sales — no human needed.",
+      "We map your operations, supply chain, and cost structure — on-site or remotely — then hand you a prioritized roadmap of the highest-impact fixes. No cost, no obligation.",
     color: "from-brand-500/20 to-brand-600/10",
     accent: "bg-brand-500",
     mockup: {
-      label: "Lead response time",
-      stat: "< 30s",
-      statLabel: "Fully automated",
+      label: "Recoverable cost identified",
+      stat: "$11.4k/mo",
+      statLabel: "Across 3 lanes",
     },
   },
   {
-    icon: Package,
-    eyebrow: "Operations Optimization",
-    title: "End-to-end operational intelligence",
+    icon: ClipboardCheck,
+    eyebrow: "Process & standards",
+    title: "Standardize how the work gets done",
     description:
-      "AI agents monitor workflows, predict bottlenecks, optimize resource allocation, and flag issues before they impact your team or delivery.",
+      "Redesigned workflows, SOPs, and documented standards your team can actually follow — so execution is consistent, repeatable, and easy to onboard into.",
     color: "from-emerald-500/20 to-emerald-600/10",
     accent: "bg-emerald-500",
     mockup: {
-      label: "Stockout prevention",
-      stat: "94%",
-      statLabel: "Accuracy rate",
+      label: "Process cycle time",
+      stat: "−35%",
+      statLabel: "After redesign",
     },
   },
   {
-    icon: BarChart3,
-    eyebrow: "Production Intelligence",
-    title: "Maximize throughput, minimize waste",
+    icon: LayoutDashboard,
+    eyebrow: "Apps & dashboards",
+    title: "Real-time visibility into cost and output",
     description:
-      "Real-time production dashboards powered by AI — track efficiency, detect anomalies, and get recommendations to increase output.",
+      "Custom tools and dashboards built around your actual workflow — intake, scheduling, tracking, approvals — surfacing the metrics that matter, without manual reporting.",
     color: "from-amber-500/20 to-amber-600/10",
     accent: "bg-amber-500",
     mockup: {
-      label: "Production efficiency",
+      label: "Production output",
       stat: "+37%",
-      statLabel: "Output increase",
+      statLabel: "With visibility",
     },
   },
   {
-    icon: ShoppingCart,
-    eyebrow: "Sales & Revenue Agents",
-    title: "Never miss a revenue opportunity",
+    icon: Bot,
+    eyebrow: "Automation · add-on",
+    title: "Automate the busywork where it pays",
     description:
-      "AI agents handle quote follow-ups, upsell detection, churn prevention, and pipeline management — driving sales while you sleep.",
+      "Where it pays off, AI agents handle follow-ups, reporting, and scheduling — a layer on top of solid processes, not a replacement for them.",
     color: "from-cyan-500/20 to-cyan-600/10",
     accent: "bg-cyan-500",
     mockup: {
-      label: "Revenue recovered",
-      stat: "$42k",
-      statLabel: "Per quarter avg.",
+      label: "Manual hours reclaimed",
+      stat: "120/mo",
+      statLabel: "Typical add-on",
     },
   },
 ];
@@ -80,7 +80,7 @@ export function FeaturesShowcase() {
           transition={{ duration: 0.4 }}
           className="eyebrow"
         >
-          Capabilities
+          What we deliver
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export function FeaturesShowcase() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="section-title mt-3"
         >
-          What our AI agents do for you
+          Consulting that ends in a working solution
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -98,8 +98,9 @@ export function FeaturesShowcase() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="section-copy mt-4"
         >
-          Each agent deploys in days, not months. No code. No disruption.
-          Measurable impact from week one.
+          Every engagement starts with a free diagnosis. From there we deliver
+          the fix — and AI agents are one capability in the toolkit, not the
+          headline.
         </motion.p>
       </div>
 
@@ -141,7 +142,7 @@ export function FeaturesShowcase() {
                 href="/services"
                 className="group/link mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-600 transition hover:text-brand-700"
               >
-                Learn more
+                See what we deliver
                 <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
               </Link>
             </div>

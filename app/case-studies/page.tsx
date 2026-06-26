@@ -7,10 +7,10 @@ import { caseStudies, testimonials, proofLogos, workflowVisuals } from "@/lib/da
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "See how OpsMira AI agents recover lost revenue, optimize operations, and increase production throughput — with measurable cost savings and economic outcomes.",
+    "Representative engagement scenarios showing how OpsMira diagnoses operations, delivers the fix, and the economic result — cost savings, revenue recovered, or throughput gained.",
   openGraph: {
     title: "Case Studies | OpsMira",
-    description: "Real implementation scenarios showing how AI agents reduce costs, speed operations, and recover missed revenue.",
+    description: "Representative scenarios showing how OpsMira reduces cost, speeds operations, and recovers missed revenue.",
     url: "https://opsmira.ai/case-studies"
   }
 };
@@ -20,17 +20,17 @@ export default function CaseStudiesPage() {
     <>
       <PageHero
         eyebrow="Case Studies"
-        title="AI agent deployments with measurable business outcomes."
-        description="Each case study shows the operational problem, which AI agents were deployed, and the economic result — cost savings, revenue recovered, or throughput gained."
+        title="Engagements with measurable business outcomes."
+        description="Each scenario shows the operational problem, the improvement OpsMira delivered, and the economic result — cost savings, revenue recovered, or throughput gained."
         stats={[
-          { label: "Structure", value: "Problem → Deploy → Result" },
+          { label: "Structure", value: "Problem → Fix → Result" },
           { label: "Primary lens", value: "Cost savings & ROI" },
           { label: "Use", value: "Buyer evaluation" }
         ]}
         highlights={[
-          "Focused on operations, production, and revenue recovery",
-          "Shows which AI agents were deployed and how they integrate",
-          "Connects deployment decisions to measurable dollar impact"
+          "Focused on operations, supply chain, and revenue recovery",
+          "Shows the improvement delivered and how it integrates",
+          "Connects each decision to measurable dollar impact"
         ]}
       />
 
@@ -96,7 +96,7 @@ export default function CaseStudiesPage() {
 
         {testimonials.length === 0 && proofLogos.length === 0 && workflowVisuals.length === 0 ? (
           <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50/70 px-6 py-5 text-sm leading-7 text-blue-800">
-            These scenarios represent common operational patterns where AI agents deliver the highest ROI. Client proof and approved assets will appear here as they become available.
+            These are representative engagement scenarios based on common operational patterns. Client proof and approved assets will appear here as they become available.
           </div>
         ) : (
           <>
@@ -143,19 +143,19 @@ export default function CaseStudiesPage() {
               Next step
             </p>
             <h3 className="mt-4 font-display text-4xl text-white">
-              See a pattern that matches your business? Let&apos;s deploy the right agents.
+              See a pattern that matches your business? Let&apos;s start with a free diagnosis.
             </h3>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-white/72">
-              OpsMira identifies which operational bottleneck is costing you the
-              most and deploys AI agents to eliminate it — measurable savings
-              from the first week.
+              We start with a free diagnosis of the operation costing you the
+              most — then deliver the fix that pays back first, with the expected
+              impact spelled out.
             </p>
           </div>
           <Link
             href="/contact"
             className="inline-flex items-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-brand-700"
           >
-            Book Operations Audit
+            Book Free Diagnosis
           </Link>
         </div>
       </section>
